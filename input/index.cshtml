@@ -1,10 +1,29 @@
+Title: Home
+Description: Welcome to CoderJony. You can find here a huge collection of technical articles &amp; bugs solutions that will surely help you in your design &amp; development phase. Apart from this, you will also find a good collection of Interview Questions that will definitely help you in your interview preparation. Most of the stuff you will find here will be related to Microsoft Technologies &amp; other open source technolgies i.e. C#, .NET, ASP.NET, MVC, TFS, VIsual Studio, JavaScript, Git, PowerShell etc.
 ---
-title: Coderjony
-description: Welcome to CoderJony. You can find here a huge collection of technical articles &amp; bugs solutions that will surely help you in your design &amp; development phase. Apart from this, you will also find a good collection of Interview Questions that will definitely help you in your interview preparation. Most of the stuff you will find here will be related to Microsoft Technologies &amp; other open source technolgies i.e. C#, .NET, ASP.NET, MVC, TFS, VIsual Studio, JavaScript, Git, PowerShell etc.
----
+
+@{
+    IDocument[] posts = Outputs.FromPipeline("Content")
+            .FilterSources(Document.GetString(CustomWebKeys.BlogSources))
+            .OrderBy(item => item.GetDateTime(CustomWebKeys.Published))
+            .ToArray();
+}
 <div class="bg-light p-5 rounded">
     <h1>This is index!</h1>
     <p class="lead">This example is a quick exercise to illustrate how the top-aligned navbar works. As you scroll, this
         navbar remains in its original position and moves with the rest of the page.</p>
     <a class="btn btn-lg btn-primary" role="button">View navbar docs &raquo;</a>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            @foreach (var item in posts)
+            {
+                <div class="row">
+                    <h2><a href="@item.GetLink()">@item.GetString(WebKeys.Title)</a></h2>
+                    @Html.Raw(item.GetString("Excerpt"))
+                </div>
+            }
+        </div>
+    </div>
 </div>
