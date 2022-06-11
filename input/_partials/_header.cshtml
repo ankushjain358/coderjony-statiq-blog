@@ -3,13 +3,13 @@
         <svg class="bi me-2" width="40" height="32">
             <use xlink:href="#bootstrap" />
         </svg>
-        <span class="fs-4"><?#= SiteTitle /?></span>
+        <span class="fs-4">@GlobalMetadata.GetSiteTitle(Model)</span>
     </a>
 
     <ul class="nav nav-pills">
         <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
         <li class="nav-item"><a href="/blogs" class="nav-link">Blog</a></li>
-        @foreach(IDocument doc in Outputs.FromPipeline("Content").Where(x => x.GetBool(CustomWebKeys.ShowInNavbar)).OrderBy(x => x.GetInt(Keys.Order)))
+        @foreach(IDocument doc in Outputs.FromPipeline("Content").Where(x => x.GetBool(GlobalMetadataKeys.ShowInNavbar)).OrderBy(x => x.GetInt(Keys.Order)))
         {
             // Don't add the home page to the nav bar
             <li class="nav-item">

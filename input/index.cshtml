@@ -4,8 +4,9 @@ Description: Welcome to CoderJony. You can find here a huge collection of techni
 
 @{
     IDocument[] posts = Outputs.FromPipeline("Content")
-            .FilterSources(Document.GetString(CustomWebKeys.BlogSources))
-            .OrderBy(item => item.GetDateTime(CustomWebKeys.Published))
+            .FilterSources(GlobalMetadata.GetBlogSources(Document))
+            .OrderBy(item => item.GetDateTime(BlogMetadataKeys.Published))
+            .Where(item => item.GetBool(BlogMetadataKeys.IsActive))
             .ToArray();
 }
 <div class="bg-light p-5 rounded">
@@ -14,16 +15,10 @@ Description: Welcome to CoderJony. You can find here a huge collection of techni
         navbar remains in its original position and moves with the rest of the page.</p>
     <a class="btn btn-lg btn-primary" role="button">View navbar docs &raquo;</a>
 </div>
-<div class="container">
-    <div class="row">
-        <div class="col-md-12">
-            @foreach (var item in posts)
-            {
-                <div class="row">
-                    <h2><a href="@item.GetLink()">@item.GetString(WebKeys.Title)</a></h2>
-                    @Html.Raw(item.GetString("Excerpt"))
-                </div>
-            }
-        </div>
-    </div>
+
+<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+    @foreach (var post in posts)
+    {
+        @Html.Partial("/_partials/_post.cshtml", post)   
+    }
 </div>

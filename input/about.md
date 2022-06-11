@@ -4,9 +4,10 @@ Order: 3
 ---
 # <?#= Title /?>
 
-## TODOs
-- Date format  may be an issue on different system
-- Serchings needs to be implemented
+Hello Everyone, Welcome to CoderJony.
 
-## References
-- [Archive page](https://github.com/statiqdev/Statiq.Web/blob/main/examples/Statiq.Web.Examples/input/archives/paged-archive.cshtml)
+I am Ankush Jain, An Electronics & Communication Enginner by educataion, Software Engineer by profession.
+
+Currently, I am working as Senior Software Engineer at Stryker Corporation, Gurgaon.
+
+Basically, I belong to Jaipur, Rajasthan. I completed my graduation B.Tech in 2011 from Rajasthan Technical University, Kota.

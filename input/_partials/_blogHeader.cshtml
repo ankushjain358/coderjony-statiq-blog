@@ -1,7 +1,26 @@
-<div class="p-5 mb-5 text-white bg-dark rounded-3">
-    <div class="text-center">
-        <h1>
+<div class="row py-5 px-2 mb-5 text-white bg-dark">
+    <div>
+        <h1 class="mb-4">
             <?#= Title /?>
         </h1>
+        <div>
+            <ul class="list-group">
+                <li class="list-group-item">
+                   Author: <?#= Author /?>
+                </li>
+                <li class="list-group-item">
+                    Published: <?#= Published /?>
+                </li>
+                @if (Document.ContainsKey("Tags"))
+                {
+                    <li class="list-group-item">
+                        @foreach (string tag in Document.GetList<string>("Tags"))
+                        {
+                            <a class="btn btn-success">@tag</a>
+                        }
+                    </li>
+                }
+            </ul>
+        </div>
     </div>
 </div>

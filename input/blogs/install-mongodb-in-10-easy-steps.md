@@ -5,10 +5,8 @@ Tags:
   - ASP.NET
   - C#
 ImageFolder: installing-mongodb
+IsActive: true
 ---
-
-<img src="/img/blogs/<?#= ImageFolder /?>/default.png" style="max-width:50%" />
-
 MongoDB is famous NoSQL database. NoSQL database stores data in JSON format in text file or similar. These are very famous now a days and used widely because reading data from a NoSQL database is much much faster than a RDBMS like SQL Server, MySQL or other.
 - **RDBMS** > Database > Table > Row
 - **NoSQL** > Database > Collections > Documents

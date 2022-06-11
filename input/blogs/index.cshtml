@@ -1,8 +1,10 @@
-ArchiveSources: => GetString(CustomWebKeys.BlogSources)
+ArchiveSources: => GetString(GlobalMetadataKeys.BlogSources)
 ArchivePageSize: 5
 ArchiveOrderKey: Published
 ArchiveOrderDescending: true
 ArchiveTitle: => GetString("Title")
+Layout: /_Layout.cshtml
+
 
 Title: Blogs
 ---
@@ -13,10 +15,7 @@ Title: Blogs
 
 @foreach (IDocument document in Model.GetChildren())
 {
-        <div class="col-md-12">
-            <h2>@Html.DocumentLink(document)</h2>
-            @Html.Raw(document.GetString(Keys.Excerpt))
-        </div>
+    @Html.Partial("/_partials/_post.cshtml", document)   
 }
 
 @{
