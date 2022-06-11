@@ -1,21 +1,50 @@
-<header class="d-flex flex-wrap justify-content-center py-3 px-4 border-bottom container-fluid">
+<header class="bg-white d-flex flex-wrap justify-content-center py-3 px-4 border-bottom container-fluid">
     <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
-        <svg class="bi me-2" width="40" height="32">
-            <use xlink:href="#bootstrap" />
-        </svg>
-        <span class="fs-4">@GlobalMetadata.GetSiteTitle(Model)</span>
+        <img src="/img/logo.png" height="40" />
+        <span class="mx-2 fs-4">@GlobalMetadata.GetSiteTitle(Model)</span>
     </a>
 
     <ul class="nav nav-pills">
-        <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
-        <li class="nav-item"><a href="/blogs" class="nav-link">Blog</a></li>
-        @foreach(IDocument doc in Outputs.FromPipeline("Content").Where(x => x.GetBool(GlobalMetadataKeys.ShowInNavbar)).OrderBy(x => x.GetInt(Keys.Order)))
+        <li class="nav-item"><a href="/" class="nav-link link-secondary">Home</a></li>
+        <li class="nav-item"><a href="/blogs" class="nav-link link-secondary">Blog</a></li>
+        @foreach (IDocument doc in Outputs.FromPipeline("Content").Where(x =>
+        x.GetBool(GlobalMetadataKeys.ShowInNavbar)).OrderBy(x => x.GetInt(Keys.Order)))
         {
             // Don't add the home page to the nav bar
             <li class="nav-item">
-                @Html.DocumentLink(doc, doc.GetString("NavbarTitle", doc.GetTitle()), new Dictionary<object, object> { { "class", "nav-link" } })
+                @Html.DocumentLink(doc, doc.GetString("NavbarTitle", doc.GetTitle()), new Dictionary<object, object> { {
+            "class", "nav-link link-secondary" } })
             </li>
         }
     </ul>
 </header>
-
+<header class="d-flex flex-wrap bg-success py-2 px-4 border-bottom container-fluid" style="font-size: larger;">
+    <ul class="nav me-auto">
+        <li class="nav-item">
+            <a class="nav-link link-light" href="#">.NET</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link link-light" href="#">AWS</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link link-light" href="#">Azure</a>
+        </li>
+    </ul>
+    <ul class="nav">
+        <li class="nav-item">
+            <a class="nav-link link-light" href="https://stackoverflow.com/users/1273882/ankush-jain"><span class="fa-brands fa-stack-overflow"></span></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link link-light" href="https://github.com/ankushjain358"><span class="fa-brands fa-github"></span></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link link-light" href="https://www.linkedin.com/in/ankush-jain-developer/"><span class="fa-brands fa-linkedin"></span></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link link-light" href="https://www.facebook.com/CoderJonycom-134557060482505"><span class="fa-brands fa-facebook"></span></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link link-light" href="https://www.instagram.com/ankushjain358/"><span class="fa-brands fa-instagram"></span></a>
+        </li>
+    </ul>
+</header>

@@ -1,9 +1,9 @@
 Title: About
 ShowInNavbar: true
 Order: 3
----
-# <?#= Title /?>
 
+Layout: /_BasicPageLayout.cshtml
+---
 Hello Everyone, Welcome to CoderJony.
 
 I am Ankush Jain, An Electronics & Communication Enginner by educataion, Software Engineer by profession.

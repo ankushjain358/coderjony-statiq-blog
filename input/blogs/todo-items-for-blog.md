@@ -14,5 +14,6 @@ Following items are pending for blog.
 5. Blog home page
 6. Blog archive page
 7. Side bar
+8. Mobile View (Blog)
 
 

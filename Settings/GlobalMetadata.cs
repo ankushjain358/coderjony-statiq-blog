@@ -10,7 +10,6 @@ namespace Coderjony.Statiq.Blog
         public const string BlogSources = "BlogSources";
         public const string IsBlogPost = "IsBlogPost";
         public const string ShowInNavbar = "ShowInNavbar";
-        public const string DefaultBlogImage = "DefaultBlogImage";
         public const string Layout = "Layout";
     }
 
@@ -22,6 +21,5 @@ namespace Coderjony.Statiq.Blog
         public static string GetBlogSources(IDocument document) { return document.GetString(GlobalMetadataKeys.BlogSources); }
         public static string GetLayout(IDocument document) { return document.GetString(GlobalMetadataKeys.Layout); }
         public static bool GetIsBlogPost(IDocument document) { return document.GetBool(GlobalMetadataKeys.IsBlogPost); }
-        public static string GetDefaultBlogImage(IDocument document) { return document.GetString(GlobalMetadataKeys.DefaultBlogImage); }
     }
 }
