@@ -9,7 +9,7 @@
     <div class="card shadow-sm" title="@Model.GetTitle()">
         <a href="@Model.GetLink()"><img src="@imagePath" class="card-img-top" alt="@Model.GetTitle()"></a>
         <div class="card-body">
-            <h4 class="card-title">@Model.GetTitle()</h4>
+            <h4 class="card-title"><a href="@Model.GetLink()" class="text-decoration-none link-dark">@Model.GetTitle()</a></h4>
             <p class="card-text">@Html.Raw(excerpt)</p>
             <div class="d-flex justify-content-between align-items-center">
                 <a href="@Model.GetLink()" class="btn btn-success">Read More</a>

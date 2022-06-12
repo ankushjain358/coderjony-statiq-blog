@@ -5,7 +5,7 @@ Description: Welcome to CoderJony. You can find here a huge collection of techni
 @{
     IDocument[] posts = Outputs.FromPipeline("Content")
             .FilterSources(GlobalMetadata.GetBlogSources(Document))
-            .OrderBy(item => item.GetDateTime(BlogMetadataKeys.Published))
+            .OrderByDescending(item => item.GetDateTime(BlogMetadataKeys.Published))
             .Where(item => item.GetBool(BlogMetadataKeys.IsActive))
             .ToArray();
 }
@@ -42,14 +42,14 @@ Description: Welcome to CoderJony. You can find here a huge collection of techni
             websites using your knowledge of .NET.
         </p>
         <p class="lead">I have made this website's source code public. It can be accessed from <a
-                href="https://github.com/ankushjain358/coderjony-statiq-blog">GitHub repository.</a></p>
+                href="https://github.com/ankushjain358/coderjony-statiq-blog" class="link-secondary">GitHub repository.</a></p>
         <p class="lead">
            Few websites build with Statiq:
-        <ul>
-            <li><a href="https://dotnetfoundation.org/">.NET Foundation</a></li>
-            <li><a href="https://www.techwatching.dev/" target="_blank">Techatching.dev</a></li>
-            <li><a href="https://www.tryingtocode.co.uk/" target="_blank">TryingToCode</a></li>
-            <li><a href="https://www.developmomentum.com/" target="_blank">Develop Momentum</a></li>
+        <ul class="lead">
+            <li><a href="https://dotnetfoundation.org/" class="link-secondary" target="_blank">.NET Foundation</a></li>
+            <li><a href="https://www.techwatching.dev/" class="link-secondary" target="_blank">Techatching.dev</a></li>
+            <li><a href="https://www.tryingtocode.co.uk/" class="link-secondary" target="_blank">TryingToCode</a></li>
+            <li><a href="https://www.developmomentum.com/" class="link-secondary" target="_blank">Develop Momentum</a></li>
         </ul>
         </p>
     </div>

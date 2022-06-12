@@ -6,11 +6,19 @@
 
 <!-- Basic page layout -->
 <div class="row">
-    <div class="col-8">
+    <div class="col-8 markdown-body">
         @RenderBody()
     </div>
     <div class="col-4">
         
     </div>
 </div>
+
+@section scripts {
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/prism.min.js"></script>
+}
+
+@section styles {
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/themes/prism-okaidia.min.css" />
+}
  
