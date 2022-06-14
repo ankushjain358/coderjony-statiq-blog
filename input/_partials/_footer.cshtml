@@ -1,7 +1,6 @@
 <footer class="bg-white mt-4">
-     <div class="container-fluid">
+     @* <div class="container-fluid">
         <div class="d-flex justify-content-between pt-4 px-4">
-            <p>© 2021 Company, Inc. All rights reserved.</p>
             <ul class="list-unstyled d-flex">
                 <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24">
                             <use xlink:href="#twitter"></use>
@@ -14,45 +13,43 @@
                         </svg></a></li>
             </ul>
         </div>
-    </div>
-    <hr/>
+    </div> 
+    <hr/> *@
     <div class="container-fluid">
         <footer class="py-5 px-4">
             <div class="row">
-                <div class="col-2">
-                    <h5>Section</h5>
+                <div class="col-md-2 mb-3">
+                    <h5>Quick Links</h5>
                     <ul class="nav flex-column">
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+                        <li class="nav-item mb-2"><a href="/" class="nav-link p-0 text-muted">Home</a></li>
+                        <li class="nav-item mb-2"><a href="/blogs" class="nav-link p-0 text-muted">Blogs</a></li>
+                        <li class="nav-item mb-2"><a href="/private-policy" class="nav-link p-0 text-muted">Private Policy</a></li>
+                        <li class="nav-item mb-2"><a href="/about" class="nav-link p-0 text-muted">About</a></li>
+                        <li class="nav-item mb-2"><a href="/contact" class="nav-link p-0 text-muted">Contact</a></li>
                     </ul>
                 </div>
 
-                <div class="col-2">
-                    <h5>Section</h5>
+                <div class="col-md-2 mb-3">
+                    <h5>Connect with us</h5>
                     <ul class="nav flex-column">
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+                        <li class="nav-item mb-2"><a  href="https://stackoverflow.com/users/1273882/ankush-jain" class="nav-link p-0 text-muted"><span class="fa-brands fa-stack-overflow me-2"></span>Stack Overflow</a></li>
+                        <li class="nav-item mb-2"><a href="https://github.com/ankushjain358" class="nav-link p-0 text-muted"><span class="fa-brands fa-github me-2"></span>GitHub</a></li>
+                        <li class="nav-item mb-2"><a  href="https://www.linkedin.com/in/ankush-jain-developer/" class="nav-link p-0 text-muted"><span class="fa-brands fa-linkedin me-2"></span>LinkedIn</a></li>
+                        <li class="nav-item mb-2"><a href="https://www.facebook.com/CoderJonycom-134557060482505" class="nav-link p-0 text-muted"><span class="fa-brands fa-facebook me-2"></span>Facebook</a></li>
+                        <li class="nav-item mb-2"><a href="https://www.instagram.com/ankushjain358/" class="nav-link p-0 text-muted"><span class="fa-brands fa-instagram me-2"></span>Instagram</a></li>
                     </ul>
                 </div>
 
-                <div class="col-2">
-                    <h5>Section</h5>
+                <div class="col-md-2 mb-3">
+                    <h5>Categories</h5>
                     <ul class="nav flex-column">
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">AWS</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Azure</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">.NET</a></li>
                     </ul>
                 </div>
 
-                <div class="col-4 offset-1">
+                <div class="col-md-4 offset-md-1 mb-3">
                     <form>
                         <h5>Subscribe to our newsletter</h5>
                         <p>Monthly digest of whats new and exciting from us.</p>
@@ -65,6 +62,12 @@
                 </div>
             </div>
         </footer>
+    </div>
+    <hr>
+      <div class="container-fluid">
+        <div class="d-flex justify-content-between py-2 px-4">
+            <p>© @DateTime.Now.Year CoderJony, All rights reserved.</p>
+        </div>
     </div>
 </footer>
 
