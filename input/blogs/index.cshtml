@@ -1,7 +1,7 @@
 ArchiveSources: => GetString(GlobalMetadataKeys.BlogSources)
 ArchiveFilter: => GetBool("IsActive") 
 ArchivePageSize: 5
-ArchiveOrderKey: Published
+ArchiveOrderKey: => GetDateTime("Published")  
 ArchiveOrderDescending: true
 ArchiveTitle: => GetString("Title")
 Layout: /_Layout.cshtml
