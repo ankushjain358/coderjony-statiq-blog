@@ -1,5 +1,5 @@
 Title: Logging to AWS CloudWatch using Log4Net in .NET Core
-Published: 28/11/2021
+Published: 24/04/2022
 Author: Ankush Jain
 IsActive: true
 Tags:
