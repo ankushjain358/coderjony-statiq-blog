@@ -2,12 +2,10 @@
     Layout = @"/_Layout.cshtml";
 }
 
-@Html.Partial("_partials/_blogHeader")
-
 <!-- Basic page layout -->
 <div class="container-fluid">
-    <div class="row">
-    <div class="col-md-8 markdown-body p-3 px-md-5">
+    <div class="row mt-5">
+    <div class="col-md-8 markdown-body p-3 px-md-5 pb-md-5">
         <div class="mb-5">
             <h1 class="mb-3">
                 <?#= Title /?>
@@ -42,7 +40,6 @@
     </div>
 </div>
 
-</div>
 @section scripts {
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/prism.min.js"></script>
 }
