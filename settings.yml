@@ -10,3 +10,4 @@ Copyright: => $"Copyright © {DateTime.Now.Year}"
 BlogSources: blogs/*.md
 Layout: /_Layout.cshtml
 IsBlogPost: => Outputs.FilterSources(Context.GetString("BlogSources")).ContainsById(Document)
+PageSize: 6

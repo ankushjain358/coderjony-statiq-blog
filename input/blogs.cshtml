@@ -1,0 +1,69 @@
+ArchiveSources: => GetString(GlobalMetadataKeys.BlogSources)
+ArchiveFilter: => GetBool("IsActive") 
+ArchivePageSize: => GlobalMetadata.GetPageSize(Document)
+ArchiveOrderKey: Published
+ArchiveOrderDescending: true
+ArchiveTitle: => GetString("Title")
+Layout: /_Layout.cshtml
+
+Title: Blogs
+---
+@Html.Partial("_partials/_titleHeader")
+
+<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 mb-4">
+    @foreach (IDocument document in Model.GetChildren())
+    {
+        @Html.Partial("/_partials/_post.cshtml", document)   
+    }
+</div>
+
+
+@{
+    int totalPostCount = Outputs.FromPipeline("Content")
+            .FilterSources(GlobalMetadata.GetBlogSources(Document))
+            .Where(item => item.GetBool(BlogMetadataKeys.IsActive))
+            .Count();
+
+    int totalPages = totalPostCount / GlobalMetadata.GetPageSize(Document);
+    totalPages = totalPostCount % GlobalMetadata.GetPageSize(Document) == 0 ? totalPages : totalPages + 1;
+    int currentPage= Document.GetInt(Keys.Index);
+
+    IDocument previous = Model.GetDocument(Keys.Previous);
+    IDocument next = Model.GetDocument(Keys.Next);
+}
+
+<div class="row">
+    <div class="col-md-12 d-flex justify-content-end">
+        <nav aria-label="...">
+            <ul class="pagination pagination-lg">
+                @if (previous != null)
+                {
+                    <li class="page-item"><a class="page-link" href="@previous.GetLink()"><i class="fa-solid fa-angles-left me-2"></i>Newer</a></li>
+                }
+                else
+                {
+                    <li class="page-item disabled"><a class="page-link"><i class="fa-solid fa-angles-left me-2"></i>Newer</a></li>
+                }
+               
+                <li class="page-item active"><a class="page-link">Page @currentPage of @totalPages</a></li>
+
+                @if (next != null)
+                {
+                    <li class="page-item"><a class="page-link" href="@next.GetLink()">Older<i class="fa-solid fa-angles-right ms-2"></i></a></li>
+                }
+                else
+                {
+                    <li class="page-item disabled"><a class="page-link">Older<i class="fa-solid fa-angles-right ms-2"></i></a></li>
+                }
+            </ul>
+        </nav>
+    </div>
+</div>
+
+
+@* 
+References for Archive
+1. https://github.com/statiqdev/Statiq.Web/blob/main/examples/Statiq.Web.Examples/input/archives/paged-archive.cshtml 
+
+References for Enumerate
+1. https://github.com/dotnet-foundation/website/blob/main/input/blog/archive.cshtml *@
