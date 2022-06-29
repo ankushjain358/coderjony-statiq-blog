@@ -5,6 +5,7 @@ IsActive: true
 Tags:
   - .NET
   - AWS
+  - .NET on AWS
   - CloudWatch
 ---
 In this post, we will understand how to use Log4Net in .NET Core application to store logs in AWS CloudWatch.

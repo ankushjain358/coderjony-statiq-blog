@@ -3,8 +3,9 @@ Published: 18/05/2022
 Author: Ankush Jain
 IsActive: true
 Tags:
-  - tooling
-  - GitHub
+  - .NET
+  - AWS
+  - .NET on AWS
 ---
 In this post, we will understand how can we implement the following things when using AWS Lambda with .NET Core.
 
