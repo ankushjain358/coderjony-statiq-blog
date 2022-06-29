@@ -11,6 +11,7 @@ namespace Coderjony.Statiq.Blog
         public const string IsBlogPost = "IsBlogPost";
         public const string ShowInNavbar = "ShowInNavbar";
         public const string Layout = "Layout";
+        public const string PageSize = "PageSize";
     }
 
     public class GlobalMetadata
@@ -21,5 +22,6 @@ namespace Coderjony.Statiq.Blog
         public static string GetBlogSources(IDocument document) { return document.GetString(GlobalMetadataKeys.BlogSources); }
         public static string GetLayout(IDocument document) { return document.GetString(GlobalMetadataKeys.Layout); }
         public static bool GetIsBlogPost(IDocument document) { return document.GetBool(GlobalMetadataKeys.IsBlogPost); }
+        public static int GetPageSize(IDocument document) { return document.GetInt(GlobalMetadataKeys.PageSize); }
     }
 }
