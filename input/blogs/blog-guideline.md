@@ -1,10 +1,9 @@
 Title: Blog Guideline for CoderJony
-Published: 02/08/2021
+Published: 29/06/2022
 Author: Ankush Jain
 IsActive: true
 Tags:
-  - ASP.NET
-  - C#
+  - CoderJony
 ---
 In this post, you can find basic guidelines that you should follow to write effective blog using statiq framework.
 
