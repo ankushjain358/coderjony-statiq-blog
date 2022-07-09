@@ -24,7 +24,7 @@ Title: Tags
                     string badgeStyle = Document.GetString(Keys.GroupKey).Equals(tag.GetTitle(),
                     StringComparison.OrdinalIgnoreCase) ? "btn-warning" : "btn-success";
                     string postCount = tag.GetChildren().Count().ToString();
-                <a href="@Context.GetLink(tag)" class="btn @badgeStyle"> @tag.GetTitle() (@postCount)</a>
+                <a href="@Context.GetLink(tag)" class="btn @badgeStyle mb-2"> @tag.GetTitle() (@postCount)</a>
                 }
         </div>
     </div>
@@ -48,7 +48,7 @@ else
                 @foreach (IDocument tag in Document.GetChildren().OrderByDescending(x => x.GetChildren().Count()))
                 {
                     string postCount = tag.GetChildren().Count().ToString();
-                    <a role="button" href="@Context.GetLink(tag)" class="btn btn-success"> @tag.GetTitle()
+                    <a role="button" href="@Context.GetLink(tag)" class="btn btn-success mb-2"> @tag.GetTitle()
                         (@postCount)</a>
                 }
             </div>
