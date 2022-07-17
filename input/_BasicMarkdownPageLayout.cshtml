@@ -1,0 +1,14 @@
+@{
+    Layout = @"/_Layout.cshtml";
+}
+
+@Html.Partial("_partials/_titleHeader")
+
+<!-- Basic page layout -->
+<div class="container">
+    <div class="row">
+        <div class="col-12 markdown-body bg-light">
+            @RenderBody()
+        </div>
+    </div>
+</div>

@@ -1,0 +1,33 @@
+@{
+    IDocument[] posts = Outputs.FromPipeline("Content")
+            .FilterSources(GlobalMetadata.GetBlogSources(Document))
+            .OrderByDescending(item => item.GetDateTime(BlogMetadataKeys.Published))
+            .Where(item => item.GetBool(BlogMetadataKeys.IsActive))
+            .Take(10)
+            .ToArray();
+}
+
+<div class="row">
+
+    <div class="col-md-12">
+        <h2 class="mb-3 pb-2 border-bottom">Recent Posts</h2>
+    </div>
+
+    @foreach (var post in posts)
+    {
+        string imagePath = BlogMetadata.GetBlogImage(Model, Document,BlogImageType.BigThumbnail);
+        
+        <div class="col-md-6 mb-2">
+            <div class="card shadow-sm" title="@post.GetTitle()">
+                <a href="@post.GetLink()"><img src="@imagePath" class="card-img-top" alt="@Model.GetTitle()"></a>
+                <div class="card-body">
+                    <b class="cj-sidebar-title"><a href="@post.GetLink()" class="text-decoration-none link-dark">@post.GetTitle()</a></b>
+                    <div class="d-flex justify-content-between align-items-center mt-1"> 
+                        <small class="text-muted">By @post.GetString(WebKeys.Author)</small> 
+                        <small class="text-muted">@post.GetDateTime(WebKeys.Published).ToString("MMM, yyyy") </small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>
