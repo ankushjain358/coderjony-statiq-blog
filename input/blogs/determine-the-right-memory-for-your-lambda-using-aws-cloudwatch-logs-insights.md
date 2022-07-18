@@ -65,14 +65,14 @@ Follow below easy steps to run a query in **Amazon CloudWatch Logs Insights**.
 
 
 
+```markup
+filter @type = "REPORT"
+      | stats max(@memorySize / 1000 / 1000) as provisonedMemoryMB,
+          min(@maxMemoryUsed / 1000 / 1000) as smallestMemoryRequestMB,
+          avg(@maxMemoryUsed / 1000 / 1000) as avgMemoryUsedMB,
+          max(@maxMemoryUsed / 1000 / 1000) as maxMemoryUsedMB,
+          provisonedMemoryMB - maxMemoryUsedMB as overProvisionedMB
 ```
-    filter @type = "REPORT"
-          | stats max(@memorySize / 1000 / 1000) as provisonedMemoryMB,
-              min(@maxMemoryUsed / 1000 / 1000) as smallestMemoryRequestMB,
-              avg(@maxMemoryUsed / 1000 / 1000) as avgMemoryUsedMB,
-              max(@maxMemoryUsed / 1000 / 1000) as maxMemoryUsedMB,
-              provisonedMemoryMB - maxMemoryUsedMB as overProvisionedMB
-    ```
 
 Here is an screenshot with above query: ![image](https://user-images.githubusercontent.com/13661966/178106632-27a9c55c-df2a-435f-9e31-ab9cfdb56f2a.png)
 
