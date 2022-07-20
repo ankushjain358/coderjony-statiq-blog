@@ -13,8 +13,6 @@ In this post, we will understand how can we implement the following things when 
 *   Logging
 *   Dependency Injection
 
-
-
 ## Overview
 When we create an AWS Lambda project in Visual Studio, we just get basic `FunctionHandler` method inside `Function` class. 
 
@@ -31,7 +29,7 @@ We will be implementing following things in this post further.
 ## Step 1: Install NuGet packages
 We would need below packages to implement *Configuration*, *Logging* & *Dependency Injection* in our Lambda project. Just update `csproj` file to have `ItemGroup` section like below, or install these packages manually. 
 
-```
+```xml
 <ItemGroup>
     <!-- Default Lambda packages specific to Lambda  -->
     <PackageReference Include="Amazon.Lambda.Core" Version="2.1.0" />
@@ -58,7 +56,7 @@ We would need below packages to implement *Configuration*, *Logging* & *Dependen
 ## Step 2: Create a `Startup` class file
 Create a `Startup.cs` class file with below content. Code is self explanatory.
 
-```
+```cs
 public class Startup
 {
     public IServiceProvider Setup()
@@ -107,7 +105,7 @@ public class Startup
 ```
 
 You may also need to add below namespaces.
-```
+```cs
 using Amazon.Extensions.NETCore.Setup;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -118,7 +116,7 @@ using Microsoft.Extensions.Logging;
 Create `ProgramEntryPoint` class with `Handler` method. Inject all the dependencies inside the constructor of this class. We will invoke `Handler` method of this class from original `FunctionHandler`.
 
 ### 3.1. `IProgramEntryPoint` interface
-```
+```cs
 public interface IProgramEntryPoint
 {
     Task<string> Handler(string input);
@@ -126,7 +124,7 @@ public interface IProgramEntryPoint
 ```
 
 ### 3.2. `ProgramEntryPoint` class
-```
+```cs
 public class ProgramEntryPoint : IProgramEntryPoint
 {
     private readonly ILogger<ProgramEntryPoint> _logger;
@@ -155,7 +153,7 @@ Here, we are mainly doing 2 things:
 
 Also, it is important to understand, `Function` class is Singleton in AWS Lambda. Multiple invocations of AWS Lambda will not execute Constructor logic multiple times, that will be executed only once in the beginning, and class will remain singleton until Lambda compute is alive.
 
-```
+```cs
 public class Function
 {
     private readonly IProgramEntryPoint _programEntryPoint;
