@@ -3,7 +3,10 @@ Published: 09/07/2022
 Author: Ankush Jain
 IsActive: true
 Tags:
-  - Tag1
+  - .NET
+  - AWS
+  - .NET on AWS
+  - Lambda
 ---
 Determining the right memory for your Lambda Function is one of the important things you should know. This will help you in both - performance optimization and cost management.
 
@@ -16,28 +19,26 @@ In this post, you will understand one of the way to figure out the right amount 
 This approach makes use of **Amazon CloudWatch** logs. So, make sure Lambda execution role has enough permission to send logs to Amazon CloudWatch.
 
 ## Step 1: Invoke Lambda Function N Times
-
 In the first step, you just need to invoke your Lambda Function multiple times, say 10 times, 50 times, 100 times or more. These executions will generate logs in **Amazon CloudWatch**, that you will be using in further steps.
 
 To invoke your Lambda Function multiple times, you can use any approach from the following:
-*   Use some Load Testing tool such as JMeter, k6, NBomber, etc.
-*   Use EventBridge rule to run on a schedule and invoke Lambda
-*   Invoke Lambda Function using code
-*   Invoke Lambda Function manually from console
+* Use some Load Testing tool such as JMeter, k6, NBomber, etc.
+* Use EventBridge rule to run on a schedule and invoke Lambda
+* Invoke Lambda Function using code
+* Invoke Lambda Function manually from console
 
 or any other way which you are comfortable with.
 
 ## Step 2: Query Logs using Amazon CloudWatch Logs Insights
-
-**Amazon CloudWatch Logs Insights** allows you to search and analyze your log data stored in Amazon CloudWatch Logs. You can perform queries to efficiently and effectively analyze log data for specific use cases.
-
-Example of most common use cases:
-*   Lambda: View latency statistics for 5-minute intervals
-*   Lambda: Determine the amount of overprovisioned memory
-*   Lambda: Find the most expensive requests
-*   VPC Flow Logs: Top 20 source IP addresses with highest number of rejected requests
-*   Common queries: Number of exceptions logged every 5 minutes
-*   Common queries: 25 most recently added log events
+>  **Amazon CloudWatch Logs Insights** allows you to search and analyze your log data stored in Amazon CloudWatch Logs. You can perform queries to efficiently and effectively analyze log data for specific use cases.
+>
+>  Example of most common use cases:
+>  * Lambda: View latency statistics for 5-minute intervals
+>  * Lambda: Determine the amount of overprovisioned memory
+>  * Lambda: Find the most expensive requests
+>  * VPC Flow Logs: Top 20 source IP addresses with highest number of rejected requests
+>  * Common queries: Number of exceptions logged every 5 minutes
+>  * Common queries: 25 most recently added log events
 
 
 
