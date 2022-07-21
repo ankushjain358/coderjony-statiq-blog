@@ -19,11 +19,17 @@ We will be using below tools and frameworks in this post going forward.
 *   AWS account
 
 ## Step 1: Create a new Lambda project in Visual Studio
-Open Visual Studio, create a new project with **AWS Lambda Project** template as shown in below picture. To get AWS project templates, you have to install [AWS Toolkit for Visual Studio](https://aws.amazon.com/visualstudio/) first. ![Serilog in AWS Lambda using .NET Core](/img/blogs/serilog-in-aws-lambda-using-net-core/1-serilog-in-aws-lambda-using-net-core.png)
+Open Visual Studio, create a new project with **AWS Lambda Project** template as shown in below picture. To get AWS project templates, you have to install [AWS Toolkit for Visual Studio](https://aws.amazon.com/visualstudio/) first. 
 
-In the next step, provide some necessary information as per the below picture, and then click on create button. ![Serilog in AWS Lambda using .NET Core](/img/blogs/serilog-in-aws-lambda-using-net-core/2-serilog-in-aws-lambda-using-net-core.png)
+![Serilog in AWS Lambda using .NET Core](/img/blogs/serilog-in-aws-lambda-using-net-core/1-serilog-in-aws-lambda-using-net-core.png)
 
-Now, select a **Blue Print** as per your application's need. Here, I am selecting **Empty Function** to keep things simple. ![Serilog in AWS Lambda using .NET Core](/img/blogs/serilog-in-aws-lambda-using-net-core/3-serilog-in-aws-lambda-using-net-core.png)
+In the next step, provide some necessary information as per the below picture, and then click on create button. 
+
+![Serilog in AWS Lambda using .NET Core](/img/blogs/serilog-in-aws-lambda-using-net-core/2-serilog-in-aws-lambda-using-net-core.png)
+
+Now, select a **Blue Print** as per your application's need. Here, I am selecting **Empty Function** to keep things simple. 
+
+![Serilog in AWS Lambda using .NET Core](/img/blogs/serilog-in-aws-lambda-using-net-core/3-serilog-in-aws-lambda-using-net-core.png)
 
 ## Step 2: Install NuGet packages for Serilog
 Install following NuGet packages to install Serilog in your Lambda Function.
@@ -37,7 +43,9 @@ Install-Package Serilog.Sinks.Console
 *   **Serilog.Settings.Configuration** - This package allows Serilog to read the settings from the configuration file such as `appsettings.json`.
 *   **Serilog.Sinks.Console** -  This package is used to sink the logs in console.
 
-In this picture, you can see we have installed above mentioned NuGet packages. ![Serilog in AWS Lambda using .NET Core](/img/blogs/serilog-in-aws-lambda-using-net-core/4-serilog-in-aws-lambda-using-net-core.png)
+In this picture, you can see we have installed above mentioned NuGet packages. 
+
+![Serilog in AWS Lambda using .NET Core](/img/blogs/serilog-in-aws-lambda-using-net-core/4-serilog-in-aws-lambda-using-net-core.png)
 
 **Important:** By default, everything that we write to the Console from within an AWS Lambda function, ends up in AWS CloudWatch, so if we are writing to the Console via `Serilog.Sinks.Console`, then all the logs by default will get stored in AWS CloudWatch log group. We don't have to do anything extra for this.
 
@@ -61,10 +69,14 @@ Also, don't forget to set **Copy to Output Directory** property to **Copy always
 }
 ```
 
-Your `appsettings.json` file should look like below: ![Serilog in AWS Lambda using .NET Core](/img/blogs/serilog-in-aws-lambda-using-net-core/5-serilog-in-aws-lambda-using-net-core.png)
+Your `appsettings.json` file should look like below: 
+
+![Serilog in AWS Lambda using .NET Core](/img/blogs/serilog-in-aws-lambda-using-net-core/5-serilog-in-aws-lambda-using-net-core.png)
 
 ## Step 4: Read Serilog configuration in Lambda Function
-Install `Microsoft.Extensions.Configuration.Json` NuGet package to read configurations from `appsettings.json` file. ![Serilog in AWS Lambda using .NET Core](/img/blogs/serilog-in-aws-lambda-using-net-core/6-serilog-in-aws-lambda-using-net-core.png)
+Install `Microsoft.Extensions.Configuration.Json` NuGet package to read configurations from `appsettings.json` file. 
+
+![Serilog in AWS Lambda using .NET Core](/img/blogs/serilog-in-aws-lambda-using-net-core/6-serilog-in-aws-lambda-using-net-core.png)
 
 After installing above NuGet package, you can initialize the Serilog logger by reading the configurations from `appsettings.json` file inside the constructor. 
 
@@ -114,10 +126,22 @@ namespace AWSLambda.SerilogDemo
 ```
 
 ## Step 5: Deploy the Lambda Function
-Right click on the Lambda project and select **Publish to AWS Lambda...** This will open up below window. Verify all the information and click on Next. ![Serilog in AWS Lambda using .NET Core](/img/blogs/serilog-in-aws-lambda-using-net-core/8-serilog-in-aws-lambda-using-net-core.png) On this window, make sure you select the `lambda_exec_BasicLambda` role. This basic lambda role has enough permissions required to store the logs into AWS CloudWatch. ![Serilog in AWS Lambda using .NET Core](/img/blogs/serilog-in-aws-lambda-using-net-core/9-serilog-in-aws-lambda-using-net-core.png)
+Right click on the Lambda project and select **Publish to AWS Lambda...** This will open up below window. Verify all the information and click on Next. 
+
+![Serilog in AWS Lambda using .NET Core](/img/blogs/serilog-in-aws-lambda-using-net-core/8-serilog-in-aws-lambda-using-net-core.png) 
+
+On this window, make sure you select the `lambda_exec_BasicLambda` role. This basic lambda role has enough permissions required to store the logs into AWS CloudWatch. 
+
+![Serilog in AWS Lambda using .NET Core](/img/blogs/serilog-in-aws-lambda-using-net-core/9-serilog-in-aws-lambda-using-net-core.png)
 
 ## Step 6: Test & Verify
-Once Lambda Function is deployed successfully, we can test it by invoking it from the Visual Studio itself. You can see in below picture, log information is getting printed, that means Serilog is doing its job. ![Serilog in AWS Lambda using .NET Core](/img/blogs/serilog-in-aws-lambda-using-net-core/10-serilog-in-aws-lambda-using-net-core.png) We can also verify it from AWS CloudWatch console. ![Serilog in AWS Lambda using .NET Core](/img/blogs/serilog-in-aws-lambda-using-net-core/11-serilog-in-aws-lambda-using-net-core.png)
+Once Lambda Function is deployed successfully, we can test it by invoking it from the Visual Studio itself. You can see in below picture, log information is getting printed, that means Serilog is doing its job. 
+
+![Serilog in AWS Lambda using .NET Core](/img/blogs/serilog-in-aws-lambda-using-net-core/10-serilog-in-aws-lambda-using-net-core.png) 
+
+We can also verify it from AWS CloudWatch console. 
+
+![Serilog in AWS Lambda using .NET Core](/img/blogs/serilog-in-aws-lambda-using-net-core/11-serilog-in-aws-lambda-using-net-core.png)
 
 That's all.
 
@@ -128,7 +152,4 @@ Thank You ❤️
 
 ## References
 *   [Serilog in ASP.NET Core 3.1](https://codewithmukesh.com/blog/serilog-in-aspnet-core-3-1/)
-*   [Serilog - Getting Started](https://github.com/serilog/serilog/wiki/Getting-Started)
-
-
-                
+*   [Serilog - Getting Started](https://github.com/serilog/serilog/wiki/Getting-Started)    
