@@ -10,7 +10,7 @@ Tags:
 ---
 In this post, we will understand, how to easily get started with CDK in .NET.
 
-CDK stands for Cloud Development Kit. CDK allows developers to provision the resources in AWS cloud programatically. CDK supports a variety of programming languages inclding C#, Java, Python, Go, JavaScript & TypeScript.
+CDK stands for **Cloud Development Kit**. CDK allows developers to provision the resources in AWS cloud programmatically. CDK supports a variety of programming languages including C#, Java, Python, Go, JavaScript & TypeScript.
 
 ## Step 1: Install CDK CLI
 Run below command to install CDK CLI using NPM.
@@ -97,7 +97,7 @@ dotnet build
 ```
 
 ## Step 6: Bootstrapping AWS environment for CDK deployment
-You need to provision few AWS resources in advance in order to deploy a CDK app in an envionment. Those resources includes:
+You need to provision few AWS resources in advance in order to deploy a CDK app in an environment. Those resources includes:
 - **Amazon S3 bucket** for storing CloudFormation files 
 - **IAM roles** that grant permissions needed to perform deployments
 
@@ -105,7 +105,7 @@ The process of provisioning these initial resources is called _bootstrapping_.
 
 Bootstrapping is required only once per environment, where environment is a combination of target AWS account & region into which the stack is intended to be deployed..
 
-To bootstrap your AWS envionment for CDK deployment, run below command. 
+To bootstrap your AWS environment for CDK deployment, run below command. 
 ```bash
 cdk bootstrap
 ```
@@ -151,7 +151,7 @@ To delete all the resources created by this Stack, just press **Delete** button 
 
 
 ## Conclusion
-In this post, you learned how easily can you deploy resources programatically using AWS CDK. Please let me know your thoughts and feedback in the comment section below.
+In this post, you learned how easily can you deploy resources programmatically using AWS CDK. Please let me know your thoughts and feedback in the comment section below.
 
 Thank You ❤️
 
