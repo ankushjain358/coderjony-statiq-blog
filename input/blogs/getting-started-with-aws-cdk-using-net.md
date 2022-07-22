@@ -47,10 +47,10 @@ Once you open the solution, you can see the `Program.cs` file. This contains a *
 
 ## Step 3: Install NuGet packages
 Install following NuGet packages to create an S3 bucket and DynamoDB table using CDK.
-```cs
-Amazon.CDK
-Amazon.CDK.AWS.S3
-Amazon.CDK.AWS.DynamoDB
+```ps
+Install-Package Amazon.CDK
+Install-Package Amazon.CDK.AWS.S3
+Install-Package Amazon.CDK.AWS.DynamoDB
 ```
 `Amazon.CDK` is the base package, that must be installed whenever you are working with CDK.
 
