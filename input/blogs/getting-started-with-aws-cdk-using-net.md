@@ -103,7 +103,7 @@ You need to provision few AWS resources in advance in order to deploy a CDK app 
 
 The process of provisioning these initial resources is called _bootstrapping_.
 
-Bootstrapping is required only once per environment, where environment is a combination of target AWS account & region into which the stack is intended to be deployed..
+Bootstrapping is required only once per environment, where the _environment_ is a combination of target AWS account & region into which the stack is intended to be deployed..
 
 To bootstrap your AWS environment for CDK deployment, run below command. 
 ```bash
@@ -113,18 +113,18 @@ Running above command will create necessary resources in AWS. See below screensh
 
 ![image](https://user-images.githubusercontent.com/13661966/180462232-6d69576c-354f-4fb5-840a-4f0c0ccd51d4.png)
 
-Here is another screenshot from the CDK Stack from AWS Console.
+Here is another screenshot of the CDK Stack from AWS Console.
 
 ![image](https://user-images.githubusercontent.com/13661966/180472066-1a3d4e52-5f4c-461f-b796-27227b49a8d5.png)
 
 
 ## Step 5: Deploy the CDK stack
-Run below to go to the root folder, as you should be on `src` folder due to previous step. 
+Run below command to go to the root folder, as you should be on `src` folder due to previous step. 
 ``bash
 cd.. 
 ``
 
-Next, run following command to deploy the CDK stack.
+Next, run the following command to deploy the CDK stack.
 ```bash
 cdk deploy
 ```
