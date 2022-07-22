@@ -29,7 +29,7 @@ mkdir cdk-sample-app
 cd cdk-sample-app
 ```
 Now, run below command to quickly generate basic template to get started. This basic template includes .NET solution with one project.
-```
+```bash
 cdk init app --language csharp
 ```
 This is how the directory structure look like.
@@ -47,7 +47,7 @@ Once you open the solution, you can see the `Program.cs` file. This contains a *
 
 ## Step 3: Install NuGet packages
 Install following NuGet packages to create an S3 bucket and DynamoDB table using CDK.
-```
+```cs
 Amazon.CDK
 Amazon.CDK.AWS.S3
 Amazon.CDK.AWS.DynamoDB
@@ -91,7 +91,7 @@ public class CdkSampleAppStack : Stack
 
 ## Step 5: Build the application
 Run following command to build this application.
-```
+```bash
 cd src
 dotnet build
 ```
@@ -106,7 +106,7 @@ The process of provisioning these initial resources is called _bootstrapping_.
 Bootstrapping is required only once per environment, where environment is a combination of target AWS account & region into which the stack is intended to be deployed..
 
 To bootstrap your AWS envionment for CDK deployment, run below command. 
-```
+```bash
 cdk bootstrap
 ```
 Running above command will create necessary resources in AWS. See below screenshot.
@@ -120,12 +120,12 @@ Here is another screenshot from the CDK Stack from AWS Console.
 
 ## Step 5: Deploy the CDK stack
 Run below to go to the root folder, as you should be on `src` folder due to previous step. 
-``
+``bash
 cd.. 
 ``
 
 Next, run following command to deploy the CDK stack.
-```
+```bash
 cdk deploy
 ```
 Running the above command will deploy the entire stack on AWS.
