@@ -7,7 +7,7 @@ Tags:
   - AWS
   - .NET on AWS
   - Lambda
-UniqueIdentifier: d2038e01-b100-4ec2-bbf7-169acbf514dd
+UniqueIdentifier: aa20117e-f30a-4223-8093-7b654135fe4c
 ---
 In this post, we will understand how can we implement the following things when using AWS Lambda with .NET Core.
 *   Configuration
