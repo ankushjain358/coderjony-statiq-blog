@@ -5,7 +5,7 @@ IsActive: true
 Tags:
   - Tag1
 ---
-In this post, we will understand how can we delete untracked files present in the git repository. To understand what are Untracked Files? Refer this - [What are Untracked Files in Git?](http://www.coderjony.com/blogs/what-are-untracked-files-in-git/)
+In this post, we will understand how can we delete untracked files present in the git repository. To understand what are Untracked Files? Refer to this - [What are Untracked Files in Git?](http://www.coderjony.com/blogs/what-are-untracked-files-in-git/)
 
 ## Deleting Untracked Files
 
@@ -49,6 +49,6 @@ To delete the files from the repository, use the below commands.
 
 
 
-You can also refer this StackOverflow link to know more about - [How to delete untracked files in Git?](https://stackoverflow.com/a/64966/1273882)
+You can also refer to this StackOverflow link to know more about - [How to delete untracked files in Git?](https://stackoverflow.com/a/64966/1273882)
 
                 

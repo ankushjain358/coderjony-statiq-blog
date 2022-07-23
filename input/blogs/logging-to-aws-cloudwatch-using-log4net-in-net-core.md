@@ -9,22 +9,22 @@ Tags:
   - Logging
   - CloudWatch
 ---
-In this post, we will understand how to use Log4Net in .NET Core application to store logs in AWS CloudWatch.
+In this post, we will understand how to use Log4Net in the .NET Core application to store logs in AWS CloudWatch.
 
 ## Overview
-By default, .NET Core provides its own logging framework. Additionally, it provides Logging APIs that enables other developers to implement their own Logging Provider. A Logging Provider is just an implementation of `Microsoft.Extensions.Logging.ILogger` interface. 
+By default, .NET Core provides its own logging framework. Additionally, it provides Logging APIs that enable other developers to implement their own Logging Providers. A Logging Provider is just an implementation of `Microsoft.Extensions.Logging.ILogger` interface. 
 
-`Log4Net` officially does not provide any Logging Provider. But, there are community developed Logging Providers that we can use in our application. In this demo, we will be using [Microsoft.Extensions.Logging.Log4Net.AspNetCore](https://www.nuget.org/packages/Microsoft.Extensions.Logging.Log4Net.AspNetCore/) NuGet package.
+`Log4Net` officially does not provide any Logging Provider. But, there are community-developed Logging Providers that we can use in our application. In this demo, we will be using [Microsoft.Extensions.Logging.Log4Net.AspNetCore](https://www.nuget.org/packages/Microsoft.Extensions.Logging.Log4Net.AspNetCore/) NuGet package.
 
-## Step 1: Install NuGet package
+## Step 1: Install the NuGet package
 Install below NuGet package:
-
-`PM> Install-Package Microsoft.Extensions.Logging.Log4Net.AspNetCore`
+```powershell
+PM> Install-Package Microsoft.Extensions.Logging.Log4Net.AspNetCore
+```
 
 This package additionally includes the following things:
 *   **Logging Provider:** Implementation of `Microsoft.Extensions.Logging.ILogger` for Log4Net.
 *   **Extension method:** To add the Logging Provider to .NET Core Logger Factory in startup class or similar.
-
 
 By default, **Log4Net** comes along with default appenders such as `Debug`, `Console`, `File`, etc.
 
@@ -42,7 +42,7 @@ builder.Host.ConfigureLogging((context, logging) =>
 ```
 
 ### For Non-Host Console Apps
-Applications not having Generic Host implementation may use below code to configure Log4Net.
+Applications not having Generic Host implementation may use the below code to configure Log4Net.
 ```cs
 var loggerFactory = LoggerFactory.Create(builder =>
 {
@@ -54,7 +54,7 @@ logger.LogInformation("Example log message");</program>
 ```
 
 ## Step 3: Add `log4net.config` file
-Add `log4net.config` file with below content.
+Add `log4net.config` file with the below content.
 ```xml
 <log4net>
     <root>
@@ -80,7 +80,7 @@ Add `log4net.config` file with below content.
     </appender>
 </log4net>
 ```
-Above file is configured with 2 appenders - `Console` & `File`.
+The above file is configured with 2 appenders - `Console` & `File`.
 
 Also, don't forget to set **Copy to Output Directory** to **Copy always** for this file.
 
@@ -91,13 +91,14 @@ An appender is a C# class that can transform a log message, including its proper
 
 [Click here to see the list of available appenders](https://logging.apache.org/log4net/release/framework-support.html#appenders)
 
-## Step 4: Install AWS CloudWatch appender
-Install following NuGet package for AWS CloudWatch appender.
-
-`PM> Install-Package AWS.Logger.Log4net`
+## Step 4: Install the AWS CloudWatch appender
+Install the following NuGet package for the AWS CloudWatch appender.
+```powershell
+PM> Install-Package AWS.Logger.Log4net
+```
 
 ## Step 5: Modify `log4net.config` file
-Now, modify existing `log4net.config` file with AWS CloudWatch appender settings.
+Now, modify the existing `log4net.` config` file with AWS CloudWatch appender settings.
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
 <log4net>
@@ -134,12 +135,12 @@ Now, modify existing `log4net.config` file with AWS CloudWatch appender settings
 ```
 
 ## Step 6: Configuring AWS credentials
-**AmazonCloudWatchLogsClient** from the AWS SDK requires AWS credentials. To correctly associate credentials with the library, there are following options.
+**AmazonCloudWatchLogsClient** from the AWS SDK requires AWS credentials. To correctly associate credentials with the library, there are the following options.
 * **Instance profile:** Use IAM Profile set on your EC2 instance machine or ECS Task.
 * **Credential profile:** Create a credentials profile with your AWS credentials.
 * **Environment Variables:** Use Environment Variables.
 
-For now, just add `AWS_PROFILE` environment variable in application's `launchSettings.json` file.
+For now, just add `AWS_PROFILE` environment variable in the application's `launchSettings.json` file.
 ```json
 "environmentVariables": {
     "ASPNETCORE_ENVIRONMENT": "Development",
@@ -147,7 +148,7 @@ For now, just add `AWS_PROFILE` environment variable in application's `launchSet
     }
 ```
 
-Also make sure, AWS credentials profile have enough IAM permissions to access and write logs in CloudWatch.
+Also, make sure, the AWS credentials profile has enough IAM permissions to access and write logs in CloudWatch.
 
 That's all.
 

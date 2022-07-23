@@ -10,10 +10,10 @@ Tags:
 ---
 In this post, we will understand, how to easily get started with CDK in .NET.
 
-CDK stands for **Cloud Development Kit**. CDK allows developers to provision the resources in AWS cloud programmatically. CDK supports a variety of programming languages including C#, Java, Python, Go, JavaScript & TypeScript.
+CDK stands for **Cloud Development Kit**. CDK allows developers to provision the resources in the AWS cloud programmatically. CDK supports a variety of programming languages including C#, Java, Python, Go, JavaScript & TypeScript.
 
 ## Step 1: Install CDK CLI
-Run below command to install CDK CLI using NPM.
+Run the below command to install CDK CLI using NPM.
 ```bash
 npm install -g aws-cdk
 ```
@@ -23,16 +23,17 @@ In this step, you will create a CDK App. An `App` in the CDK represents the entr
 
 The unit of deployment in the AWS CDK is called a `stack`. All AWS resources defined in a stack, are provisioned as a single unit.
 
-Run below commands to create new directory and then change your working directory to new one.
+Run the below commands to create a new directory and then change your working directory to the new one.
 ```bash
 mkdir cdk-sample-app
 cd cdk-sample-app
 ```
-Now, run below command to quickly generate basic template to get started. This basic template includes .NET solution with one project.
+Now, run the below command to quickly generate a basic template to get started. This basic template includes .NET solution with one project.
 ```bash
 cdk init app --language csharp
 ```
-This is how the directory structure look like.
+
+This is what the directory structure looks like.
 
 ![image](https://user-images.githubusercontent.com/13661966/180404455-7ed3b188-0c2a-46ec-9d8e-96250f3225d1.png)
 
@@ -46,8 +47,8 @@ Once you open the solution, you can see the `Program.cs` file. This contains a *
 
 
 ## Step 3: Install NuGet packages
-Install following NuGet packages to create an S3 bucket and DynamoDB table using CDK.
-```ps
+Install the following NuGet packages to create an S3 bucket and DynamoDB table using CDK.
+```powershell
 Install-Package Amazon.CDK
 Install-Package Amazon.CDK.AWS.S3
 Install-Package Amazon.CDK.AWS.DynamoDB
@@ -55,7 +56,7 @@ Install-Package Amazon.CDK.AWS.DynamoDB
 `Amazon.CDK` is the base package, that must be installed whenever you are working with CDK.
 
 ## Step 4: Modify CDK Stack - Create S3 Bucket & DynamoDB table using CDK
-Go to `Program.cs` and replace existing code with below:
+Go to `Program.cs` and replace the existing code with the below:
 ```cs
 public static void Main(string[] args)
 {
@@ -90,26 +91,26 @@ public class CdkSampleAppStack : Stack
 ```
 
 ## Step 5: Build the application
-Run following command to build this application.
+Run the following command to build this application.
 ```bash
 cd src
 dotnet build
 ```
 
 ## Step 6: Bootstrapping AWS environment for CDK deployment
-You need to provision few AWS resources in advance in order to deploy a CDK app in an environment. Those resources includes:
+You need to provision a few AWS resources in advance to deploy a CDK app in an environment. Those resources include:
 - **Amazon S3 bucket** for storing CloudFormation files 
 - **IAM roles** that grant permissions needed to perform deployments
 
 The process of provisioning these initial resources is called _bootstrapping_.
 
-Bootstrapping is required only once per environment, where the _environment_ is a combination of target AWS account & region into which the stack is intended to be deployed..
+Bootstrapping is required only once per environment, where the _environment_ is a combination of the target AWS account & region into which the stack is intended to be deployed.
 
-To bootstrap your AWS environment for CDK deployment, run below command. 
+To bootstrap, your AWS environment for CDK deployment, run the below command. 
 ```bash
 cdk bootstrap
 ```
-Running above command will create necessary resources in AWS. See below screenshot.
+Running the above command will create necessary resources in AWS. See the below screenshot.
 
 ![image](https://user-images.githubusercontent.com/13661966/180462232-6d69576c-354f-4fb5-840a-4f0c0ccd51d4.png)
 
@@ -119,7 +120,7 @@ Here is another screenshot of the CDK Stack from AWS Console.
 
 
 ## Step 5: Deploy the CDK stack
-Run below command to go to the root folder, as you should be on `src` folder due to previous step. 
+Run the below command to go to the root folder, as you should be on `src` folder due to the previous step. 
 ``bash
 cd.. 
 ``
@@ -132,7 +133,7 @@ Running the above command will deploy the entire stack on AWS.
 
 ![image](https://user-images.githubusercontent.com/13661966/180473805-77621ca5-0ce7-480d-8795-65a087eecb66.png)
 
-The same, we can verify from AWS Console. See below screenshot.
+The same, we can verify from AWS Console. See the below screenshot.
 
 ![image](https://user-images.githubusercontent.com/13661966/180474103-35ae4081-7fcb-4acf-a468-9a479b3b475a.png)
 

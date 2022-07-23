@@ -5,10 +5,10 @@ IsActive: true
 Tags:
   - CoderJony
 ---
-In this post, you can find basic guidelines that you should follow to write effective blog using statiq framework.
+In this post, you can find basic guidelines that you should follow to write an effective blog using statiq framework.
 
 ## Few things to know when writing an effective blog
-- Add following things as part of your blogs page metadata
+- Add the following things as part of your blogs page metadata
   - Title
   - Published 
   - Author

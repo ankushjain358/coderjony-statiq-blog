@@ -14,20 +14,20 @@ In this post, we will understand how can we implement the following things when 
 *   Dependency Injection
 
 ## Overview
-When we create an AWS Lambda project in Visual Studio, we just get basic `FunctionHandler` method inside `Function` class. 
+When we create an AWS Lambda project in Visual Studio, we just get the basic `FunctionHandler` method inside `Function` class. 
 
 .NET Core features such as *Configuration*, *Logging* & *Dependency Injection* are not enabled by default. We need to write some additional code to enable these features. 
 
-Although, Logging is enabled by default, but that uses lambda logger, not .NET Core's default logger.
+Although, Logging is enabled by default, that uses the lambda logger, not the .NET Core's default logger.
 
 ## Implementation - Configuration, Logging & Dependency Injection
-We will be implementing following things in this post further.
+We will be implementing the following things in this post further.
 *   **Configuration** - Configuration support with `appsettings.json` file & `Environment Variables`.
 *   **Logging** - Logging support with default `Console` logging.
 *   **Dependency Injection** - DI support by adding services in `ServiceCollection`.
 
 ## Step 1: Install NuGet packages
-We would need below packages to implement *Configuration*, *Logging* & *Dependency Injection* in our Lambda project. Just update `csproj` file to have `ItemGroup` section like below, or install these packages manually. 
+We would need the below packages to implement *Configuration*, *Logging* & *Dependency Injection* in our Lambda project. Just update `csproj` file to have `ItemGroup` section like below, or install these packages manually. 
 
 ```xml
 <ItemGroup>
@@ -54,7 +54,7 @@ We would need below packages to implement *Configuration*, *Logging* & *Dependen
 ```
 
 ## Step 2: Create a `Startup` class file
-Create a `Startup.cs` class file with below content. Code is self explanatory.
+Create a `Startup.cs` class file with the below content. Code is self-explanatory.
 
 ```cs
 public class Startup
@@ -104,7 +104,7 @@ public class Startup
 }
 ```
 
-You may also need to add below namespaces.
+You may also need to add the below namespaces.
 ```cs
 using Amazon.Extensions.NETCore.Setup;
 using Microsoft.Extensions.Configuration;
@@ -113,7 +113,7 @@ using Microsoft.Extensions.Logging;
 ```
 
 ## Step 3: Create `ProgramEntryPoint` class
-Create `ProgramEntryPoint` class with `Handler` method. Inject all the dependencies inside the constructor of this class. We will invoke `Handler` method of this class from original `FunctionHandler`.
+Create `ProgramEntryPoint` class with `Handler` method. Inject all the dependencies inside the constructor of this class. We will invoke `Handler` method of this class from the original `FunctionHandler`.
 
 ### 3.1. `IProgramEntryPoint` interface
 ```cs
@@ -144,14 +144,14 @@ public class ProgramEntryPoint : IProgramEntryPoint
 ```
 
 ## 4. Modify `Function.cs` class
-Now replace `Function` class content with below content. 
+Now replace `Function` class content with the below content. 
 
 Here, we are mainly doing 2 things:
 
-1.  Inside constructor, we are calling `Setup()` method of `Startup` class. This method will setup everything and will return an instance of `IServiceProvider`. 
+1.  Inside the constructor, we are calling `Setup()` method of `Startup` class. This method will set up everything and will return an instance of `IServiceProvider`. 
 2.  Inside `FunctionHandler`, we are calling `_programEntryPoint.Handler(input)` method to do the actual processing.
 
-Also, it is important to understand, `Function` class is Singleton in AWS Lambda. Multiple invocations of AWS Lambda will not execute Constructor logic multiple times, that will be executed only once in the beginning, and class will remain singleton until Lambda compute is alive.
+Also, it is important to understand, `Function` class is Singleton in AWS Lambda. Multiple invocations of AWS Lambda will not execute Constructor logic multiple times, which will be executed only once in the beginning, and the class will remain singleton until Lambda compute is alive.
 
 ```cs
 public class Function
@@ -178,7 +178,7 @@ That's all.
 
 ## Conclusion
 
-In this post, we learned how easily we can setup *configuration*, *logging* and *dependency injection* in AWS Lambda when using with .NET Core. Please let me know your thoughts and feedback in the comment section below.
+In this post, we learned how easily we can set up _configuration_, *logging* and *dependency injection* in AWS Lambda when using with .NET Core. Please let me know your thoughts and feedback in the comment section below.
 
 Thank You ❤️
 

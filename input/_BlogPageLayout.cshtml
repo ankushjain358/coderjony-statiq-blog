@@ -47,9 +47,9 @@
 </div>
 
 @section scripts {
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/prism.min.js"></script>
+    <script src="@Context.GetLink("/scripts/prism.js")"></script>
 }
 
 @section styles {
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/themes/prism-okaidia.min.css" />
+    <link rel="stylesheet" href="@Context.GetLink("/styles/prism.css")" />
 }
