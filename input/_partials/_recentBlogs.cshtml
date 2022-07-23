@@ -17,7 +17,7 @@
     {
         string imagePath = BlogMetadata.GetBlogImage(Model, Document,BlogImageType.BigThumbnail);
         
-        <div class="col-md-6 mb-2">
+        <div class="col-md-12 mb-3">
             <div class="card shadow-sm" title="@post.GetTitle()">
                 <a href="@post.GetLink()"><img src="@imagePath" class="card-img-top" alt="@Model.GetTitle()"></a>
                 <div class="card-body">

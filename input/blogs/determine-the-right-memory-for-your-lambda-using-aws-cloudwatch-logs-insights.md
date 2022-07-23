@@ -7,6 +7,7 @@ Tags:
   - AWS
   - .NET on AWS
   - Lambda
+UniqueIdentifier: ddfd90fd-cd47-4efd-82c0-ebad95c15c2e
 ---
 Determining the right memory for your Lambda Function is one of the important things you should know. This will help you in both - performance optimization and cost management.
 

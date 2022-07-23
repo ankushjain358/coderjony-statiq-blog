@@ -12,6 +12,7 @@ namespace Coderjony.Statiq.Blog
         public const string ShowInNavbar = "ShowInNavbar";
         public const string Layout = "Layout";
         public const string PageSize = "PageSize";
+        public const string DisqusShortname = "DisqusShortname";
     }
 
     public class GlobalMetadata
@@ -23,5 +24,6 @@ namespace Coderjony.Statiq.Blog
         public static string GetLayout(IDocument document) { return document.GetString(GlobalMetadataKeys.Layout); }
         public static bool GetIsBlogPost(IDocument document) { return document.GetBool(GlobalMetadataKeys.IsBlogPost); }
         public static int GetPageSize(IDocument document) { return document.GetInt(GlobalMetadataKeys.PageSize); }
+        public static string GetDisqusShortname(IDocument document) { return document.GetString(GlobalMetadataKeys.DisqusShortname); }
     }
 }

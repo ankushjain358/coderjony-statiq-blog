@@ -8,6 +8,7 @@ Tags:
   - .NET on AWS
   - Logging
   - CloudWatch
+UniqueIdentifier: d2038e01-b100-4ec2-bbf7-169acbf514dd
 ---
 In this post, we will understand how to use Log4Net in the .NET Core application to store logs in AWS CloudWatch.
 

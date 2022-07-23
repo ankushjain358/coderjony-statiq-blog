@@ -7,6 +7,7 @@ Tags:
   - AWS
   - .NET on AWS
   - CDK
+UniqueIdentifier: aa20117e-f30a-4223-8093-7b654135fe4c
 ---
 In this post, we will understand, how to easily get started with CDK in .NET.
 

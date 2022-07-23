@@ -7,6 +7,7 @@ Tags:
   - AWS
   - .NET on AWS
   - Lambda
+UniqueIdentifier: 94b0372a-b960-4376-89bb-215024679c60
 ---
 In this post, we will understand how to use Serilog in AWS Lambda to store logs in AWS CloudWatch.
 
