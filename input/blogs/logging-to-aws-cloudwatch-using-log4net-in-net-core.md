@@ -3,7 +3,7 @@ Published: 24/04/2022
 Author: Ankush Jain
 IsActive: true
 Tags:
-  - .NET
+  - .NET Core
   - AWS
   - .NET on AWS
   - Logging

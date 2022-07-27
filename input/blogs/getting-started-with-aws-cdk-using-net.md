@@ -3,7 +3,7 @@ Published: 07/22/2022
 Author: Ankush Jain
 IsActive: true
 Tags:
-  - .NET
+  - .NET Core
   - AWS
   - .NET on AWS
   - CDK

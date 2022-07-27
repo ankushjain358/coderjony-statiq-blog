@@ -3,7 +3,7 @@ Published: 09/07/2022
 Author: Ankush Jain
 IsActive: true
 Tags:
-  - .NET
+  - .NET Core
   - AWS
   - .NET on AWS
   - Lambda

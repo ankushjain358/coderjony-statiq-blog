@@ -3,10 +3,8 @@ Published: 11/12/2021
 Author: Ankush Jain
 IsActive: true
 Tags:
-  - Tag1
+  - Security
 ---
-![3 Important Things About Backing Up Data](/img/blogs/3-important-things-about-backing-up-data/3-important-things-about-backing-up-data-1.png)
-
 Backing up data is important, but not that many people bother putting enough effort into making sure that their files are safe. The negligence should not be so prominent given how many different factors can lead to data loss.
 
 You have malware attacks wiping entire databases, power outages that disrupt the flow and crash the systems, hardware problems that cause drives to break down, and even someone using a computer deleting files accidentally.
@@ -16,6 +14,7 @@ Sure, one could argue that recovery software is good enough of a safety net, but
 Whether you are an individual or someone who has to manage vast [amounts of data](https://coderjony.com/blogs/cloud-computing-concepts-high-availability-scalability-elasticity-agility-fault-tolerance-and-disaster-recovery/), it makes sense to take the necessary precautions and back up the files and do so on multiple different channels.
 
 ## Different Devices and Operating Systems
+![3 Important Things About Backing Up Data](/img/blogs/3-important-things-about-backing-up-data/3-important-things-about-backing-up-data-1.png)
 
 Overall, the process of backing up data is relatively similar when you compare the fundamentals regardless of the device. You find a means and copy data from your device to a backup location.
 
@@ -28,14 +27,15 @@ For computers, things are a bit easier. Both laptops and desktop computers come 
 Besides different devices, you also have different operating systems. One thing that stands out about them is that you need to use tailor-made software to backup data. For instance, [macOS users](https://www.techradar.com/how-to/computing/the-ultimate-guide-to-backing-up-your-mac-1318501) stick to Time Machine, which is a built-in application. Keep in mind, though, that third-party software does the job as well. 
 
 ## External Storage Accessories
+![3 Important Things About Backing Up Data](/img/blogs/3-important-things-about-backing-up-data/3-important-things-about-backing-up-data-2.png) 
 
-![3 Important Things About Backing Up Data](/img/blogs/3-important-things-about-backing-up-data/3-important-things-about-backing-up-data-2.png) Let’s move on to the actual data backup. The first way to do it is by relying on external storage accessories.
+Let’s move on to the actual data backup. The first way to do it is by relying on external storage accessories.
 
 The two that usually come to mind first are external hard drives and USB flash sticks. The former is a better choice most of the time because it gives more space. At the same time, hard drives are larger, and it might be a bit awkward to find a space in your room for one or multiple HDDs.
 
 A USB flash stick is more compact, and it is cheaper, but you might find that it does not offer as much storage as you need. And is there really any point in purchasing multiple flash sticks? Probably not, but then again, it comes down to your personal preference.
 
-Creating a backup on an external storage device is as simple as copying files from a computer and pasting them in the drive after mounting them on the device. 
+Creating a backup on an external storage device is as simple as copying files from a computer and pasting them into the drive after mounting them on the device. 
 
 The backup might take a while, particularly if you have a lot of files, though thanks to improvements to computer ports and accessories themselves, the wait is not as long as it used to be. 
 
