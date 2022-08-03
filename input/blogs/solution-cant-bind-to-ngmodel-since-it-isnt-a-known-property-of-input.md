@@ -3,8 +3,21 @@ Published: 25/04/2019
 Author: Ankush Jain
 IsActive: true
 Tags:
-  - Tag1
+  - Angular
 ---
-Just add `FormsModule` in `app.module.ts` file your Angular application.
+Just add `FormsModule` in `app.module.ts` file of your Angular application.
 
+```ts
+import { FormsModule } from '@angular/forms';
+
+[...]
+
+@NgModule({
+  imports: [
+    [...]
+    FormsModule
+  ],
+  [...]
+})
+```
                 
