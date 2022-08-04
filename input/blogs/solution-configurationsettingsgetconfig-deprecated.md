@@ -3,8 +3,15 @@ Published: 14/11/2018
 Author: Ankush Jain
 IsActive: true
 Tags:
-  - Tag1
+  - .NET
 ---
 ## Solution:
 
-Just replace `ConfigurationSettings.GetConfig` with `ConfigurationManager.GetSection` 
+Just replace 
+```cs
+ConfigurationSettings.GetConfig
+```
+with 
+```cs
+ConfigurationManager.GetSection
+```

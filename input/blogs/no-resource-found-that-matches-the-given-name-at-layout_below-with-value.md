@@ -3,7 +3,7 @@ Published: 28/11/2018
 Author: Ankush Jain
 IsActive: true
 Tags:
-  - Tag1
+  - Android
 ---
 ## Solution:
 
@@ -11,10 +11,12 @@ Just change `@id` to `@+id` while defining or referencing an id. This will fix y
 
 For me, I just changed 
 
-`android:layout_below="@id/toolbar_layout"`
-
+```markup
+android:layout_below="@id/toolbar_layout"
+```
 to
-
-`android:layout_below="@+id/toolbar_layout"`
+```markup
+`android:layout_below="@+id/toolbar_layout"
+```
 
                 
