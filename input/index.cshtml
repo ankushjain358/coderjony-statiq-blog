@@ -7,6 +7,7 @@ Description: Welcome to CoderJony. You can find here a huge collection of techni
             .FilterSources(GlobalMetadata.GetBlogSources(Document))
             .OrderByDescending(item => item.GetDateTime(BlogMetadataKeys.Published))
             .Where(item => item.GetBool(BlogMetadataKeys.IsActive))
+            .Take(9)
             .ToArray();
 }
 <div class="bg-light p-5 mb-4 row">

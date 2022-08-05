@@ -1,5 +1,5 @@
 ArchiveSources: => GetString(GlobalMetadataKeys.BlogSources)
-ArchiveFilter: => GetBool("IsActive") 
+ArchiveFilter: => GetBool("IsActive")
 ArchiveKey: Tags
 ArchiveKeyComparer: => StringComparer.OrdinalIgnoreCase.ToConvertingEqualityComparer()
 ArchiveDestination: >
@@ -12,6 +12,7 @@ ArchiveTitle: => GetString("GroupKey")
 Layout: /_Layout.cshtml
 Title: Tags
 ---
+
 @Html.Partial("_partials/_titleHeader")
 
 @if (Document.ContainsKey(Keys.GroupKey))

@@ -3,7 +3,7 @@ Published: 12/11/2018
 Author: Ankush Jain
 IsActive: true
 Tags:
-  - Security
+  - Encoding
   - Cryptography
 ---
 ASCII & Unicode both are character sets & both character sets (ASCII & Unicode) hold a list of characters with unique decimal numbers (code points). A= 65, B=66, C=67 etc.
