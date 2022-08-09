@@ -11,7 +11,7 @@ Media queries allow us to write device-specific CSS & build responsive websites.
 
 Media Queries are part of CSS3.
 
-## Understand Media Query by Example:
+## Understand Media Query by Example
 Suppose, you are developing an application & want the application to look like a native app in mobile and tablet devices while maintaining the full view in the desktop & laptops devices as well. Here you can make use of media queries to write such CSS that will support all major devices and make your application responsive to all devices.
 
 Media Query is just like an ordinary CSS, the only difference is that it is wrapped inside a `@media` block like below.
@@ -43,7 +43,7 @@ Here, this query really means that - "if device width is greater than or equals 
 ## Understand Max-Width
 Here is an example of `max-width` media query:
 
-```csss
+```css
 @media only screen and (max-width: 576px) {...}
 ```
 Here, this query really means that - "if device width is less than or equals to 576px, then apply the CSS defined in this block."
@@ -60,7 +60,7 @@ We can also combine both `min-width` & `max-width` to target a particular screen
 
 Above CSS will be applied to only those screens whose width is greater than 576px and less than 768px.
 
-## Bootstrap uses below breakpoints to handle responsive designs:
+## Bootstrap uses below breakpoints to handle responsive designs
 For the given screen size or larger
 
 ```css
