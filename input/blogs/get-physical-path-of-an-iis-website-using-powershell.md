@@ -8,7 +8,7 @@ Tags:
 ---
 Below piece of code will give you physical path of an IIS website.
 
-```
+```powershell
 Import-Module WebAdministration
 
 [string] $iisWebsiteName = 'Default Web Site'

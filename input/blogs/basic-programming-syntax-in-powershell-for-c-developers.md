@@ -9,17 +9,17 @@ Recently I started working on PowerShell as I was working on C# for a long time.
 
 ## How to use for loop in PowerShell?
 ```powershell
-    # declare & initialize an array
-    [string[]] $names = @("Ankush", "Virat", "Sachin", "MS Dhoni")
+# declare & initialize an array
+[string[]] $names = @("Ankush", "Virat", "Sachin", "MS Dhoni")
 
-    # call for loop
-    For ($i=0; $i -lt $names.count ; $i++) {
+# call for loop
+For ($i=0; $i -lt $names.count ; $i++) {
 
-        [string]$playerName =  $names[$i]
+    [string]$playerName =  $names[$i]
 
-        Write-Output $playerName
-    }
-    ```
+    Write-Output $playerName
+}
+```
 
 ## How to use foreach in PowerShell?
 ```powershell

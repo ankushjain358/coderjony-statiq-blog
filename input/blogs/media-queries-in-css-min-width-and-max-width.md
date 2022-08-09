@@ -26,7 +26,7 @@ Media Query is just like an ordinary CSS, the only difference is that it is wrap
 }
 ```
 
-> I often used to get confused when to use `min-width` & when to use `max-width`. So, I thought to write a blog here & document my understanding so that I can look onto this blog whenever I get confused.
+I often used to get confused when to use `min-width` & when to use `max-width`. So, I thought to write a blog here & document my understanding so that I can look onto this blog whenever I get confused.
 
 ## Understand Min-Width
 Here is an example of `min-width` media query:
@@ -63,7 +63,7 @@ Above CSS will be applied to only those screens whose width is greater than 576p
 ## Bootstrap uses below breakpoints to handle responsive designs:
 For the given screen size or larger
 
-```
+```css
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) { ... }
 
@@ -79,7 +79,7 @@ For the given screen size or larger
 
 For the given screen size or smaller
 
-```
+```css
 // Extra small devices (portrait phones, less than 576px)
 @media (max-width: 575.98px) { ... }
 
