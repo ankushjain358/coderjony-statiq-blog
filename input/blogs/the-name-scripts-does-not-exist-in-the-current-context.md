@@ -18,10 +18,10 @@ Just go to your `Views` folder, open `web.config` & add this missing key. You're
 <add namespace="System.Web.Optimization"/>
 ```
 
-## Things to remember here: 
+## Things To Remember
 1. You must have the reference of `System.Web.Optimization.dll` in your project. 
 2. If not, just install this package from [Nuget](https://www.nuget.org/packages/microsoft.aspnet.web.optimization) with this command - `Install-Package Microsoft.AspNet.Web.Optimization`. 
 3. Ensure that your Views `Web.Config` file have the reference of `System.Web.Optimization`. 
 
-## Example Screenshot: 
+## Example Screenshot 
 ![The name 'Scripts' does not exist in the current context - Solution](/img/blogs/the-name-scripts-does-not-exist-in-the-current-context/the-name-scripts-does-not-exist-in-the-current-context.png)
