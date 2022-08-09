@@ -34,12 +34,18 @@ appearing at the bottom.
 6.  Now you need to do two small things to embed this font on your
 website. First, copy below code & paste it in the head section of your web-page. 
 
-    ![enter image description here](/img/blogs/how-to-use-google-fonts-on-your-website/how-to-use-google-fonts-on-your-website-6.png) Copy it like below in your HTML page. ![enter image description here](/img/blogs/how-to-use-google-fonts-on-your-website/how-to-use-google-fonts-on-your-website-7.png)
+    ![enter image description here](/img/blogs/how-to-use-google-fonts-on-your-website/how-to-use-google-fonts-on-your-website-6.png) 
+    
+    Copy it like below in your HTML page. 
+    
+    ![enter image description here](/img/blogs/how-to-use-google-fonts-on-your-website/how-to-use-google-fonts-on-your-website-7.png)
 
 7.  Now copy below **CSS code** & assign this CSS to the body part of your
 application. 
 
-    ![enter image description here](/img/blogs/how-to-use-google-fonts-on-your-website/how-to-use-google-fonts-on-your-website-8.png) Now apply this CSS on the body part of your web-page like below.  
+    ![enter image description here](/img/blogs/how-to-use-google-fonts-on-your-website/how-to-use-google-fonts-on-your-website-8.png) 
+    
+    Now apply this CSS on the body part of your web-page like below.  
 
     > **Note**: Here I have used on-page CSS. Ideally, you should place CSS code in a separate CSS file.
 
