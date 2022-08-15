@@ -3,7 +3,7 @@ Published: 13/07/2018
 Author: Ankush Jain
 IsActive: true
 Tags:
-  - .NET
+  - Windows Service
 ---
 Sometimes, You may find that window service's executable has been deleted but the service is still present in service viewer.
 

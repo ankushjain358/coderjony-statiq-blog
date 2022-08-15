@@ -3,7 +3,7 @@ Published: 13/07/2018
 Author: Ankush Jain
 IsActive: true
 Tags:
-  - Tag1
+  - Git
 ---
 ## Problem
 Deleted remote branches are still visible in Visual Studio Team Explorer (Branches Section).
