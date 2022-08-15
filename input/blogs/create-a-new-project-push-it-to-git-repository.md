@@ -3,7 +3,8 @@ Published: 22/07/2018
 Author: Ankush Jain
 IsActive: true
 Tags:
-  - Tag1
+  - Git
+  - Visual Studio
 ---
 If you are a beginner to Git then you have come to the right place.
 

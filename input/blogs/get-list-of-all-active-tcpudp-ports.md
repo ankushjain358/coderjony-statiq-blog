@@ -3,7 +3,6 @@ Published: 13/07/2018
 Author: Ankush Jain
 IsActive: true
 Tags:
-  - Tag1
 ---
 Just type `netstat -a` in command prompt & press enter. This will print a list of all active TCP & UDP ports running on your machine.
 
