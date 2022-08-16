@@ -7,7 +7,6 @@ namespace Coderjony.Statiq.Blog
         public const string ImageFolder = "ImageFolder";
         public const string Published = "Published";
         public const string IsActive = "IsActive";
-        public const string UniqueIdentifier = "UniqueIdentifier";
     }
 
     public class BlogMetadata
@@ -18,7 +17,6 @@ namespace Coderjony.Statiq.Blog
         public const int BIG_THUMBNAIL_HEIGHT = 400;
 
         public static string GetImageFolder(IDocument document) { return document.GetString(BlogMetadataKeys.ImageFolder); }
-        public static string GetPageUniqueIdentifier(IDocument document) { return document.GetString(BlogMetadataKeys.UniqueIdentifier); }
         public static string GetBlogImage(IDocument item, IDocument parent, BlogImageType blogImageType = BlogImageType.Default)
         {
             string suffix = "";
