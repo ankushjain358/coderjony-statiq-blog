@@ -1,7 +1,5 @@
 @{
     Layout = @"/_Layout.cshtml";
-
-    bool enableDisqus = !string.IsNullOrWhiteSpace(GlobalMetadata.GetDisqusShortname(Document)) && !string.IsNullOrWhiteSpace(BlogMetadata.GetPageUniqueIdentifier(Document));
 }
 
 <!-- Basic page layout -->
@@ -42,10 +40,7 @@
 
         @RenderBody()
 
-        @if (enableDisqus)
-        {
-            @Html.Partial("_partials/_giscus.cshtml")
-        }
+        @Html.Partial("_partials/_giscus.cshtml")
 
     </div>
     <div class="col-md-4 pt-0 p-3 ps-md-5 pe-md-4">
