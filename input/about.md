@@ -14,7 +14,6 @@ I currently work with [Amazon Web Services](https://aws.amazon.com/) at Pune, In
 
 You can reach out to me at [LinkedIn](https://www.linkedin.com/in/ankush-jain-developer/) or mail me directly at [ankushjain358@gmail.com](mailto:ankushjain358@gmail.com)
 
-
 <div class="row mt-5">
    <div class="col-md-6">
       <h5>Additional Profiles</h5>
