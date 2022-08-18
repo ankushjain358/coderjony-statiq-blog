@@ -1,3 +1,7 @@
+@{
+    var tagsToDisplay = new string[] { ".NET Core", "AWS", "Azure" };
+    var selectedTags = OutputPages.Get("tags.html").GetChildren().Where(item => tagsToDisplay.Contains(item.GetTitle()));
+}
 <footer class="bg-white mt-4">
      @* <div class="container-fluid">
         <div class="d-flex justify-content-between pt-4 px-4">
@@ -17,7 +21,7 @@
     <hr/> *@
     <div class="container-fluid">
         <footer class="py-5 px-4">
-            <div class="row">
+            <div class="row d-flex justify-content-center">
                 <div class="col-md-2 mb-3">
                     <h5>Quick Links</h5>
                     <ul class="nav flex-column">
@@ -43,22 +47,13 @@
                 <div class="col-md-2 mb-3">
                     <h5>Categories</h5>
                     <ul class="nav flex-column">
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">AWS</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Azure</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">.NET</a></li>
+                        @foreach (var item in selectedTags)
+                        {
+                            <li class="nav-item mb-2">
+                                <a class="nav-link p-0 text-muted" href="@item.GetLink()">@item.GetTitle()</a>
+                            </li>
+                        }
                     </ul>
-                </div>
-
-                <div class="col-md-4 offset-md-1 mb-3">
-                    <form>
-                        <h5>Subscribe to our newsletter</h5>
-                        <p>Monthly digest of whats new and exciting from us.</p>
-                        <div class="d-flex w-100 gap-2">
-                            <label for="newsletter1" class="visually-hidden">Email address</label>
-                            <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
-                            <button class="btn btn-primary" type="button">Subscribe</button>
-                        </div>
-                    </form>
                 </div>
             </div>
         </footer>
