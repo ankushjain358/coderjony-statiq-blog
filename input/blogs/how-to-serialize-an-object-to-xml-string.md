@@ -3,19 +3,21 @@ Published: 05/08/2017
 Author: Ankush Jain
 IsActive: true
 Tags:
-  - Tag1
+  - .NET
 ---
 You can use below method to serialize an object to XML string.
 
 Namespaces required:
 
-`using System.Xml.Serialization;
+```cs
+using System.Xml.Serialization;
 using System.IO;
-`
+```
 
 Method definition:
 
-`public string GetXMLString<T>(T objectToSerialize)
+```cs
+public string GetXMLString<T>(T objectToSerialize)
 {
       XmlSerializer xmlSerializer = new XmlSerializer(objectToSerialize.GetType());
 
@@ -25,6 +27,6 @@ Method definition:
             return stringWriter.ToString();
       }
 }
-`
+```
 
                 

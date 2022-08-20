@@ -3,13 +3,13 @@ Published: 25/04/2018
 Author: Ankush Jain
 IsActive: true
 Tags:
-  - Tag1
+  - .NET
 ---
 You can determine type of exception in c# in two ways.
 
 ## Way 1
-
-`catch (Exception ex) 
+```CS
+catch (Exception ex) 
 {
     if (ex is System.ServiceModel.FaultException) 
     {
@@ -20,13 +20,13 @@ You can determine type of exception in c# in two ways.
      // do something
     }
 }
-`
+```
 
 ## Way 2
-
 This is useful when you don't have assembly reference of exception type. In that case, you can use string comparison.
 
-`catch (Exception ex) 
+```cs
+catch (Exception ex) 
 {
      if (ex.GetType().FullName == "System.ServiceModel.FaultException") 
      {
@@ -37,6 +37,5 @@ This is useful when you don't have assembly reference of exception type. In that
       // do something
      }
 }
-`
-
+```
                 

@@ -3,19 +3,20 @@ Published: 25/04/2018
 Author: Ankush Jain
 IsActive: true
 Tags:
-  - Tag1
+  - Umbraco
 ---
 I got this issue after hosting my umbraco website on GoDaddy server. 
 
 ## Solution
 
-`<configuration>
+```xml
+<configuration>
     <system.web>
        <trust level="Full" />
     </system.web>
 </configuration>
-`
+```
 
-This will fix your issue. Happy Coding :)
+This will fix your issue. Happy Coding 😊
 
                 
