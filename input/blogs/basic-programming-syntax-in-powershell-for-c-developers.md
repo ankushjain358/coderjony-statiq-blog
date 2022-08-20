@@ -2,6 +2,7 @@ Title: Basic programming syntax in PowerShell for C# developers
 Published: 02/08/2018
 Author: Ankush Jain
 IsActive: true
+ImageFolder: basic-programming-syntax-in-powershell-for-c-developers
 Tags:
   - PowerShell
 ---

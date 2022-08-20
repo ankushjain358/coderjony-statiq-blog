@@ -2,6 +2,7 @@ Title: no resource found that matches the given name (at 'layout_below' with val
 Published: 28/11/2018
 Author: Ankush Jain
 IsActive: true
+ImageFolder: no-resource-found-that-matches-the-given-name-at-layout_below-with-value
 Tags:
   - Android
 ---

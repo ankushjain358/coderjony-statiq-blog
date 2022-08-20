@@ -2,6 +2,7 @@ Title: ASP.NET Core - Notes for Beginners
 Published: 02/12/2018
 Author: Ankush Jain
 IsActive: true
+ImageFolder: aspnet-core-notes-for-beginners
 Tags:
   - .NET Core
 ---

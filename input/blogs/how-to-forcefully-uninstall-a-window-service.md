@@ -2,6 +2,7 @@ Title: How to forcefully uninstall a window service?
 Published: 13/07/2018
 Author: Ankush Jain
 IsActive: true
+ImageFolder: how-to-forcefully-uninstall-a-window-service
 Tags:
   - Windows Service
 ---

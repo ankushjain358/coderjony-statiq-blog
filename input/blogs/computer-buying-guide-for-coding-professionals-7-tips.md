@@ -2,6 +2,7 @@ Title: Computer Buying Guide for Coding Professionals- 7 Tips
 Published: 17/01/2022
 Author: Ankush Jain
 IsActive: true
+ImageFolder: computer-buying-guide-for-coding-professionals-7-tips
 Tags:
   - Computer
   - Laptop

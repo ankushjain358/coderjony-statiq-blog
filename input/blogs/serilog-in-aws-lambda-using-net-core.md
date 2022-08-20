@@ -2,6 +2,7 @@ Title: Serilog in AWS Lambda using .NET Core
 Published: 14/03/2022
 Author: Ankush Jain
 IsActive: true
+ImageFolder: serilog-in-aws-lambda-using-net-core
 Tags:
   - .NET
   - AWS

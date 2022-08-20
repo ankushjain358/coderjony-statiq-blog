@@ -2,6 +2,7 @@ Title: SOAP - A Protocol, Not a Technology
 Published: 21/02/2018
 Author: Ankush Jain
 IsActive: true
+ImageFolder: soap-a-protocol-not-a-technology
 Tags:
   - WCF
 ---

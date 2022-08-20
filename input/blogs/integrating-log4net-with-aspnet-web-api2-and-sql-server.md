@@ -2,6 +2,7 @@ Title: Integrating Log4Net with ASP.NET Web API2 and SQL Server
 Published: 17/10/2019
 Author: Ankush Jain
 IsActive: true
+ImageFolder: integrating-log4net-with-aspnet-web-api2-and-sql-server
 Tags:
   - .NET
   - Web API

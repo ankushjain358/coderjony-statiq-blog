@@ -2,6 +2,7 @@ Title: Step by Step - Creating a Virtual Machine in a Virtual Network (VNET) in 
 Published: 14/02/2021
 Author: Ankush Jain
 IsActive: true
+ImageFolder: step-by-step-creating-a-virtual-machine-in-a-virtual-network-vnet-in-azure
 Tags:
   - Azure
   - Virtual Machine

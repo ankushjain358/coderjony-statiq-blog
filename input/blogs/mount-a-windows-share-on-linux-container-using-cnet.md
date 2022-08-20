@@ -2,6 +2,7 @@ Title: Mount a Windows Share on Linux container using C#.NET
 Published: 06/08/2020
 Author: Ankush Jain
 IsActive: true
+ImageFolder: mount-a-windows-share-on-linux-container-using-cnet
 Tags:
   - .NET Core
   - Linux

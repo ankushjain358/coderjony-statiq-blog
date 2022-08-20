@@ -2,6 +2,7 @@ Title: List all node modules installed globally & locally in Node.js
 Published: 01/10/2018
 Author: Ankush Jain
 IsActive: true
+ImageFolder: list-all-node-modules-installed-globally-locally-in-nodejs
 Tags:
   - NodeJS
 ---

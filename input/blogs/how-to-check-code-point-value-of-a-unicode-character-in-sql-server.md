@@ -2,6 +2,7 @@ Title: How to check code point value of a Unicode character in SQL Server?
 Published: 23/10/2018
 Author: Ankush Jain
 IsActive: true
+ImageFolder: how-to-check-code-point-value-of-a-unicode-character-in-sql-server
 Tags:
   - SQL Server
 ---

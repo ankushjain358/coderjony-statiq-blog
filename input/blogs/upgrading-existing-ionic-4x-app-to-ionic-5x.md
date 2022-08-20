@@ -2,6 +2,7 @@ Title: Upgrading existing Ionic 4.x app to Ionic 5.x
 Published: 16/02/2020
 Author: Ankush Jain
 IsActive: true
+ImageFolder: upgrading-existing-ionic-4x-app-to-ionic-5x
 Tags:
   - Ionic Framework
 ---

@@ -2,6 +2,7 @@ Title: Installing Google Chrome and IIS Web Server on Windows Server
 Published: 22/05/2021
 Author: Ankush Jain
 IsActive: true
+ImageFolder: installing-google-chrome-and-iis-web-server-on-windows-server
 Tags:
   - IIS
   - Windows Server

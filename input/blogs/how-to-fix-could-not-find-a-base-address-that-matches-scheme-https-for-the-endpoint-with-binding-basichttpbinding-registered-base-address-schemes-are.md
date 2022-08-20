@@ -2,6 +2,7 @@ Title: How to fix - "Could not find a base address that matches scheme https for
 Published: 26/03/2019
 Author: Ankush Jain
 IsActive: true
+ImageFolder: how-to-fix-could-not-find-a-base-address-that-matches-scheme-https-for-the-endpoint-with-binding-basichttpbinding-registered-base-address-schemes-are
 Tags:
   - WCF
 ---

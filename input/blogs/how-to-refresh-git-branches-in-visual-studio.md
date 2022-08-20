@@ -2,6 +2,7 @@ Title: How to refresh git branches in visual studio?
 Published: 13/07/2018
 Author: Ankush Jain
 IsActive: true
+ImageFolder: how-to-refresh-git-branches-in-visual-studio
 Tags:
   - Git
 ---

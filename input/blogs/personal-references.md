@@ -2,6 +2,7 @@ Title: Personal References
 Published: 27/12/2019
 Author: Ankush Jain
 IsActive: true
+ImageFolder: personal-references
 Tags:
 ---
 In this post, I am just documenting all the links and stuff that I found useful over the internet so that I can refer to this page whenever needed.

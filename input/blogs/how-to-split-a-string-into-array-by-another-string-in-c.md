@@ -2,6 +2,7 @@ Title: How to split a string into array by another string in C#
 Published: 09/07/2018
 Author: Ankush Jain
 IsActive: true
+ImageFolder: how-to-split-a-string-into-array-by-another-string-in-c
 Tags:
   - .NET
 ---

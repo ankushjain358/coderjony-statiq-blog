@@ -2,6 +2,7 @@ Title: How to use BehaviourSubject to share the data to other components in Angu
 Published: 27/04/2019
 Author: Ankush Jain
 IsActive: true
+ImageFolder: how-to-use-behavioursubject-to-share-the-data-to-other-components-in-angular
 Tags:
   - Angular
 ---

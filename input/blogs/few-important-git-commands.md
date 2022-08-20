@@ -2,6 +2,7 @@ Title: Few important GIT commands
 Published: 14/05/2018
 Author: Ankush Jain
 IsActive: true
+ImageFolder: few-important-git-commands
 Tags:
   - Git
 ---

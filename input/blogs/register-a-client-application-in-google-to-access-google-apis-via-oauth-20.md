@@ -2,6 +2,7 @@ Title: Register a Client application in Google to access Google APIs via OAuth 2
 Published: 26/01/2021
 Author: Ankush Jain
 IsActive: true
+ImageFolder: register-a-client-application-in-google-to-access-google-apis-via-oauth-20
 Tags:
   - OAuth
 ---

@@ -2,6 +2,7 @@ Title: System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
 Published: 14/08/2018
 Author: Ankush Jain
 IsActive: true
+ImageFolder: systemio__errorwinioerror-int32-errorcode-string-maybefullpath
 Tags:
   - PowerShell
 ---

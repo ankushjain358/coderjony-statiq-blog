@@ -2,6 +2,7 @@ Title: Cloud Computing Concepts - High Availability, Scalability, Elasticity, Ag
 Published: 29/12/2020
 Author: Ankush Jain
 IsActive: true
+ImageFolder: cloud-computing-concepts-high-availability-scalability-elasticity-agility-fault-tolerance-and-disaster-recovery
 Tags:
   - Azure
   - AWS

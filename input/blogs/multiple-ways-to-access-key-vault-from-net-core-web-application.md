@@ -2,6 +2,7 @@ Title: Multiple ways to access Key Vault from .NET Core Web Application
 Published: 13/12/2020
 Author: Ankush Jain
 IsActive: true
+ImageFolder: multiple-ways-to-access-key-vault-from-net-core-web-application
 Tags:
   - Azure
   - Security

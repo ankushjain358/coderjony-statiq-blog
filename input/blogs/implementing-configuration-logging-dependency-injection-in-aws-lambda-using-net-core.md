@@ -2,6 +2,7 @@ Title: Implementing Configuration, Logging & Dependency Injection in AWS Lambda 
 Published: 18/05/2022
 Author: Ankush Jain
 IsActive: true
+ImageFolder: implementing-configuration-logging-dependency-injection-in-aws-lambda-using-net-core
 Tags:
   - .NET Core
   - AWS

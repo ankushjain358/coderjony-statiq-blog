@@ -2,6 +2,7 @@ Title: Redis Cluster continuously logging - WSA_IO_PENDING writing to socket
 Published: 09/05/2018
 Author: Ankush Jain
 IsActive: true
+ImageFolder: redis-cluster-continuously-logging-wsa_io_pending-writing-to-socket
 Tags:
   - Redis
 ---

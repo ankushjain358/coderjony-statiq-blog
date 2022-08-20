@@ -2,6 +2,7 @@ Title: What is Angular CLI?
 Published: 19/01/2018
 Author: Ankush Jain
 IsActive: true
+ImageFolder: what-is-angular-cli
 Tags:
   - Angular
 ---

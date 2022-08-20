@@ -2,6 +2,7 @@ Title: Open activity from fragment in Xamarin Android
 Published: 10/09/2018
 Author: Ankush Jain
 IsActive: true
+ImageFolder: open-activity-from-fragment-in-xamarin-android
 Tags:
   - Android
 ---

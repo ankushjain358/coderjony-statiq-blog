@@ -2,6 +2,7 @@ Title: 3 Important Things About Backing Up Data
 Published: 11/12/2021
 Author: Ankush Jain
 IsActive: true
+ImageFolder: 3-important-things-about-backing-up-data
 Tags:
   - Security
 ---

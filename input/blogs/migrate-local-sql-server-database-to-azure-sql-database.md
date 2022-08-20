@@ -2,6 +2,7 @@ Title: Migrate Local SQL Server Database to Azure SQL Database
 Published: 26/12/2020
 Author: Ankush Jain
 IsActive: true
+ImageFolder: migrate-local-sql-server-database-to-azure-sql-database
 Tags:
   - Azure
   - SQL Server

@@ -2,6 +2,7 @@ Title: Difference between SET and SETX in PowerShell
 Published: 29/05/2018
 Author: Ankush Jain
 IsActive: true
+ImageFolder: difference-between-set-and-setx-in-powershell
 Tags:
   - PowerShell
 ---

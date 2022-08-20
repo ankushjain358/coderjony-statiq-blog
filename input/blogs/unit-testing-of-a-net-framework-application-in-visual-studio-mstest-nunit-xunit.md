@@ -2,6 +2,7 @@ Title: Unit Testing of a .NET Framework application in Visual Studio - MSTest, N
 Published: 28/06/2020
 Author: Ankush Jain
 IsActive: true
+ImageFolder: unit-testing-of-a-net-framework-application-in-visual-studio-mstest-nunit-xunit
 Tags:
   - Unit Testing
   - .NET

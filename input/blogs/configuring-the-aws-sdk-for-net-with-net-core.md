@@ -2,6 +2,7 @@ Title: Configuring the AWS SDK for .NET with .NET Core
 Published: 12/02/2022
 Author: Ankush Jain
 IsActive: true
+ImageFolder: configuring-the-aws-sdk-for-net-with-net-core
 Tags:
   - .NET Core
   - AWS

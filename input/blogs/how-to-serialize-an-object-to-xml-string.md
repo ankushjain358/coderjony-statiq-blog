@@ -2,6 +2,7 @@ Title: How to serialize an object to XML string?
 Published: 05/08/2017
 Author: Ankush Jain
 IsActive: true
+ImageFolder: how-to-serialize-an-object-to-xml-string
 Tags:
   - .NET
 ---

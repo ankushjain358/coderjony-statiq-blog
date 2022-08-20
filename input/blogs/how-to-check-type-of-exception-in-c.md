@@ -2,6 +2,7 @@ Title: How to check type of exception in c#?
 Published: 25/04/2018
 Author: Ankush Jain
 IsActive: true
+ImageFolder: how-to-check-type-of-exception-in-c
 Tags:
   - .NET
 ---

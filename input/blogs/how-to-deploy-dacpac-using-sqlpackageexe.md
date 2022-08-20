@@ -2,6 +2,7 @@ Title: How to deploy dacpac using SQLPackage.exe
 Published: 18/06/2018
 Author: Ankush Jain
 IsActive: true
+ImageFolder: how-to-deploy-dacpac-using-sqlpackageexe
 Tags:
   - SQL Server
 ---

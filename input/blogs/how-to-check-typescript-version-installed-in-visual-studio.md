@@ -2,6 +2,7 @@ Title: How to check TypeScript version installed in Visual Studio?
 Published: 19/11/2017
 Author: Ankush Jain
 IsActive: true
+ImageFolder: how-to-check-typescript-version-installed-in-visual-studio
 Tags:
   - TypeScript
   - Visual Studio

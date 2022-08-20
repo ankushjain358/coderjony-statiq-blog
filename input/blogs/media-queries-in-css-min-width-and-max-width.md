@@ -2,6 +2,7 @@ Title: Media Queries in CSS – Min-Width and Max-Width
 Published: 02/09/2018
 Author: Ankush Jain
 IsActive: true
+ImageFolder: media-queries-in-css-min-width-and-max-width
 Tags:
   - CSS
   - Bootstrap

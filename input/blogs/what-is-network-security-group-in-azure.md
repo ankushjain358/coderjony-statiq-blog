@@ -2,6 +2,7 @@ Title: What is Network Security Group in Azure
 Published: 24/12/2020
 Author: Ankush Jain
 IsActive: true
+ImageFolder: what-is-network-security-group-in-azure
 Tags:
   - Azure
   - Security

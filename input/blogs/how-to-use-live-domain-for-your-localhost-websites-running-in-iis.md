@@ -2,6 +2,7 @@ Title: How to use live domain for your localhost websites running in IIS
 Published: 01/05/2018
 Author: Ankush Jain
 IsActive: true
+ImageFolder: how-to-use-live-domain-for-your-localhost-websites-running-in-iis
 Tags:
   - IIS
 ---

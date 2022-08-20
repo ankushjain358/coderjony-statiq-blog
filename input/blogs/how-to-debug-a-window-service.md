@@ -2,6 +2,7 @@ Title: How to debug a Window Service?
 Published: 24/07/2017
 Author: Ankush Jain
 IsActive: true
+ImageFolder: how-to-debug-a-window-service
 Tags:
   - .NET
   - Windows Service

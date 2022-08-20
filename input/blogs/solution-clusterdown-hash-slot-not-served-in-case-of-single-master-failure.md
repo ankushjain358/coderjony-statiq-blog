@@ -2,6 +2,7 @@ Title: Solution- CLUSTERDOWN Hash slot not served in case of single master failu
 Published: 17/10/2018
 Author: Ankush Jain
 IsActive: true
+ImageFolder: solution-clusterdown-hash-slot-not-served-in-case-of-single-master-failure
 Tags:
   - Redis
 ---

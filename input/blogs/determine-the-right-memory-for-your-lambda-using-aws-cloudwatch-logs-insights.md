@@ -2,6 +2,7 @@ Title: Determine the right memory for your Lambda using AWS CloudWatch Logs Insi
 Published: 09/07/2022
 Author: Ankush Jain
 IsActive: true
+ImageFolder: determine-the-right-memory-for-your-lambda-using-aws-cloudwatch-logs-insights
 Tags:
   - .NET Core
   - AWS

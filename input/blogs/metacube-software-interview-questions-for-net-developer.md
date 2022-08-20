@@ -2,6 +2,7 @@ Title: Metacube Software - Interview Questions for .NET Developer
 Published: 26/10/2017
 Author: Ankush Jain
 IsActive: true
+ImageFolder: metacube-software-interview-questions-for-net-developer
 Tags:
   - .NET
 ---

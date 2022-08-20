@@ -2,6 +2,7 @@ Title: Difference between CoffeeScript, TypeScript and ES6?
 Published: 15/06/2017
 Author: Ankush Jain
 IsActive: true
+ImageFolder: difference-between-coffeescript-typescript-and-es6
 Tags:
   - TypeScript
   - Web Development

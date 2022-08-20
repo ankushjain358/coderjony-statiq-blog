@@ -2,6 +2,7 @@ Title: Creating a Pipe to filter the items in the list using Angular 7
 Published: 27/07/2019
 Author: Ankush Jain
 IsActive: true
+ImageFolder: creating-a-pipe-to-filter-the-items-in-the-list-using-angular-7
 Tags:
   - Angular
 ---

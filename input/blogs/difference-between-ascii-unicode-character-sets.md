@@ -2,6 +2,7 @@ Title: Difference between ASCII & Unicode Character Sets
 Published: 12/11/2018
 Author: Ankush Jain
 IsActive: true
+ImageFolder: difference-between-ascii-unicode-character-sets
 Tags:
   - Encoding
   - Cryptography

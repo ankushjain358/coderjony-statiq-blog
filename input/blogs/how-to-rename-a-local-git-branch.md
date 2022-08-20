@@ -2,6 +2,7 @@ Title: How to rename a local GIT Branch?
 Published: 28/06/2018
 Author: Ankush Jain
 IsActive: true
+ImageFolder: how-to-rename-a-local-git-branch
 Tags:
   - Git
 ---

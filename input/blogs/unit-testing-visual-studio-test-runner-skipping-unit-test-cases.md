@@ -2,6 +2,7 @@ Title: Unit Testing - Visual Studio Test Runner Skipping Unit Test Cases
 Published: 25/05/2018
 Author: Ankush Jain
 IsActive: true
+ImageFolder: unit-testing-visual-studio-test-runner-skipping-unit-test-cases
 Tags:
   - Unit Testing
 ---

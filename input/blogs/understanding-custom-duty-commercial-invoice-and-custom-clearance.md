@@ -2,6 +2,7 @@ Title: Understanding Custom Duty, Commercial Invoice and Custom Clearance
 Published: 29/06/2017
 Author: Ankush Jain
 IsActive: true
+ImageFolder: understanding-custom-duty-commercial-invoice-and-custom-clearance
 Tags:
 ---
 In this article, I am going to explain you below terms

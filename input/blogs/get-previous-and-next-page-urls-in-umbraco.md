@@ -2,6 +2,7 @@ Title: Get Previous and Next page URLs in Umbraco
 Published: 28/11/2018
 Author: Ankush Jain
 IsActive: true
+ImageFolder: get-previous-and-next-page-urls-in-umbraco
 Tags:
   - Umbraco
 ---

@@ -2,6 +2,7 @@ Title: Exporting and copying SQL Server backup files to Azure Blob Storage using
 Published: 05/06/2021
 Author: Ankush Jain
 IsActive: true
+ImageFolder: exporting-and-copying-sql-server-backup-files-to-azure-blob-storage-using-command-line
 Tags:
   - Azure
   - SQL Server

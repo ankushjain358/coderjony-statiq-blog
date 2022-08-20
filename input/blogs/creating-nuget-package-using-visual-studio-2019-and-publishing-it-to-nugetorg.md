@@ -2,6 +2,7 @@ Title: Creating NuGet package using Visual Studio 2019 and publishing it to Nuge
 Published: 06/03/2020
 Author: Ankush Jain
 IsActive: true
+ImageFolder: creating-nuget-package-using-visual-studio-2019-and-publishing-it-to-nugetorg
 Tags:
   - Visual Studio
 ---

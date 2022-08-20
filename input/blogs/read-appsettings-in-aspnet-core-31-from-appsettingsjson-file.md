@@ -2,6 +2,7 @@ Title: Read AppSettings in ASP.NET Core 3.1 from appsettings.json file
 Published: 14/03/2020
 Author: Ankush Jain
 IsActive: true
+ImageFolder: read-appsettings-in-aspnet-core-31-from-appsettingsjson-file
 Tags:
   - .NET Core
 ---

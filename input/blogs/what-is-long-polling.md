@@ -2,6 +2,7 @@ Title: What is Long Polling?
 Published: 17/04/2017
 Author: Ankush Jain
 IsActive: true
+ImageFolder: what-is-long-polling
 Tags:
   - Web Development
 ---

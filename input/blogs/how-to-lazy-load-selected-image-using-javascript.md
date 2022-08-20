@@ -2,6 +2,7 @@ Title: How to Lazy load selected image using JavaScript
 Published: 16/10/2021
 Author: Ankush Jain
 IsActive: true
+ImageFolder: how-to-lazy-load-selected-image-using-javascript
 Tags:
   - JavaScript
 ---

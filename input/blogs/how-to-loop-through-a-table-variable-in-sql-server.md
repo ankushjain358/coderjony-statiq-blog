@@ -2,6 +2,7 @@ Title: How to loop through a table variable in SQL Server?
 Published: 26/12/2019
 Author: Ankush Jain
 IsActive: true
+ImageFolder: how-to-loop-through-a-table-variable-in-sql-server
 Tags:
   - SQL Server
 ---

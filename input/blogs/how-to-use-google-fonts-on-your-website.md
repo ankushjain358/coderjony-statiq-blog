@@ -2,6 +2,7 @@ Title: How to use Google Fonts on your website?
 Published: 20/09/2018
 Author: Ankush Jain
 IsActive: true
+ImageFolder: how-to-use-google-fonts-on-your-website
 Tags:
   - Web Development
 ---

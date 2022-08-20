@@ -2,6 +2,7 @@ Title: Solution- "PDB does not match image" issue in Post Build event in Visual 
 Published: 24/03/2018
 Author: Ankush Jain
 IsActive: true
+ImageFolder: solution-pdb-does-not-match-image-issue-in-post-build-event-in-visual-studio
 Tags:
   - .NET
   - IIS

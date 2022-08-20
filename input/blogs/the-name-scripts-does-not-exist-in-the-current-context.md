@@ -2,6 +2,7 @@ Title: The name 'Scripts' does not exist in the current context
 Published: 30/09/2018
 Author: Ankush Jain
 IsActive: true
+ImageFolder: the-name-scripts-does-not-exist-in-the-current-context
 Tags:
   - .NET
 ---

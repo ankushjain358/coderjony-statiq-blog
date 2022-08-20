@@ -2,6 +2,7 @@ Title: Solution- The following untracked working tree files would be overwritten
 Published: 16/01/2019
 Author: Ankush Jain
 IsActive: true
+ImageFolder: solution-the-following-untracked-working-tree-files-would-be-overwritten-by-merge
 Tags:
   - Git
 ---

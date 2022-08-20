@@ -2,6 +2,7 @@ Title: How to change schema name of a table in SQL Server?
 Published: 26/03/2018
 Author: Ankush Jain
 IsActive: true
+ImageFolder: how-to-change-schema-name-of-a-table-in-sql-server
 Tags:
   - SQL Server
 ---

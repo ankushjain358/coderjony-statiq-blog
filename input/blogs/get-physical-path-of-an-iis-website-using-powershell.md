@@ -2,6 +2,7 @@ Title: Get physical path of an IIS website using PowerShell
 Published: 28/08/2018
 Author: Ankush Jain
 IsActive: true
+ImageFolder: get-physical-path-of-an-iis-website-using-powershell
 Tags:
   - IIS
   - .NET

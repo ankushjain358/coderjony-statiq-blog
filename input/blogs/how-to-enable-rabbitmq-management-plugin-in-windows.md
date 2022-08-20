@@ -2,6 +2,7 @@ Title: How to enable RabbitMQ Management Plugin in Windows
 Published: 09/07/2018
 Author: Ankush Jain
 IsActive: true
+ImageFolder: how-to-enable-rabbitmq-management-plugin-in-windows
 Tags:
   - RabbitMQ
 ---

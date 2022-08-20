@@ -2,6 +2,7 @@ Title: Amazon Leadership Principles Interview Questions
 Published: 24/09/2021
 Author: Ankush Jain
 IsActive: true
+ImageFolder: amazon-leadership-principles-interview-questions
 Tags:
   - Interview Questions
 ---

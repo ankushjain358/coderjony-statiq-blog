@@ -2,6 +2,7 @@ Title: Attempt by security transparent method 'Umbraco.Core.UmbracoApplicationBa
 Published: 25/04/2018
 Author: Ankush Jain
 IsActive: true
+ImageFolder: attempt-by-security-transparent-method-umbracocoreumbracoapplicationbasestartapplication-systemobject-systemeventargs-to-access-security-critical-method-systemappdomain-failed
 Tags:
   - Umbraco
 ---

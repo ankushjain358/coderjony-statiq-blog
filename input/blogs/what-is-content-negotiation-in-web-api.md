@@ -2,6 +2,7 @@ Title: What is Content Negotiation in WEB API?
 Published: 19/09/2017
 Author: Ankush Jain
 IsActive: true
+ImageFolder: what-is-content-negotiation-in-web-api
 Tags:
   - Web API
 ---

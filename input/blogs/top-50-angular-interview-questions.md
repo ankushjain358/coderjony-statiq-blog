@@ -2,6 +2,7 @@ Title: Top 50 Angular Interview Questions
 Published: 19/06/2019
 Author: Ankush Jain
 IsActive: true
+ImageFolder: top-50-angular-interview-questions
 Tags:
   - Angular
 ---

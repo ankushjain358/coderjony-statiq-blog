@@ -2,6 +2,7 @@ Title: SQL Server Error- Unable to delete the database user as the user is alrea
 Published: 18/04/2017
 Author: Ankush Jain
 IsActive: true
+ImageFolder: sql-server-error-unable-to-delete-the-database-user-as-the-user-is-already-logged-in-currently
 Tags:
   - SQL Server
 ---

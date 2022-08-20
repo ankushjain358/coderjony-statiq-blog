@@ -2,6 +2,7 @@ Title: Top 10 IT companies in Jaipur that will pay you well.
 Published: 23/04/2017
 Author: Ankush Jain
 IsActive: true
+ImageFolder: top-10-it-companies-in-jaipur-that-will-pay-you-well
 Tags:
 ---
 If you are looking for a job change and thinking to settle down in Jaipur, then I will help you a bit in this process. Below you can find top 10 IT companies where you will be paid well and also get healthy working environment.

@@ -2,6 +2,7 @@ Title: Differences between CommonJS and AMD?
 Published: 23/06/2017
 Author: Ankush Jain
 IsActive: true
+ImageFolder: differences-between-commonjs-and-amd
 Tags:
   - JavaScript
 ---

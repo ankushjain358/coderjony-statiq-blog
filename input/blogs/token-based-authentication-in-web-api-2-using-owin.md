@@ -2,6 +2,7 @@ Title: Token Based Authentication in Web API 2 using OWIN
 Published: 25/12/2018
 Author: Ankush Jain
 IsActive: true
+ImageFolder: token-based-authentication-in-web-api-2-using-owin
 Tags:
   - Web API
   - Security

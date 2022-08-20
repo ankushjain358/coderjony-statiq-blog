@@ -2,6 +2,7 @@ Title: Database Unit Testing for SQL Server using tSQLt
 Published: 22/03/2019
 Author: Ankush Jain
 IsActive: true
+ImageFolder: database-unit-testing-for-sql-server-using-tsqlt
 Tags:
   - SQL Server
 ---

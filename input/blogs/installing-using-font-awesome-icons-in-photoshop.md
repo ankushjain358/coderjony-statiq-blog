@@ -2,6 +2,7 @@ Title: Installing & Using Font Awesome Icons in Photoshop
 Published: 20/10/2019
 Author: Ankush Jain
 IsActive: true
+ImageFolder: installing-using-font-awesome-icons-in-photoshop
 Tags:
   - Font Awesome
 ---

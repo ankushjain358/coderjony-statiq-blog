@@ -2,6 +2,7 @@ Title: Implementing Login with Microsoft or Azure Active Directory Account using
 Published: 24/10/2020
 Author: Ankush Jain
 IsActive: true
+ImageFolder: implementing-login-with-microsoft-or-azure-active-directory-account-using-aspnet-core-31
 Tags:
   - OAuth
   - Authentication

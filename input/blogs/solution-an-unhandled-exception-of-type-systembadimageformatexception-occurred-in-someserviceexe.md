@@ -2,6 +2,7 @@ Title: Solution- An unhandled exception of type 'System.BadImageFormatException'
 Published: 06/02/2020
 Author: Ankush Jain
 IsActive: true
+ImageFolder: solution-an-unhandled-exception-of-type-systembadimageformatexception-occurred-in-someserviceexe
 Tags:
   - .NET
 ---

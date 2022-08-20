@@ -2,6 +2,7 @@ Title: How to type any Unicode symbol in outlook?
 Published: 17/10/2018
 Author: Ankush Jain
 IsActive: true
+ImageFolder: how-to-type-any-unicode-symbol-in-outlook
 Tags:
   - Encoding
 ---

@@ -2,6 +2,7 @@ Title: Connecting with Azure SQL Database using Azure Active Directory and Manag
 Published: 13/12/2020
 Author: Ankush Jain
 IsActive: true
+ImageFolder: connecting-with-azure-sql-database-using-azure-active-directory-and-managed-identity-in-net-core
 Tags:
   - Azure
   - Azure SQL Database

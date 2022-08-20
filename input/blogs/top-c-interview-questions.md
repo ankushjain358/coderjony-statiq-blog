@@ -2,6 +2,7 @@ Title: Top C# Interview Questions
 Published: 19/09/2017
 Author: Ankush Jain
 IsActive: true
+ImageFolder: top-c-interview-questions
 Tags:
   - .NET
 ---

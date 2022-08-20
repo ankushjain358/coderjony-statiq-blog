@@ -2,6 +2,7 @@ Title: Export Variable Groups from VSTS
 Published: 02/08/2018
 Author: Ankush Jain
 IsActive: true
+ImageFolder: export-variable-groups-from-vsts
 Tags:
   - PowerShell
 ---

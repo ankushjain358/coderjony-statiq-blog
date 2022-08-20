@@ -2,6 +2,7 @@ Title: Install MongoDB in 10 easy steps
 Published: 16/04/2017
 Author: Ankush Jain
 IsActive: true
+ImageFolder: install-mongodb-in-10-easy-steps
 Tags:
   - Web Development
 ---

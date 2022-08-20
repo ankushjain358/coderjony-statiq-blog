@@ -2,6 +2,7 @@ Title: Solution- The term 'Param' is not recognized as the name of a cmdlet
 Published: 08/10/2018
 Author: Ankush Jain
 IsActive: true
+ImageFolder: solution-the-term-param-is-not-recognized-as-the-name-of-a-cmdlet
 Tags:
   - PowerShell
 ---

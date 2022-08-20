@@ -2,6 +2,7 @@ Title: Solution- Could not load file or assembly 'System.Net.Http, Version=4.2.0
 Published: 27/07/2019
 Author: Ankush Jain
 IsActive: true
+ImageFolder: solution-could-not-load-file-or-assembly-systemnethttp-version-4200-culture-neutral-publickeytoken-b03f5f7f11d50a3a-or-one-of-its-dependencies-the-system-cannot-find-the-file-specified
 Tags:
   - .NET
 ---
