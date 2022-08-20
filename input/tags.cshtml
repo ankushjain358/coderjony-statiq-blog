@@ -22,10 +22,14 @@ Title: Tags
                 @foreach (IDocument tag in OutputPages.Get("tags.html").GetChildren().OrderByDescending(x =>
                x.GetChildren().Count()))
                 {
-                    string badgeStyle = Document.GetString(Keys.GroupKey).Equals(tag.GetTitle(),
-                    StringComparison.OrdinalIgnoreCase) ? "btn-warning" : "btn-success";
-                    string postCount = tag.GetChildren().Count().ToString();
-                <a href="@Context.GetLink(tag)" class="btn @badgeStyle mb-2"> @tag.GetTitle() (@postCount)</a>
+                    if(!string.IsNullOrEmpty(tag.GetTitle()))
+                    {
+                        string badgeStyle = Document.GetString(Keys.GroupKey).Equals(tag.GetTitle(),
+                        StringComparison.OrdinalIgnoreCase) ? "btn-warning" : "btn-success";
+                        string postCount = tag.GetChildren().Count().ToString();
+                        
+                        <a href="@Context.GetLink(tag)" class="btn @badgeStyle mb-2"> @tag.GetTitle() (@postCount)</a>
+                    }
                 }
         </div>
     </div>

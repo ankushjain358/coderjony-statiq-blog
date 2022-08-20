@@ -4,6 +4,7 @@ Author: Ankush Jain
 IsActive: true
 Tags:
   - .NET
+  - Windows Service
 ---
 To debug a window service you can make use of below property of **Environment** class:
 

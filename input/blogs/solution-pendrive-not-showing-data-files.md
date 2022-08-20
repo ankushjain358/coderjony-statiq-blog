@@ -3,7 +3,6 @@ Published: 08/10/2017
 Author: Ankush Jain
 IsActive: true
 Tags:
-  - Tag1
 ---
 If your pen-drive is not showing data and you know that there is some data in it then below steps can help you in displaying data in pen-drive.
 
