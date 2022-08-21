@@ -41,7 +41,8 @@
     
     @if (Document.ContainsKey(BlogMetadataKeys.ImageFolder))
     {
-        <meta property="og:image" content="/img/blogs/{Document.GetString(BlogMetadataKeys.ImageFolder)}/default.png" />
+        string imagePath = $"/img/blogs/{Document.GetString(BlogMetadataKeys.ImageFolder)}/default.png";
+        <meta property="og:image" content="@imagePath" />
     }
     <meta property="og:type" content="website" />
     <meta property="og:url" content="@Document.GetLink(true)" />
