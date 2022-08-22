@@ -8,7 +8,6 @@ namespace Coderjony.Statiq.Blog
         public const string PageTitle = "PageTitle";
         public const string Copyright = "Copyright";
         public const string BlogSources = "BlogSources";
-        public const string IsBlogPost = "IsBlogPost";
         public const string ShowInNavbar = "ShowInNavbar";
         public const string Layout = "Layout";
         public const string PageSize = "PageSize";
@@ -21,7 +20,6 @@ namespace Coderjony.Statiq.Blog
         public static string GetCopyright(IDocument document) { return document.GetString(GlobalMetadataKeys.Copyright); }
         public static string GetBlogSources(IDocument document) { return document.GetString(GlobalMetadataKeys.BlogSources); }
         public static string GetLayout(IDocument document) { return document.GetString(GlobalMetadataKeys.Layout); }
-        public static bool GetIsBlogPost(IDocument document) { return document.GetBool(GlobalMetadataKeys.IsBlogPost); }
         public static int GetPageSize(IDocument document) { return document.GetInt(GlobalMetadataKeys.PageSize); }
     }
 }

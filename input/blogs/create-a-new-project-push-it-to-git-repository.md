@@ -2,8 +2,10 @@ Title: Create a new project & push it to Git Repository
 Published: 22/07/2018
 Author: Ankush Jain
 IsActive: true
+ImageFolder: create-a-new-project-push-it-to-git-repository
 Tags:
-  - Tag1
+  - Git
+  - Visual Studio
 ---
 If you are a beginner to Git then you have come to the right place.
 

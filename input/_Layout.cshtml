@@ -3,6 +3,10 @@
 
 <head>
 
+    <!-- Analytics Start -->
+    @Html.Partial("_partials/_analytics")
+    <!-- Analytics End -->
+
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
@@ -35,9 +39,10 @@
     @* TODO: More social graph meta tags *@
     <meta property="og:title" content="@Document.GetString("PageTitle")" />
     
-    @if (Document.ContainsKey(WebKeys.Image))
+    @if (Document.ContainsKey(BlogMetadataKeys.ImageFolder))
     {
-        <meta property="og:image" content="@Context.GetLink(Document.GetString(WebKeys.Image))" />
+        string imagePath = $"/img/blogs/{Document.GetString(BlogMetadataKeys.ImageFolder)}/default.png";
+        <meta property="og:image" content="@imagePath" />
     }
     <meta property="og:type" content="website" />
     <meta property="og:url" content="@Document.GetLink(true)" />

@@ -15,13 +15,13 @@
 
     @foreach (var post in posts)
     {
-        string imagePath = BlogMetadata.GetBlogImage(Model, Document,BlogImageType.BigThumbnail);
+        string imagePath = BlogMetadata.GetBlogImage(post, Document,BlogImageType.BigThumbnail);
         
-        <div class="col-md-6 mb-2">
+        <div class="col-md-12 mb-3">
             <div class="card shadow-sm" title="@post.GetTitle()">
                 <a href="@post.GetLink()"><img src="@imagePath" class="card-img-top" alt="@Model.GetTitle()"></a>
                 <div class="card-body">
-                    <b class="cj-sidebar-title"><a href="@post.GetLink()" class="text-decoration-none link-dark">@post.GetTitle()</a></b>
+                    <b class="cj-sidebar-blog-title"><a href="@post.GetLink()" class="text-decoration-none link-dark">@post.GetTitle()</a></b>
                     <div class="d-flex justify-content-between align-items-center mt-1"> 
                         <small class="text-muted">By @post.GetString(WebKeys.Author)</small> 
                         <small class="text-muted">@post.GetDateTime(WebKeys.Published).ToString("MMM, yyyy") </small>

@@ -2,19 +2,23 @@ Title: How to debug a Window Service?
 Published: 24/07/2017
 Author: Ankush Jain
 IsActive: true
+ImageFolder: how-to-debug-a-window-service
 Tags:
-  - Tag1
+  - .NET
+  - Windows Service
 ---
 To debug a window service you can make use of below property of **Environment** class:
 
-`Environment.UserInteractive
-`
+```cs
+Environment.UserInteractive
+```
 
 When you run your code in debug mode, this property returns true because your code is running in user interactive mode but when you run your window service as a windows process or service, then this property returns false.
 
 > It is recommended to do not show any popup, alert or dialog when this service runs as windows process.
 
-`static void Main(string[] args)
+```cs
+static void Main(string[] args)
 {
     if (Environment.UserInteractive)
     {
@@ -33,6 +37,6 @@ When you run your code in debug mode, this property returns true because your co
         ServiceBase.Run(ServicesToRun);
     }
 }
-`
+```
 
                 

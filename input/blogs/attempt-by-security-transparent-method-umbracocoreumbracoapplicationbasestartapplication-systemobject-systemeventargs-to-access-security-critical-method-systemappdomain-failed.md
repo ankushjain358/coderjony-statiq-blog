@@ -2,20 +2,22 @@ Title: Attempt by security transparent method 'Umbraco.Core.UmbracoApplicationBa
 Published: 25/04/2018
 Author: Ankush Jain
 IsActive: true
+ImageFolder: attempt-by-security-transparent-method-umbracocoreumbracoapplicationbasestartapplication-systemobject-systemeventargs-to-access-security-critical-method-systemappdomain-failed
 Tags:
-  - Tag1
+  - Umbraco
 ---
 I got this issue after hosting my umbraco website on GoDaddy server. 
 
 ## Solution
 
-`<configuration>
+```xml
+<configuration>
     <system.web>
        <trust level="Full" />
     </system.web>
 </configuration>
-`
+```
 
-This will fix your issue. Happy Coding :)
+This will fix your issue. Happy Coding 😊
 
                 

@@ -1,3 +1,8 @@
+@{
+    var tagsToDisplay = new string[] { ".NET Core", "AWS", "Azure" };
+    var selectedTags = OutputPages.Get("tags.html").GetChildren().Where(item => tagsToDisplay.Contains(item.GetTitle()));
+}
+
 <header class="bg-white d-flex flex-wrap justify-content-center py-3 px-4 border-bottom container-fluid">
     <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
         <img src="/img/logo.png" height="40" />
@@ -21,15 +26,12 @@
 </header>
 <header class="d-flex flex-wrap bg-primary bg-gradient py-2 px-4 border-bottom container-fluid" style="font-size: larger;margin-bottom: -1px;">
     <ul class="nav me-auto">
-        <li class="nav-item">
-            <a class="nav-link link-light" href="#">.NET</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link link-light" href="#">AWS</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link link-light" href="#">Azure</a>
-        </li>
+        @foreach (var item in selectedTags)
+        {
+            <li class="nav-item">
+                <a class="nav-link link-light" href="@item.GetLink()">@item.GetTitle()</a>
+            </li>
+        }
     </ul>
     <ul class="nav">
         <li class="nav-item">

@@ -2,8 +2,9 @@ Title: What is Web Service?
 Published: 28/06/2017
 Author: Ankush Jain
 IsActive: true
+ImageFolder: what-is-web-service
 Tags:
-  - Tag1
+  - Web Development
 ---
 > Web Service is a piece of software that makes an application available to the internet.
 
@@ -17,10 +18,8 @@ This was just an example to explain you what is web service and what is it's pur
 
 Web Service uses two protocols majorly.
 
-**SOAP** - SOAP (Simple Object Access Protocol ) is an XML based protocol that is followed by Web Service. This protocol uses XML based envelop to transfer information from one application to another.   
-Example - WCF, ASMX Web Service etc.
+**SOAP** - SOAP (Simple Object Access Protocol ) is an XML based protocol that is followed by Web Service. This protocol uses XML based envelop to transfer information from one application to another. *i.e. WCF, ASMX Web Service etc.*
 
-**REST** - REST is an architectural design and it stands for Representational State Transfer (ReST). Mainly It works over HTTP. REST APIs are much lighter than SOAP based APIs. Modern web application or mobile application prefer to develop their APIs in REST style.   
-Example - WEB API (ASP.Net), NodeJS APIs etc.
+**REST** - REST is an architectural design and it stands for Representational State Transfer (ReST). Mainly It works over HTTP. REST APIs are much lighter than SOAP based APIs. Modern web application or mobile application prefer to develop their APIs in REST style. *i.e. WEB API (ASP.Net), NodeJS APIs etc.*
 
                 

@@ -5,16 +5,24 @@
 <!-- Basic page layout -->
 <div class="container-fluid">
     <div class="row mt-5">
+
+    <!--Header Ad Unit -->
+    <div class="mb-5">
+        @Html.Partial("_partials/adunits/_header_unit.cshtml")
+    </div>
+    
     <div class="col-md-8 markdown-body p-3 px-md-5 pb-md-5 mb-3">
+
         <div class="mb-5">
             <h1 class="mb-3">
                 <?#= Title /?>
             </h1>
             <div class="mb-3 d-flex align-items-center">
-               <a href="/about"><img src="/img/authors/ankush-jain/thumbnail.png" class="img-fluid rounded-circle img-thumbnail me-2"
-                    style="height: 45px ;" /></a>
-                <label class="text-secondary">
-                    <span class="me-2">By <strong><a class="text-decoration-none link-secondary cj-author-link" href="/about"><?#= Author /?></a></strong></span>|
+               <a href="/about" style="min-width:60px">
+                    <img src="/img/authors/ankush-jain/thumbnail.png" class="img-fluid rounded-circle img-thumbnail me-2" style="height: 45px ;" />
+                </a>
+                <label class="text-muted">
+                    <span class="me-2">By<strong><a class="text-decoration-none link-secondary cj-author-link ms-1" href="/about"><?#= Author /?></a></strong></span>|
                     <span class="ms-2">Last Updated On
                             @Document.GetDateTime(WebKeys.Published).DayOfWeek,
                             @Document.GetDateTime(WebKeys.Published).ToString("MMM dd, yyyy")
@@ -38,18 +46,35 @@
         </div>
 
         @RenderBody()
+
+        @Html.Partial("_partials/_giscus.cshtml")
+
     </div>
     <div class="col-md-4 pt-0 p-3 ps-md-5 pe-md-4">
        
+       <!--Right Side Ad Unit - 1 -->
+        <div class="my-5">
+            @Html.Partial("_partials/adunits/_right_unit_1.cshtml")
+        </div>
+
         @Html.Partial("_partials/_recentBlogs")
+
+        <!--Right Side Ad Unit - 2 -->
+        <div class="my-5">
+            @Html.Partial("_partials/adunits/_right_unit_2.cshtml")
+        </div>
 
     </div>
 </div>
 
 @section scripts {
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/prism.min.js"></script>
+    <script src="@Context.GetLink("/scripts/prism.js")"></script>
+
+    <!-- Adsense script -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7899471603221633"
+     crossorigin="anonymous"></script>
 }
 
 @section styles {
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/themes/prism-okaidia.min.css" />
+    <link rel="stylesheet" href="@Context.GetLink("/styles/prism.css")" />
 }

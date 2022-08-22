@@ -7,19 +7,32 @@ Description: Welcome to CoderJony. You can find here a huge collection of techni
             .FilterSources(GlobalMetadata.GetBlogSources(Document))
             .OrderByDescending(item => item.GetDateTime(BlogMetadataKeys.Published))
             .Where(item => item.GetBool(BlogMetadataKeys.IsActive))
+            .Take(9)
             .ToArray();
 }
 <div class="bg-light p-5 mb-4 row">
-    <div class="col-md-12">
+    <div class="col-md-8">
         <h5>coderjony</h5>
-    <h1>Hey! I'm Ankush Jain</h1>
-    <p class="lead">
-        I'm a Full Stack Engineer with 10+ years of experience in Software Development. I love building web applications
-        and cloud solutions.</p>
-    <p class="lead">My technology stack mostly revolves around .NET, AWS, Azure & JavaScript.</p>
-    <p class="lead">I am also a part time blogger. I write technical blogs on my website CoderJony as and when I get time. </p>
-    <a class="btn btn-lg btn-success" href="https://www.linkedin.com/in/ankush-jain-developer/">Connect via LinkedIn
-        &raquo;</a>
+        <h1>Hey! I'm Ankush Jain</h1>
+        <p class="lead">
+            I'm a Full Stack Engineer with 10+ years of experience in Software Development. I love building web applications
+            and cloud solutions.</p>
+        <p class="lead">My technology stack mostly revolves around .NET, AWS, Azure & JavaScript.</p>
+        <p class="lead">I write articles about Web Development and Cloud Computing.</p>
+        <a class="btn btn-lg btn-success" href="https://www.linkedin.com/in/ankush-jain-developer/">Connect via LinkedIn
+            &raquo;</a>
+    </div>
+    <div class="col-md-4 pt-md-0 pt-3">
+        <div class="d-flex justify-content-between">
+            <a href="https://www.credly.com/badges/22a0978d-0849-4047-a7ca-fa2fc0df99c0" target="_blank" class="p-3"
+                title="AWS Certified Solutions Architect – Associate">
+                <img src="/img/aws-saa.png" class="img-thumbnail">
+            </a>
+            <a href="https://www.credly.com/badges/abfec068-b3f5-4b45-80c8-0e165b42e1b2" target="_blank" class="p-3"
+                title="Microsoft Certified: Azure Fundamentals">
+                <img src="/img/azure-fundamentals.png" class="img-thumbnail" />
+            </a>
+        </div>
     </div>
 </div>
 

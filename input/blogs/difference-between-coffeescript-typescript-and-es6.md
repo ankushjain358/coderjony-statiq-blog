@@ -2,8 +2,10 @@ Title: Difference between CoffeeScript, TypeScript and ES6?
 Published: 15/06/2017
 Author: Ankush Jain
 IsActive: true
+ImageFolder: difference-between-coffeescript-typescript-and-es6
 Tags:
-  - Tag1
+  - TypeScript
+  - Web Development
 ---
 CoffeeScript & TypeScript are languages that support ES6 features and their compiler (transpiler) convert code into JavaScript (ES5).
 
