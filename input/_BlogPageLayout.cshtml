@@ -5,9 +5,13 @@
 <!-- Basic page layout -->
 <div class="container-fluid">
     <div class="row mt-5">
-    <div class="col-md-8 markdown-body p-3 px-md-5 pb-md-5 mb-3">
 
+    <!--Header Ad Unit -->
+    <div class="mb-5">
         @Html.Partial("_partials/adunits/_header_unit.cshtml")
+    </div>
+    
+    <div class="col-md-8 markdown-body p-3 px-md-5 pb-md-5 mb-3">
 
         <div class="mb-5">
             <h1 class="mb-3">
@@ -48,13 +52,15 @@
     </div>
     <div class="col-md-4 pt-0 p-3 ps-md-5 pe-md-4">
        
+       <!--Right Side Ad Unit - 1 -->
         <div class="my-5">
             @Html.Partial("_partials/adunits/_right_unit_1.cshtml")
         </div>
 
         @Html.Partial("_partials/_recentBlogs")
 
-         <div class="my-5">
+        <!--Right Side Ad Unit - 2 -->
+        <div class="my-5">
             @Html.Partial("_partials/adunits/_right_unit_2.cshtml")
         </div>
 
