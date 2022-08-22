@@ -6,6 +6,9 @@
 <div class="container-fluid">
     <div class="row mt-5">
     <div class="col-md-8 markdown-body p-3 px-md-5 pb-md-5 mb-3">
+
+        @Html.Partial("_partials/adunits/_header_unit.cshtml")
+
         <div class="mb-5">
             <h1 class="mb-3">
                 <?#= Title /?>
@@ -45,13 +48,25 @@
     </div>
     <div class="col-md-4 pt-0 p-3 ps-md-5 pe-md-4">
        
+        <div class="my-5">
+            @Html.Partial("_partials/adunits/_right_unit_1.cshtml")
+        </div>
+
         @Html.Partial("_partials/_recentBlogs")
+
+         <div class="my-5">
+            @Html.Partial("_partials/adunits/_right_unit_2.cshtml")
+        </div>
 
     </div>
 </div>
 
 @section scripts {
     <script src="@Context.GetLink("/scripts/prism.js")"></script>
+
+    <!-- Adsense script -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7899471603221633"
+     crossorigin="anonymous"></script>
 }
 
 @section styles {
