@@ -58,7 +58,7 @@ Follow the below easy steps to run a query in **Amazon CloudWatch Logs Insights*
 
 Here is a screenshot with the above query:
 
-![image](https://user-images.githubusercontent.com/13661966/178106632-27a9c55c-df2a-435f-9e31-ab9cfdb56f2a.png)
+![image](/img/blogs/determine-the-right-memory-for-your-lambda-using-aws-cloudwatch-logs-insights/1.png)
 
 ## Step 3: Observing Results
 
@@ -71,7 +71,7 @@ After running the above query in **Amazon CloudWatch Logs Insights**, you will g
 
 With the help of the above parameters, you can easily decide how much memory would be required for your Lambda Function to run efficiently. To be on the safe side, you should always provision some extra memory. 
 
-![image](https://user-images.githubusercontent.com/13661966/178106675-a8584bda-befe-4d34-bd8f-5d369faabdb5.png)
+![image](/img/blogs/determine-the-right-memory-for-your-lambda-using-aws-cloudwatch-logs-insights/2.png)
 
 ## Conclusion
 In this post, you learned how can you determine the right memory size for your Lambda Function using Amazon CloudWatch Logs Insights. Please let me know your thoughts and feedback in the comment section below.
