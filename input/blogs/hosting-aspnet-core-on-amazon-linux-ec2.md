@@ -9,11 +9,13 @@ Tags:
   - .NET on AWS
   - Linux
 ---
-## 1. Create an Amazon Linux 2 (ARM) EC2 instance
-In this tutorial, we won't focus on creating a Linux EC2 instance step by step. But there are a few things that you need to know while provisioning the EC2 instance.
+In this post, you will understand how you can deploy an ASP.NET Core application on an Amazon Linux 2 EC2 instance. You will learn the whole process step by step.
+
+## 1. Create an Amazon Linux 2 EC2 instance
+In this post, we won't focus much on creating a Linux EC2 instance step by step. But there are certain things that you must know while provisioning the EC2 instance.
 
 ### 1.1. Make sure you select the right AMI - Amazon Linux 2
-
+Select the Amazon Linux 2 AMI as shown in below picture. For CPU architecture, you can choose either x86 or ARM. In this post, I chose x86 as ARM instances were not eligible for free tier.
 ![image](/img/blogs/hosting-aspnet-core-on-amazon-linux-ec2/1.png)
 
 ### 1.2. Make sure, the Security Group allows access on ports 22 & 80
