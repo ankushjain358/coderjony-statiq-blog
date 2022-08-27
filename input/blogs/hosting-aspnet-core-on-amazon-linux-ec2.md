@@ -9,13 +9,14 @@ Tags:
   - .NET on AWS
   - Linux
 ---
-In this post, you will understand how you can deploy an ASP.NET Core application on an Amazon Linux 2 EC2 instance step by step.
+In this post, we will understand how can we deploy an ASP.NET Core application on an Amazon Linux 2 EC2 instance step by step.
 
 ## 1. Create an Amazon Linux 2 EC2 instance
 In the first step, you have to create an Amazon Linux 2 EC2 instance. Though, in this post, we won't focus much on creating a Linux EC2 instance step by step. But there are certain things that you must know while provisioning the EC2 instance.
 
 ### 1.1. Make sure you select the right AMI - Amazon Linux 2
 Select the Amazon Linux 2 AMI as shown in the below picture. For CPU architecture, you can choose either x86 or ARM. In this post, I have chosen x86 as ARM instances were not available in **t2** or **t3** instance family.
+
 ![image](/img/blogs/hosting-aspnet-core-on-amazon-linux-ec2/1.png)
 
 ### 1.2. Make sure, the Security Group allows access on ports 22 & 80
@@ -49,10 +50,10 @@ cat /etc/os-release
 
 As you can see, the above command outputs `ID_LIKE` property with `centos rhel fedora` value. Considering this AMI similar to **CentOS**, we can proceed further installing .NET Core on Linux CentOS distribution.
 
-To know more about **ID_LIKE** property. [You can refer this link](https://www.freedesktop.org/software/systemd/man/os-release.html#ID_LIKE=).
+To know more about **ID_LIKE** property, [please refer this link](https://www.freedesktop.org/software/systemd/man/os-release.html#ID_LIKE=).
 
 ### 2.2. Installing ASP.NET Core Runtime on CentOS
-In this step, we are following the documentation from Microsoft website to [install the .NET Runtime on CentOS](https://docs.microsoft.com/en-us/dotnet/core/install/linux-centos)
+In this step, we will be following the documentation from Microsoft website to [install the .NET Runtime on CentOS](https://docs.microsoft.com/en-us/dotnet/core/install/linux-centos).
 
 Before you install .NET Core Runtime, run the following commands. This will add the Microsoft package signing key to the list of trusted keys and add the Microsoft package repository.
 ```bash
