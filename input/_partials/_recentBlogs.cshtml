@@ -15,7 +15,7 @@
 
     @foreach (var post in posts)
     {
-        string imagePath = BlogMetadata.GetBlogImage(post, Document,BlogImageType.BigThumbnail);
+        string imagePath = BlogMetadata.GetBlogImage(post, BlogImageType.BigThumbnail);
         
         <div class="col-md-12 mb-3">
             <div class="card shadow-sm" title="@post.GetTitle()">

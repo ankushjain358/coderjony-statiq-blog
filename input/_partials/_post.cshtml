@@ -1,7 +1,7 @@
  @model IDocument
 
 @{
-    string imagePath = BlogMetadata.GetBlogImage(Model, Document,BlogImageType.BigThumbnail);
+    string imagePath = BlogMetadata.GetBlogImage(Model, BlogImageType.BigThumbnail);
     string excerpt = Model.GetString(Keys.Excerpt);
 }
 
