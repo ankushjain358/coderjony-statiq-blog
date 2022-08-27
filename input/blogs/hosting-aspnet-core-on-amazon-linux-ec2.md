@@ -41,7 +41,7 @@ Microsoft has published [documentation](https://docs.microsoft.com/en-us/dotnet/
 ### 2.1. Determine Linux Distribution
 To install the .NET Core runtime, you first have to check the **Linux Distribution** used by Amazon Linux 2.
 
-Run the below command using SSH to check the Linux distribution
+Run the below command using SSH to check the Linux distribution.
 ```bash
 cat /etc/os-release
 ```
@@ -55,12 +55,12 @@ To know more about **ID_LIKE** property, [please refer this link](https://www.fr
 ### 2.2. Installing ASP.NET Core Runtime on CentOS
 In this step, we will be following the documentation from Microsoft website to [install the .NET Runtime on CentOS](https://docs.microsoft.com/en-us/dotnet/core/install/linux-centos).
 
-Before you install .NET Core Runtime, run the following commands. This will add the Microsoft package signing key to the list of trusted keys and add the Microsoft package repository.
+Before you install .NET Core Runtime, run the following command. This will add the Microsoft package signing key to the list of trusted keys and add the Microsoft package repository.
 ```bash
 sudo rpm -Uvh https://packages.microsoft.com/config/centos/7/packages-microsoft-prod.rpm
 ```
 
-Next, run below command to install ASP.NET Core 6 Runtime.
+Next, run the below command to install ASP.NET Core 6 Runtime.
 ```bash
 sudo yum install aspnetcore-runtime-6.0
 ```
@@ -143,7 +143,7 @@ Visit the public IP of EC2, you can see the app is up and running.
 ![image](/img/blogs/hosting-aspnet-core-on-amazon-linux-ec2/12.png)
 
 
-## 6. Create a Linux Service (with Linux Systemd Service)
+## 6. Running the application (with Linux Systemd Service)
 Running a web-app as a Linux service ensures that web-app will be up and running always as the Linux service restarts automatically after a reboot or crash using systemd.
 
 Create the service definition file:
@@ -151,7 +151,7 @@ Create the service definition file:
 sudo nano /etc/systemd/system/mymvcapp.service
 ```
 
-You can find running Linux service under path `/etc/systemd/system`. 
+You can find running Linux service under path **/etc/systemd/system**. 
 
 Next, copy the below content in this service file.
 ```bash
@@ -178,9 +178,11 @@ sudo systemctl start mymvcapp.service
 sudo systemctl status mymvcapp.service
 ```
 
-![image](/img/blogs/hosting-aspnet-core-on-amazon-linux-ec2/13.png)
+The above command will start the service, and the service will start the ASP.NET Core app with the Kestrel server that is listening to the port 80. You can now try accessing the app from public IP. 
 
-The above command will start the service, and the service will start the ASP.NET Core app with the Kestrel server that is listening to the port 80. You can try accessing the app from public IP.
+See below screenshot of the running active service.
+
+![image](/img/blogs/hosting-aspnet-core-on-amazon-linux-ec2/13.png)
 
 To redeploy your app with the changes, you need to stop the service, replace the DLLs, and start the service again. You can use the following commands to stop and start the service again.
 
