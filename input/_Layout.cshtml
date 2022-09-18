@@ -17,8 +17,8 @@
     else if (Document.ContainsKey(Keys.Excerpt))
     {
         string description = Model.GetString(Keys.Excerpt);
-        description = description.Replace("&lt;p&gt;",""); // Replace paragraph start tag
-        description = description.Replace("&lt;/p&gt;",""); // Replace paragraph end tag
+        description = description.Replace("<p>",""); // Replace paragraph start tag
+        description = description.Replace("</p>",""); // Replace paragraph end tag
 
         <meta name="description" content="@description"/>
     }
