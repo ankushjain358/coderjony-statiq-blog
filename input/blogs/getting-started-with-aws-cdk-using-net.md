@@ -1,5 +1,5 @@
 Title: Getting Started with AWS CDK using .NET
-Published: 07/22/2022
+Published: 22/07/2022
 Author: Ankush Jain
 IsActive: true
 ImageFolder: getting-started-with-aws-cdk-using-net

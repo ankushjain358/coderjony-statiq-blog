@@ -1,5 +1,5 @@
 Title: Hosting an ASP.NET Core Application on Amazon Linux 2 EC2 instance
-Published: 08/27/2022
+Published: 27/08/2022
 Author: Ankush Jain
 IsActive: true
 ImageFolder: hosting-aspnet-core-on-amazon-linux-ec2

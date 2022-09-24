@@ -61,18 +61,36 @@ Create a `Startup.cs` class file with the below content. Code is self-explanator
 ```cs
 public class Startup
 {
-    public IServiceProvider Setup()
-    {
-        var configuration = new ConfigurationBuilder() // ConfigurationBuilder() method requires Microsoft.Extensions.Configuration NuGet package
-                .SetBasePath(Directory.GetCurrentDirectory())  // SetBasePath() method requires Microsoft.Extensions.Configuration.FileExtensions NuGet package
-                .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true) // AddJsonFile() method requires Microsoft.Extensions.Configuration.Json NuGet package
-                .AddEnvironmentVariables() // AddEnvironmentVariables() method requires Microsoft.Extensions.Configuration.EnvironmentVariables NuGet package
-                .Build();
+    private readonly IConfigurationRoot Configuration;
 
+    public Startup()
+    {
+        Configuration = new ConfigurationBuilder() // ConfigurationBuilder() method requires Microsoft.Extensions.Configuration NuGet package
+            .SetBasePath(Directory.GetCurrentDirectory())  // SetBasePath() method requires Microsoft.Extensions.Configuration.FileExtensions NuGet package
+            .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true) // AddJsonFile() method requires Microsoft.Extensions.Configuration.Json NuGet package
+            .AddEnvironmentVariables() // AddEnvironmentVariables() method requires Microsoft.Extensions.Configuration.EnvironmentVariables NuGet package
+            .Build();
+    }
+
+    public IServiceProvider ConfigureServices()
+    {
         var services = new ServiceCollection(); // ServiceCollection require Microsoft.Extensions.DependencyInjection NuGet package
 
+        ConfigureLoggingAndConfigurations(services);
+
+        ConfigureApplicationServices(services);
+
+        IServiceProvider provider = services.BuildServiceProvider();
+
+        return provider;
+    }
+
+
+    private void ConfigureLoggingAndConfigurations(ServiceCollection services)
+    {
+
         // Add configuration service
-        services.AddSingleton<IConfiguration>(configuration);
+        services.AddSingleton<IConfiguration>(Configuration);
 
         // Add logging service
         services.AddLogging(loggingBuilder =>  // AddLogging() requires Microsoft.Extensions.Logging NuGet package
@@ -80,19 +98,13 @@ public class Startup
             loggingBuilder.ClearProviders();
             loggingBuilder.AddConsole(); // AddConsole() requires Microsoft.Extensions.Logging.Console NuGet package
         });
-
-        ConfigureServices(configuration, services);
-
-        IServiceProvider provider = services.BuildServiceProvider();
-
-        return provider;
     }
 
-    private void ConfigureServices(IConfiguration configuration, ServiceCollection services)
+    private void ConfigureApplicationServices(ServiceCollection services)
     {
         #region AWS SDK setup
         // Get the AWS profile information from configuration providers
-        AWSOptions awsOptions = configuration.GetAWSOptions();
+        AWSOptions awsOptions = Configuration.GetAWSOptions();
 
         // Configure AWS service clients to use these credentials
         services.AddDefaultAWSOptions(awsOptions);
@@ -101,7 +113,7 @@ public class Startup
         services.AddAWSService<IAmazonS3>();
         #endregion
 
-        services.AddSingleton<IProgramEntryPoint, ProgramEntryPoint>();
+        services.AddSingleton<ILambdaEntryPoint, LambdaEntryPoint>();
     }
 }
 ```
@@ -114,24 +126,24 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 ```
 
-## Step 3: Create `ProgramEntryPoint` class
-Create `ProgramEntryPoint` class with `Handler` method. Inject all the dependencies inside the constructor of this class. We will invoke `Handler` method of this class from the original `FunctionHandler`.
+## Step 3: Create `LambdaEntryPoint` class
+Create `LambdaEntryPoint` class with `Handler` method. Inject all the dependencies inside the constructor of this class. We will invoke `Handler` method of this class from the original `FunctionHandler`.
 
-### 3.1. `IProgramEntryPoint` interface
+### 3.1. `ILambdaEntryPoint` interface
 ```cs
-public interface IProgramEntryPoint
+public interface ILambdaEntryPoint
 {
     Task<string> Handler(string input);
 }
 ```
 
-### 3.2. `ProgramEntryPoint` class
+### 3.2. `LambdaEntryPoint` class
 ```cs
-public class ProgramEntryPoint : IProgramEntryPoint
+public class LambdaEntryPoint : ILambdaEntryPoint
 {
-    private readonly ILogger<ProgramEntryPoint> _logger;
+    private readonly ILogger<LambdaEntryPoint> _logger;
 
-    public ProgramEntryPoint(ILogger<ProgramEntryPoint> logger)
+    public LambdaEntryPoint(ILogger<LambdaEntryPoint> logger)
     {
         _logger = logger;
     }
@@ -150,27 +162,27 @@ Now replace `Function` class content with the below content.
 
 Here, we are mainly doing 2 things:
 
-1.  Inside the constructor, we are calling `Setup()` method of `Startup` class. This method will set up everything and will return an instance of `IServiceProvider`. 
-2.  Inside `FunctionHandler`, we are calling `_programEntryPoint.Handler(input)` method to do the actual processing.
+1.  Inside the constructor, we are calling `ConfigureServices()` method of `Startup` class. This method will register all the services in `ServiceCollection` and return an instance of `IServiceProvider`. 
+2.  Inside `FunctionHandler`, we are calling `_lambdaEntryPoint.Handler(input)` method to do the actual processing.
 
-Also, it is important to understand, `Function` class is Singleton in AWS Lambda. Multiple invocations of AWS Lambda will not execute Constructor logic multiple times, which will be executed only once in the beginning, and the class will remain singleton until Lambda compute is alive.
+Also, it is important to understand, `Function` class is Singleton in AWS Lambda. Multiple invocations of AWS Lambda will not execute Constructor logic multiple times, which will be executed only once in the beginning, and the class will remain singleton until the Lambda compute is alive.
 
 ```cs
 public class Function
 {
-    private readonly IProgramEntryPoint _programEntryPoint;
+    private readonly ILambdaEntryPoint _lambdaEntryPoint;
 
     public Function()
     {
         var startup = new Startup();
-        IServiceProvider provider = startup.Setup();
+        IServiceProvider provider = startup.ConfigureServices();
 
-        _programEntryPoint = provider.GetRequiredService<IProgramEntryPoint>();
+        _lambdaEntryPoint = provider.GetRequiredService<ILambdaEntryPoint>();
     }
 
     public async Task<string> FunctionHandler(string input, ILambdaContext context)
     {
-        return await _programEntryPoint.Handler(input);
+        return await _lambdaEntryPoint.Handler(input);
     }
 
 }
