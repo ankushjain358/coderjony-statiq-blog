@@ -79,7 +79,7 @@ Here you can see, the entire event has been logged as a JSON document, where bot
       <!-- rules to map from logger name to target -->
       <rules>
         <!--Output hosting lifetime messages to console target for faster startup detection -->
-        <logger name="Microsoft.Hosting.Lifetime" minlevel="Info" writeTo="lifetimeConsole, ownFile-web" final="true" />
+        <logger name="Microsoft.Hosting.Lifetime" minlevel="Info" writeTo="ConsoleTarget" final="true" />
 
         <!--Skip non-critical Microsoft logs and so log only own logs (BlackHole) -->
         <logger name="Microsoft.*" maxlevel="Info" final="true" />
