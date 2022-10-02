@@ -12,12 +12,12 @@ Tags:
 ---
 In this post, you will learn how to build a Serverless API using ASP.NET Core and AWS Lambda.
 
-To make the API available on a public HTTP(S) endpoint, you will use Lambda **[Lambda function URLs](https://docs.aws.amazon.com/lambda/latest/dg/lambda-urls.html)** instead of **Amazon API Gateway**.
+To make the API available on a public HTTP(S) endpoint, you will use **[Lambda function URLs](https://docs.aws.amazon.com/lambda/latest/dg/lambda-urls.html)** instead of **Amazon API Gateway**.
 
 # Pre-requisites
 1. Visual Studio 2022
-2. AWS Toolkit for Visual Studio
-3. AWS Account
+2. [AWS Toolkit for Visual Studio](https://aws.amazon.com/visualstudio/)
+3. [AWS Account](https://console.aws.amazon.com/)
 4. .NET 6
 
 ## Step 1: Create ASP.NET Core Web API project
@@ -25,7 +25,7 @@ Open Visual Studio, create **New Project** and select **ASP.NET Core Web API** t
 
 ![image](/img/blogs/building-a-serverless-aspnet-core-web-api-with-aws-lambda-using-function-urls/1.png)
 
-In the **Additional information** window, keep the following settings.
+In the **Additional information** dialog, keep the following settings.
 
 ![image](/img/blogs/building-a-serverless-aspnet-core-web-api-with-aws-lambda-using-function-urls/2.png)
 
@@ -36,7 +36,7 @@ To deploy ASP.NET Core application using Minimal API to Lambda, install `Amazon.
 
 ![image](/img/blogs/building-a-serverless-aspnet-core-web-api-with-aws-lambda-using-function-urls/3.png)
 
-Next, add a call to `AddAWSLambdaHosting`` method when services are defined in your application.
+Next, add a call to `AddAWSLambdaHosting` method when services are defined in your application.
 
 ```cs
 var builder = WebApplication.CreateBuilder(args);
@@ -61,23 +61,23 @@ Open `.csproj` file and add `<AWSProjectType>Lambda</AWSProjectType>` in **Prope
 
 ![image](/img/blogs/building-a-serverless-aspnet-core-web-api-with-aws-lambda-using-function-urls/4.png)
 
-This will let **AWS Toolkit for Visual Studio** know that your project is an AWS project. Now, when you right-click on your project, you will start getting **Publish to AWS ...** options as shown in the below image.
+This will let **AWS Toolkit for Visual Studio** know that your project is an AWS project. Now, when you right-click on your project, you will start getting **Publish to AWS...** options as shown in the below image.
 
 ![image](/img/blogs/building-a-serverless-aspnet-core-web-api-with-aws-lambda-using-function-urls/5.png)
 
 ## Step 4: Deploy Web API on AWS Lambda
 Follow the instructions below to deploy Web API on AWS Lambda.
-1. Right-click on the project, and select **Publish to AWS Lambda...**. 
+1. Right-click on the project, and select **Publish to AWS Lambda**. 
 2. In **Upload Lambda Function** dialog, ensure the following values are correct.
    - Lambda Runtime should be .NET 6
    - Configuration should be Release
-   - Handler must be the Assembly name of your application
+   - Handler must be the **Assembly name** of your application
    
    ![image](/img/blogs/building-a-serverless-aspnet-core-web-api-with-aws-lambda-using-function-urls/6.png)
-3. In the Advanced Function Details, you can configure the following things.
+3. In the **Advanced Function Details** dialog, you can configure the following things.
    - IAM Role for the Lambda Function, when in doubt, select **AWSLambdaBasicExecutionRole** from the dropdown.
    - Memory & Timeout values
-   - Environment Variables
+   - Environment variables
    - DLQ & VPC details (if needed)
    
    ![image](/img/blogs/building-a-serverless-aspnet-core-web-api-with-aws-lambda-using-function-urls/7.png)
@@ -91,23 +91,25 @@ Follow the instructions below to enable Function Url for the Lambda.
    ![image](/img/blogs/building-a-serverless-aspnet-core-web-api-with-aws-lambda-using-function-urls/8.png)
 3. Select your Lambda function to go to its detail page.
 4. Select **Configuration** tab and then select **Function URL** from the left menu.
+   
+   ![image](/img/blogs/building-a-serverless-aspnet-core-web-api-with-aws-lambda-using-function-urls/9.png)
 5. Click on **Create function URL** button.
 6. On **Configure Function URL** screen, select **NONE** as Auth type.
    
-   ![image](/img/blogs/building-a-serverless-aspnet-core-web-api-with-aws-lambda-using-function-urls/9.png)
-7. Click on the **Save** button.
-8. You can see, **Function URL** has been created, and you can use the below URL to access your Web API.
-   
    ![image](/img/blogs/building-a-serverless-aspnet-core-web-api-with-aws-lambda-using-function-urls/10.png)
+7. Click on the **Save** button.
+8. You can see, **Function URL** has been created, and you can use it to access your Web API.
+   
+   ![image](/img/blogs/building-a-serverless-aspnet-core-web-api-with-aws-lambda-using-function-urls/11.png)
 
 ## Step 6: Verify that API is working
 Follow the instructions below to verify that API is working.
-1. Copy the **Function URL**. It should look like **https://6fm7vxp77g7vrgl5apdyw2jce40vrcbi.lambda-url.ap-south-1.on.aws/**
-2. Just append **WeatherForecast** in this URL, as this is the only controller we have in the default API.
+1. Copy the **Function URL**.
+2. Append **WeatherForecast** in the URL, as this is the only controller we have in the default ASP.NET Core Web API.
 3. Copy the new URL in the browser and see the result.
 4. If everything is fine, you will get the JSON response from the API like below.
    
-   ![image](/img/blogs/building-a-serverless-aspnet-core-web-api-with-aws-lambda-using-function-urls/11.png)
+   ![image](/img/blogs/building-a-serverless-aspnet-core-web-api-with-aws-lambda-using-function-urls/12.png)
 5. That's all.   
 
 ## Conclusion
