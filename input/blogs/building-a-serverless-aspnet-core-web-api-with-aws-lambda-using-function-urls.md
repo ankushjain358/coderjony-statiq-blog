@@ -3,6 +3,7 @@ Published: 02/10/2022
 Author: Ankush Jain
 IsActive: true
 ImageFolder: building-a-serverless-aspnet-core-web-api-with-aws-lambda-using-function-urls
+SeoTags: dotnet, aws, .net on aws, asp.net core web api, web api on aws lambda, serverless asp.net core api
 Tags:
   - .NET Core
   - AWS

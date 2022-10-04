@@ -1,0 +1,6 @@
+FeedSources: => GetString("BlogSources")
+FeedOrderKey: Published
+FeedOrderDescending: true
+FeedSize: 30
+FeedRss: true
+FeedAtom: true

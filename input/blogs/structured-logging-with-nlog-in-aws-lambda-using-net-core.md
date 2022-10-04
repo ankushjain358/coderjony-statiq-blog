@@ -3,6 +3,7 @@ Published: 24/09/2022
 Author: Ankush Jain
 IsActive: true
 ImageFolder: structured-logging-with-nlog-in-aws-lambda-using-net-core
+SeoTags: dotnet, aws, .net on aws, aws lambda, logging, nlog with .net core, serverless, structured logging 
 Tags:
   - .NET Core
   - AWS

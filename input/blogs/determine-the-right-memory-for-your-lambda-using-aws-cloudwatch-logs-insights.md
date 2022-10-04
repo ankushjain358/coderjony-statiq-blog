@@ -3,6 +3,7 @@ Published: 09/07/2022
 Author: Ankush Jain
 IsActive: true
 ImageFolder: determine-the-right-memory-for-your-lambda-using-aws-cloudwatch-logs-insights
+SeoTags: dotnet, aws, .net on aws, aws lambda, optimize aws lambda memory, serverless
 Tags:
   - .NET Core
   - AWS
@@ -10,7 +11,7 @@ Tags:
   - Lambda
 UniqueIdentifier: ddfd90fd-cd47-4efd-82c0-ebad95c15c2e
 ---
-Determining the right memory for your Lambda Function is one of the important things you should know. This will help you in both - performance optimization and cost management.
+Optimizing memory for your Lambda Function is one of the important things you should know. This will help you in both - performance optimization and cost management.
 
 You can save a good amount of money by reducing the allocated memory to over-provisioned Lambdas.
 
