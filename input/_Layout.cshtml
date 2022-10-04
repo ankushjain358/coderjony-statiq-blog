@@ -11,14 +11,16 @@
         description = description.Replace("<p>",""); // Replace paragraph start tag
         description = description.Replace("</p>",""); // Replace paragraph end tag       
     }
+    string baseUrl =  imageUrl = GlobalMetadata.GetBaseUrl(Document);
     string pageTitle = Document.GetString("PageTitle");
     string siteTitle = GlobalMetadata.GetSiteTitle(Document);
     string author = Document.ContainsKey(WebKeys.Author) ? Document.GetString(WebKeys.Author) : GlobalMetadata.GetDefaultAuthor(Document);
-    string imageUrl = Document.ContainsKey(BlogMetadataKeys.ImageFolder) ? BlogMetadata.GetBlogImage(Document) : GlobalMetadata.GetDefaultImage(Document);
+    string imageUrl = Document.ContainsKey(BlogMetadataKeys.ImageFolder) ? baseUrl + BlogMetadata.GetBlogImage(Document) : baseUrl + GlobalMetadata.GetDefaultImage(Document);
     string GetDefaultAuthor = GlobalMetadata.GetDefaultAuthor(Document);
     string facebookPageUrl = GlobalMetadata.GeFacebookPageUrl(Document);
     string facebookAuthorUrl = GlobalMetadata.GetFacebookAuthorUrl(Document);
     string twitterUsername = GlobalMetadata.GetTwitterUsername(Document);
+    string currentPageUrl = baseUrl + Document.GetLink(true);
 }
 <!DOCTYPE html>
 <html lang="en">
@@ -58,7 +60,7 @@
     <meta property="og:locale" content="en_US"/>
     <meta property="og:type" content="article" />
     <meta property="og:site_name" content="@siteTitle"/>
-    <meta property="og:url" content="@Document.GetLink(true)" />
+    <meta property="og:url" content="@currentPageUrl" />
     <meta property="og:description" content="@description"/>
     <meta property="og:image" content="@imageUrl" />
     <meta property="og:image:alt" content="@pageTitle"/>
