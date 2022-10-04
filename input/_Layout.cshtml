@@ -11,7 +11,7 @@
         description = description.Replace("<p>",""); // Replace paragraph start tag
         description = description.Replace("</p>",""); // Replace paragraph end tag       
     }
-    string baseUrl =  imageUrl = GlobalMetadata.GetBaseUrl(Document);
+    string baseUrl =  GlobalMetadata.GetBaseUrl(Document);
     string pageTitle = Document.GetString("PageTitle");
     string siteTitle = GlobalMetadata.GetSiteTitle(Document);
     string author = Document.ContainsKey(WebKeys.Author) ? Document.GetString(WebKeys.Author) : GlobalMetadata.GetDefaultAuthor(Document);
