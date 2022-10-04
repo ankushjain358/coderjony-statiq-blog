@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "coderjony-statiq-blog": {
+      "commandName": "Project",
+      "commandLineArgs": "preview"
+    }
+  }
+}

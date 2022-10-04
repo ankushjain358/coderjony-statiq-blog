@@ -1,3 +1,25 @@
+@{
+    string description = $"Welcome to {GlobalMetadata.GetSiteTitle(Document)}";
+
+    if(Document.ContainsKey(WebKeys.Description))
+    {
+        description = Document.GetString(WebKeys.Description);
+    }
+    else if (Document.ContainsKey(Keys.Excerpt))
+    {
+        description = Model.GetString(Keys.Excerpt);
+        description = description.Replace("<p>",""); // Replace paragraph start tag
+        description = description.Replace("</p>",""); // Replace paragraph end tag       
+    }
+    string pageTitle = Document.GetString("PageTitle");
+    string siteTitle = GlobalMetadata.GetSiteTitle(Document);
+    string author = Document.ContainsKey(WebKeys.Author) ? Document.GetString(WebKeys.Author) : GlobalMetadata.GetDefaultAuthor(Document);
+    string imageUrl = Document.ContainsKey(BlogMetadataKeys.ImageFolder) ? BlogMetadata.GetBlogImage(Document) : GlobalMetadata.GetDefaultImage(Document);
+    string GetDefaultAuthor = GlobalMetadata.GetDefaultAuthor(Document);
+    string facebookPageUrl = GlobalMetadata.GeFacebookPageUrl(Document);
+    string facebookAuthorUrl = GlobalMetadata.GetFacebookAuthorUrl(Document);
+    string twitterUsername = GlobalMetadata.GetTwitterUsername(Document);
+}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,28 +31,8 @@
 
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-
-    @if(Document.ContainsKey(WebKeys.Description))
-    {
-        <meta name="description" content="@Document.GetString(WebKeys.Description)" />
-    }
-    else if (Document.ContainsKey(Keys.Excerpt))
-    {
-        string description = Model.GetString(Keys.Excerpt);
-        description = description.Replace("<p>",""); // Replace paragraph start tag
-        description = description.Replace("</p>",""); // Replace paragraph end tag
-
-        <meta name="description" content="@description"/>
-    }
     
     <meta name="google-site-verification" content="PQ5CdHXf2hto7aq8b56JBtujJ_Hbi_KkoDrpap-2DxM" />
-
-    @if(Document.ContainsKey(WebKeys.Author))
-    {
-        <meta name="author" content="@Document.GetString(WebKeys.Author)" />
-    }
-
-    <title>@Document.GetString("PageTitle")</title>
 
     @{
         @foreach (IDocument rssFeed in Outputs["**/*.rss"])
@@ -42,22 +44,46 @@
             <link type="application/atom+xml" rel="alternate" title="@atomFeed.GetString(WebKeys.Title)" href="@atomFeed.GetLink()" />
         }
     }
-    
-    <meta name="application-name" content="@Document.GetString("SiteTitle")" />
-    <meta name="msapplication-tooltip" content="@Document.GetString("SiteTitle")" />
+
+    <title>@pageTitle</title>
+    <meta name="author" content="@author" />
+    <meta name="description" content="@description"/>
+    <meta name="application-name" content="@siteTitle" />
+   
+    <meta name="msapplication-tooltip" content="@siteTitle" />
     <meta name="msapplication-starturl" content="@Context.GetLink("/")" />
 
     @* TODO: More social graph meta tags *@
-    <meta property="og:title" content="@Document.GetString("PageTitle")" />
-    
-
-    @if (Document.ContainsKey(BlogMetadataKeys.ImageFolder))
-    {
-        string imagePath = BlogMetadata.GetBlogImage(Document);
-        <meta property="og:image" content="@imagePath" />
-    }
-    <meta property="og:type" content="website" />
+    <meta property="og:title" content="@pageTitle" />
+    <meta property="og:locale" content="en_US"/>
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="@siteTitle"/>
     <meta property="og:url" content="@Document.GetLink(true)" />
+    <meta property="og:description" content="@description"/>
+    <meta property="og:image" content="@imageUrl" />
+    <meta property="og:image:alt" content="@pageTitle"/>
+
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:title" content="@pageTitle"/>
+    <meta name="twitter:description" content="@description"/>
+    <meta name="twitter:site" content="@twitterUsername" />
+    <meta name="twitter:creator" content="@twitterUsername" />
+    <meta name="twitter:image" content="@imageUrl"/>
+    <meta name="twitter:label1" content="Written by"/>
+    <meta name="twitter:data1" content="@author"/>
+
+    <meta property="article:publisher" content="@facebookPageUrl" />
+    <meta property="article:author" content="@facebookAuthorUrl" />
+
+    @if(Document.ContainsKey("SeoTags"))
+    {
+        List<string> seoTags = Document.GetString("SeoTags").Split(",").ToList();
+
+        foreach(var tag in seoTags)
+        {
+            <meta property="article:tag" content="@tag.Trim()"/>
+        }
+    }
 
     <link rel="shortcut icon" href="@Context.GetLink("/favicon.ico")" type="image/x-icon">
     <link rel="icon" href="@Context.GetLink("/favicon.ico")" type="image/x-icon">

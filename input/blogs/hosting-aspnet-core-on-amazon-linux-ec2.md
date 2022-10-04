@@ -3,11 +3,13 @@ Published: 27/08/2022
 Author: Ankush Jain
 IsActive: true
 ImageFolder: hosting-aspnet-core-on-amazon-linux-ec2
+SeoTags: dotnet, aws, .net on aws, asp.net core, amazon ec2 linux, asp.net core on amazon ec2 linux
 Tags:
   - .NET Core
   - AWS
   - .NET on AWS
   - Linux
+  - Amazon EC2
 ---
 In this post, we will understand how can we deploy an ASP.NET Core application on an Amazon Linux 2 EC2 instance step by step.
 

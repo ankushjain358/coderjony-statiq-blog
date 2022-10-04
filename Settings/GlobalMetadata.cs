@@ -11,6 +11,11 @@ namespace Coderjony.Statiq.Blog
         public const string ShowInNavbar = "ShowInNavbar";
         public const string Layout = "Layout";
         public const string PageSize = "PageSize";
+        public const string TwitterUsername = "TwitterUsername";
+        public const string DefaultAuthor = "DefaultAuthor";
+        public const string FacebookPageUrl = "FacebookPageUrl";
+        public const string FacebookAuthorUrl = "FacebookAuthorUrl";
+        public const string DefaultImage = "DefaultImage";
     }
 
     public class GlobalMetadata
@@ -21,5 +26,10 @@ namespace Coderjony.Statiq.Blog
         public static string GetBlogSources(IDocument document) { return document.GetString(GlobalMetadataKeys.BlogSources); }
         public static string GetLayout(IDocument document) { return document.GetString(GlobalMetadataKeys.Layout); }
         public static int GetPageSize(IDocument document) { return document.GetInt(GlobalMetadataKeys.PageSize); }
+        public static string GetTwitterUsername(IDocument document) { return document.GetString(GlobalMetadataKeys.TwitterUsername); }
+        public static string GetDefaultAuthor(IDocument document) { return document.GetString(GlobalMetadataKeys.DefaultAuthor); }
+        public static string GeFacebookPageUrl(IDocument document) { return document.GetString(GlobalMetadataKeys.FacebookPageUrl); }
+        public static string GetFacebookAuthorUrl(IDocument document) { return document.GetString(GlobalMetadataKeys.FacebookAuthorUrl); }
+        public static string GetDefaultImage(IDocument document) { return document.GetString(GlobalMetadataKeys.DefaultImage); }
     }
 }
