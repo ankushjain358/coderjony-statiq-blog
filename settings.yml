@@ -4,7 +4,8 @@ DefaultAuthor: "Ankush Jain"
 FacebookPageUrl: "https://www.facebook.com/coderjony/"
 FacebookAuthorUrl: "https://www.facebook.com/IamAnkushJain1990/"
 DefaultImage: "https://coderjony.com/img/blogs/default.png"
-BaseUrl: https://coderjony.com
+Host:  coderjony.com
+LinksUseHttps:  true
 PageTitle: |
   =>
   {

@@ -11,16 +11,16 @@
         description = description.Replace("<p>",""); // Replace paragraph start tag
         description = description.Replace("</p>",""); // Replace paragraph end tag       
     }
-    string baseUrl =  GlobalMetadata.GetBaseUrl(Document);
+    
     string pageTitle = Document.GetString("PageTitle");
     string siteTitle = GlobalMetadata.GetSiteTitle(Document);
     string author = Document.ContainsKey(WebKeys.Author) ? Document.GetString(WebKeys.Author) : GlobalMetadata.GetDefaultAuthor(Document);
-    string imageUrl = Document.ContainsKey(BlogMetadataKeys.ImageFolder) ? baseUrl + BlogMetadata.GetBlogImage(Document) : baseUrl + GlobalMetadata.GetDefaultImage(Document);
+    string imageUrl = Document.ContainsKey(BlogMetadataKeys.ImageFolder) ?  Context.GetLink(BlogMetadata.GetBlogImage(Document), true) : GlobalMetadata.GetDefaultImage(Document);
     string GetDefaultAuthor = GlobalMetadata.GetDefaultAuthor(Document);
     string facebookPageUrl = GlobalMetadata.GeFacebookPageUrl(Document);
     string facebookAuthorUrl = GlobalMetadata.GetFacebookAuthorUrl(Document);
     string twitterUsername = GlobalMetadata.GetTwitterUsername(Document);
-    string currentPageUrl = baseUrl + Document.GetLink(true);
+    string currentPageUrl = Document.GetLink(true);
 }
 <!DOCTYPE html>
 <html lang="en">

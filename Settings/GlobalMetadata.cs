@@ -16,8 +16,6 @@ namespace Coderjony.Statiq.Blog
         public const string FacebookPageUrl = "FacebookPageUrl";
         public const string FacebookAuthorUrl = "FacebookAuthorUrl";
         public const string DefaultImage = "DefaultImage";
-        public const string BaseUrl = "BaseUrl";
-        
     }
 
     public class GlobalMetadata
@@ -33,6 +31,5 @@ namespace Coderjony.Statiq.Blog
         public static string GeFacebookPageUrl(IDocument document) { return document.GetString(GlobalMetadataKeys.FacebookPageUrl); }
         public static string GetFacebookAuthorUrl(IDocument document) { return document.GetString(GlobalMetadataKeys.FacebookAuthorUrl); }
         public static string GetDefaultImage(IDocument document) { return document.GetString(GlobalMetadataKeys.DefaultImage); }
-        public static string GetBaseUrl(IDocument document) { return document.GetString(GlobalMetadataKeys.BaseUrl); }
     }
 }
