@@ -48,6 +48,11 @@ Once you open the solution, you can see the `Program.cs` file. This contains a *
 
 
 ## Step 3: Install NuGet packages
+> You can skip this step if you are using **CDKv2**. 
+
+To check, go to your project's `csproj` file and look for `Amazon.CDK.Lib` NuGet package. If it is there, that means you are using **CDKv2** and you don't have to install separate NuGet packages for S3, DynamoDB or any other AWS services. With **CDKv2**, all these modules are included in the `Amazon.CDK.Lib` package.
+
+### When using CDK v1.x  (`Amazon.CDK.Lib` NuGet package is not installed)
 Install the following NuGet packages to create an S3 bucket and DynamoDB table using CDK.
 ```powershell
 Install-Package Amazon.CDK
