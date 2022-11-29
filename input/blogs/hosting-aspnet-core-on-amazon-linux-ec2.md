@@ -162,7 +162,7 @@ Description=Example of ASP.NET Core MVC App running on Amazon Linux
 
 [Service]
 WorkingDirectory=wwwroot/my-mvc-app
-ExecStart=/usr/bin/dotnet /wwwroot/my-mvc-app/WebApplication1.dll -urls "http://0.0.0.0:80"
+ExecStart=/usr/bin/dotnet /wwwroot/my-mvc-app/WebApplication1.dll --urls "http://0.0.0.0:80"
 Restart=always
 RestartSec=10
 KillSignal=SIGINT
