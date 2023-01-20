@@ -32,9 +32,9 @@ Simply click the **Connect** button as seen in the photo below, and you will be 
 
 ![image](/img/blogs/installing-mysql-on-amazon-linux-2-ec2-instance-and-configure-it-for-remote-connections/3.png)
 
-Select **SSH client** tab and copy the command to highlighted below.
+Select **SSH client** tab and copy the command highlighted below.
 
-To connect with the Linux instance, issue the command in Bash or the Command Line. The `<private-key>.pem` file that you might have generated during the EC2 creation is also necessary for this command.
+To connect with the Linux instance, issue the command in **Bash** or the **Command Line**. The `<private-key>.pem` file that you might have generated during the EC2 creation is also necessary for this command.
 
 ![image](/img/blogs/installing-mysql-on-amazon-linux-2-ec2-instance-and-configure-it-for-remote-connections/4.png)
 
@@ -104,7 +104,7 @@ SHOW DATABASES;
 ```
 It should print the names of all the test databases. If this prints, we can assume that the MySQL server installation was successful.
 
-## 5. Connect to MySQL on Amazon EC2 from remote server
+## 5. Configure MySQL to accept remote connections
 The MySQL server is currently only accessible within the EC2 instance. However, if you want to connect to this MySQL server from your local machine or another server, you must configure it to accept remote connections.
 
 Follow the steps below to configure MySQL to accept remote connections.
