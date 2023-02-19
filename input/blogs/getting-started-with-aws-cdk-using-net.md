@@ -13,6 +13,10 @@ In this post, we will understand, how to easily get started with CDK in .NET.
 
 CDK stands for **Cloud Development Kit**. CDK allows developers to provision the resources in the AWS cloud programmatically. CDK supports a variety of programming languages including C#, Java, Python, Go, JavaScript & TypeScript.
 
+<div class="video-container">
+   <iframe class="video" src="https://www.youtube.com/embed/DyD7WVKCj6k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+
 ## Step 1: Install CDK CLI
 Run the below command to install CDK CLI using NPM.
 ```bash
