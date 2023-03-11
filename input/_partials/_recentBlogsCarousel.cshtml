@@ -7,29 +7,31 @@
             .ToArray();
 }
 
+<!-- Sidebar Carousel -->
 <div class="row">
 
     <div class="col-md-12">
-        <h2 class="mb-3 pb-2 border-bottom">Recent Posts</h2>
+        <h4 class="mb-3 pt-4 pb-2 border-bottom">Recent Posts</h4>
     </div>
+    <div class="col-md-12 px-5 mb-5">
+        <div class="carousel px-2">
+            @foreach (var post in posts)
+            {
+                string imagePath = BlogMetadata.GetBlogImage(post, BlogImageType.BigThumbnail);
 
-    <div class="col-md-12 carousel mb-5">
-        @foreach (var post in posts)
-        {
-            string imagePath = BlogMetadata.GetBlogImage(post, BlogImageType.BigThumbnail);
-            
-            <div class="me-3 mb-3">
-                <div class="card shadow-sm" title="@post.GetTitle()">
-                    <a href="@post.GetLink()"><img src="@imagePath" class="card-img-top" alt="@Model.GetTitle()"></a>
-                    <div class="card-body">
-                        <b class="cj-sidebar-blog-title"><a href="@post.GetLink()" class="text-decoration-none link-dark">@post.GetTitle()</a></b>
-                        <div class="d-flex justify-content-between align-items-center mt-1"> 
-                            <small class="text-muted">By @post.GetString(WebKeys.Author)</small> 
-                            <small class="text-muted">@post.GetDateTime(WebKeys.Published).ToString("MMM, yyyy") </small>
+                <div class="me-3 mb-3">
+                    <div class="card shadow-sm" title="@post.GetTitle()">
+                        <a href="@post.GetLink()"><img src="@imagePath" class="card-img-top" alt="@Model.GetTitle()"></a>
+                        <div class="card-body">
+                            <b class="cj-sidebar-blog-title"><a href="@post.GetLink()" class="text-decoration-none link-dark">@post.GetTitle()</a></b>
+                            <div class="d-flex justify-content-between align-items-center mt-1">
+                                <small class="text-muted">By @post.GetString(WebKeys.Author)</small>
+                                <small class="text-muted">@post.GetDateTime(WebKeys.Published).ToString("MMM, yyyy") </small>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        }
+            }
+        </div>
     </div>
 </div>

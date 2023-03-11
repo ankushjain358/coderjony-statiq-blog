@@ -6,119 +6,165 @@
 <div class="container-fluid">
     <div class="row mt-5">
 
-    <!--Header Ad Unit -->
-    <div class="mb-5">
-        @Html.Partial("_partials/adunits/_header_unit.cshtml")
-    </div>
-    
-    <div class="col-md-8 markdown-body p-3 px-md-5 pb-md-5 mb-3">
+        <!--Header Ad Unit -->
+        <div class="mb-5 text-center">
+            @Html.Partial("_partials/adunits/_header_unit.cshtml")
+        </div>
 
-        <div class="mb-5">
-            <h1 class="mb-3">
-                <?#= Title /?>
-            </h1>
-            <div class="mb-3 d-flex align-items-center">
-               <a href="/about" style="min-width:60px">
-                    <img src="/img/authors/ankush-jain/thumbnail.png" class="img-fluid rounded-circle img-thumbnail me-2" style="height: 45px ;" />
-                </a>
-                <label class="text-muted">
-                    <span class="me-2">By<strong><a class="text-decoration-none link-secondary cj-author-link ms-1" href="/about"><?#= Author /?></a></strong></span>|
-                    <span class="ms-2">Last Updated On
+        <div class="col-md-8 markdown-body p-3 px-md-5 pb-md-5 mb-3">
+
+            <div class="mb-5">
+                <h1 class="mb-3">
+                    <?#= Title /?>
+                </h1>
+                <div class="mb-3 d-flex align-items-center">
+                    <a href="/about" style="min-width:60px">
+                        <img src="/img/authors/ankush-jain/thumbnail.png" class="img-fluid rounded-circle img-thumbnail me-2" style="height: 45px ;" />
+                    </a>
+                    <label class="text-muted">
+                        <span class="me-2">By<strong><a class="text-decoration-none link-secondary cj-author-link ms-1" href="/about"><?#= Author /?></a></strong></span>|
+                        <span class="ms-2">
+                            Last Updated On
                             @Document.GetDateTime(WebKeys.Published).DayOfWeek,
                             @Document.GetDateTime(WebKeys.Published).ToString("MMM dd, yyyy")
-                    </span>
-                   </label>
-            </div>
+                        </span>
+                    </label>
+                </div>
 
-            <div>
-                @if (Document.ContainsKey("Tags"))
-                {
-                    var allTags = OutputPages.Get("tags.html").GetChildren();
-
-                    @foreach (string tag in Document.GetList<string>("Tags"))
+                <div>
+                    @if (Document.ContainsKey("Tags"))
                     {
-                        var currentTag = allTags.First(item => item.GetTitle() == tag);
+                        var allTags = OutputPages.Get("tags.html").GetChildren();
 
-                        <a  href="@currentTag.GetLink()" class="badge bg-success text-light">@tag</a>
+                        @foreach (string tag in Document.GetList<string>("Tags"))
+                        {
+                            var currentTag = allTags.First(item => item.GetTitle() == tag);
+
+                            <a href="@currentTag.GetLink()" class="badge bg-success text-light">@tag</a>
+                        }
                     }
-                }
+                </div>
             </div>
-        </div>
 
-        @RenderBody()
+            @RenderBody()
 
-        @Html.Partial("_partials/_buymeacoffee.cshtml")
-        
-        @Html.Partial("_partials/_recentBlogsCarousel.cshtml")
+            @Html.Partial("_partials/_buymeacoffee.cshtml")
 
-        @Html.Partial("_partials/_giscus.cshtml")
+            @Html.Partial("_partials/adunits/_footer_unit.cshtml")
 
-        <div class="my-5">
+            @*  @Html.Partial("_partials/_recentBlogsCarousel.cshtml")*@
+
+            @Html.Partial("_partials/_giscus.cshtml")
+
+            <!-- Disabling multiplex ads -->
+            @* <div class="my-5">
             @Html.Partial("_partials/adunits/_multiplex_unit.cshtml")
-        </div>
+            </div>*@
 
+        </div>
+        <div class="col-md-4 pt-0 p-3 ps-md-5 pe-md-4">
+
+            <div class="sticky-top pt-2">
+
+                <!-- User Profile -->
+                <div class="user-profile">
+                    <div class="card profile-card-3">
+                        <div class="background-block">
+                            <img src="/img/profile-card-background.png" alt="profile-sample1" class="background" />
+                        </div>
+                        <div class="profile-thumb-block">
+                            <img src="/img/ankush-jain-2.png" alt="profile-image" class="profile" />
+                        </div>
+                        <div class="card-content">
+                            <h2>@GlobalMetadata.GetDefaultAuthor(Document)<small>Software Engineer</small></h2>
+                            <div class="icon-block">
+                                <ul class="nav justify-content-center">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="https://stackoverflow.com/users/1273882/ankush-jain"><span class="fa-brands fa-stack-overflow"></span></a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="https://github.com/ankushjain358"><span class="fa-brands fa-github"></span></a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="https://www.linkedin.com/in/ankush-jain-developer/"><span class="fa-brands fa-linkedin"></span></a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="https://www.facebook.com/CoderJonycom-134557060482505"><span class="fa-brands fa-facebook"></span></a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="https://www.instagram.com/ankushjain358/"><span class="fa-brands fa-instagram"></span></a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="https://www.youtube.com/@@coderjony9694/"><span class="fa-brands fa-youtube"></span></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar Carousel -->
+                @Html.Partial("_partials/_recentBlogsCarousel.cshtml")
+
+                <!--Right Side Ad Unit - 1 -->
+                <div class="my-5">
+                    @Html.Partial("_partials/adunits/_right_unit_1.cshtml")
+                </div>
+
+                <!--Right Side Ad Unit - 2 -->
+                <div class="my-5">
+                    @Html.Partial("_partials/adunits/_right_unit_2.cshtml")
+                </div>
+
+                <!--Right Side Ad Unit - 3 -->
+                <div class="my-5">
+                    @Html.Partial("_partials/adunits/_right_unit_3.cshtml")
+                </div>
+            </div>
+
+        </div>
     </div>
-    <div class="col-md-4 pt-0 p-3 ps-md-5 pe-md-4">
-       
-       <!--Right Side Ad Unit - 1 -->
-        <div class="my-5">
-            @Html.Partial("_partials/adunits/_right_unit_1.cshtml")
-        </div>
 
-        @* @Html.Partial("_partials/_recentBlogs") *@
+    @section scripts {
 
-        <!--Right Side Ad Unit - 2 -->
-        <div class="my-5">
-            @Html.Partial("_partials/adunits/_right_unit_2.cshtml")
-        </div>
+        <!-- Syntax highlighter script -->
+        <script src="@Context.GetLink("/scripts/prism.js")"></script>
 
-         <!--Right Side Ad Unit - 3 -->
-        <div class="my-5">
-            @Html.Partial("_partials/adunits/_right_unit_3.cshtml")
-        </div>
+        <!-- jQuery & Carousel script -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-    </div>
-</div>
+        <!-- Adsense script -->
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7899471603221633"
+            crossorigin="anonymous"></script>
 
-@section scripts {
-    
-    <!-- Syntax highlighter script -->
-    <script src="@Context.GetLink("/scripts/prism.js")"></script>
-
-    <!-- jQuery & Carousel script -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-    <!-- Adsense script -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7899471603221633"
-     crossorigin="anonymous"></script>
-
-    <script>
-        $(function(){
-            applyCarousel();
-        });
-
-        function applyCarousel() {
-            $('.carousel').slick({
-                dots: true,
-                centerMode: true,
-                slidesToShow: 3,
-                slidesToScroll: 1,
-                autoplay: true,
-                autoplaySpeed: 2000
+        <script>
+            $(function () {
+                applyCarousel();
             });
-        }
-    </script>
-}
 
-@section styles {
-    <link rel="stylesheet" href="@Context.GetLink("/styles/prism.css")" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <style  type="text/css">
-        .slick-prev:before, .slick-next:before
-        {
-            color: black;
-        }
-    </style>
-}
+            function applyCarousel() {
+                $('.carousel').slick({
+                    dots: false,
+                    centerMode: true,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    autoplay: true,
+                    autoplaySpeed: 5000
+                });
+            }
+        </script>
+    }
+
+    @section styles {
+        <link rel="stylesheet" href="@Context.GetLink("/styles/prism.css")" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <style type="text/css">
+            .slick-prev:before, .slick-next:before {
+                color: black;
+            }
+        </style>
+    }
+
+</div>
