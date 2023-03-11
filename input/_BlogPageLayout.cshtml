@@ -10,7 +10,7 @@
         <div class="mb-5 text-center">
             @Html.Partial("_partials/adunits/_header_unit_1.cshtml")
         </div>
-        
+
         <div class="col-md-8 markdown-body p-3 px-md-5 pb-md-5 mb-3">
 
             <div class="mb-5">
@@ -94,8 +94,10 @@
             </div>
 
             <!--Right Side Ad Unit - 1 -->
-            <div class="mt-4 text-center">
-                @Html.Partial("_partials/adunits/_right_unit_1.cshtml")
+            <div class="row mt-4 text-center">
+                <div class="col-md-12">
+                    @Html.Partial("_partials/adunits/_right_unit_1.cshtml")
+                </div>
             </div>
 
             <div class="sticky-top">
@@ -104,13 +106,15 @@
                 @Html.Partial("_partials/_recentBlogsCarousel.cshtml")
 
                 <!--Right Side Ad Unit - 2 -->
-                <div class="my-4 text-center">
-                    @Html.Partial("_partials/adunits/_right_unit_2.cshtml")
+                <div class="row my-4 text-center">
+                    <div class="col-md-12">
+                        @Html.Partial("_partials/adunits/_right_unit_2.cshtml")
+                    </div>
                 </div>
 
                 <!--Right Side Ad Unit - 3 -->
-              @*  <div class="my-5">
-                    @Html.Partial("_partials/adunits/_right_unit_3.cshtml")
+                @*  <div class="my-5">
+                @Html.Partial("_partials/adunits/_right_unit_3.cshtml")
                 </div>*@
             </div>
 
