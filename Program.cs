@@ -17,19 +17,19 @@ namespace Coderjony.Statiq.Blog
             return await Bootstrapper
                         .Factory
                         .CreateWeb(args)
-                        // .BuildPipeline("ResizeTitleImages", builder =>
-                        // {
-                        //     // We are using 16:9 ratio for main blog image
-                        //     builder.WithInputReadFiles("img/blogs/*.{jpg,png,gif}", "img/blogs/*/default.{jpg,png,gif}");
-                        //     builder.WithInputModules(new MutateImage()
-                        //         .Resize(BlogMetadata.DEFAULT_WIDTH, BlogMetadata.DEFAULT_HEIGHT, AnchorPositionMode.Top, ResizeMode.Stretch).OutputAsPng()
-                        //         .And()
-                        //         .Resize(BlogMetadata.THUMBNAIL_WIDTH, BlogMetadata.THUMBNAIL_HEIGHT, AnchorPositionMode.Top, ResizeMode.Stretch).OutputAsPng().SetSuffix("-thumb")
-                        //         .And()
-                        //         .Resize(BlogMetadata.BIG_THUMBNAIL_WIDTH, BlogMetadata.BIG_THUMBNAIL_HEIGHT, AnchorPositionMode.Top, ResizeMode.Stretch).OutputAsPng().SetSuffix("-big-thumb")
-                        //     );
-                        //     builder.WithOutputWriteFiles();
-                        // })
+                        .BuildPipeline("ResizeTitleImages", builder =>
+                        {
+                            // We are using 16:9 ratio for main blog image
+                            builder.WithInputReadFiles("img/blogs/*.{jpg,png,gif}", "img/blogs/*/default.{jpg,png,gif}");
+                            builder.WithInputModules(new MutateImage()
+                                .Resize(BlogMetadata.DEFAULT_WIDTH, BlogMetadata.DEFAULT_HEIGHT, AnchorPositionMode.Top, ResizeMode.Stretch).OutputAsPng()
+                                .And()
+                                .Resize(BlogMetadata.THUMBNAIL_WIDTH, BlogMetadata.THUMBNAIL_HEIGHT, AnchorPositionMode.Top, ResizeMode.Stretch).OutputAsPng().SetSuffix("-thumb")
+                                .And()
+                                .Resize(BlogMetadata.BIG_THUMBNAIL_WIDTH, BlogMetadata.BIG_THUMBNAIL_HEIGHT, AnchorPositionMode.Top, ResizeMode.Stretch).OutputAsPng().SetSuffix("-big-thumb")
+                            );
+                            builder.WithOutputWriteFiles();
+                        })
                         .RunAsync();
       }
     }
