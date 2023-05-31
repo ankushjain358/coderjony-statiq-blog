@@ -1,4 +1,4 @@
-Title: Determine the right memory for your Lambda using AWS CloudWatch Logs Insights
+Title: Choosing the perfect memory for your AWS Lambda functions
 Published: 09/07/2022
 Author: Ankush Jain
 IsActive: true
@@ -11,17 +11,17 @@ Tags:
   - Lambda
 UniqueIdentifier: ddfd90fd-cd47-4efd-82c0-ebad95c15c2e
 ---
-Optimizing memory for your Lambda Function is one of the important things you should know. This will help you in both - performance optimization and cost management.
+In the world of serverless computing, choosing the right memory configuration for your AWS Lambda functions is crucial for optimal performance and cost-efficiency. Determining the ideal memory allocation requires careful consideration and understanding of your application's requirements. By properly sizing the memory, you can ensure that your Lambda functions have the necessary resources to handle their workload effectively.
 
-You can save a good amount of money by reducing the allocated memory to over-provisioned Lambdas.
+Optimizing memory for your Lambda functions is one of the important things you should know. This helps you in both - performance as well as cost optimization. You can save a good amount of money by reducing the allocated memory to over-provisioned Lambda functions.
 
-In this post, you will understand one of the ways to figure out the right amount of memory for your Lambda Function.
+In this post, I will show you one of the ways to determine the right memory for your Lambda Function.
 
 ## Pre-requisite
 This approach makes use of **Amazon CloudWatch** logs. So, make sure the Lambda execution role has enough permission to send logs to Amazon CloudWatch.
 
 ## Step 1: Invoke Lambda Function N Times
-In the first step, you just need to invoke your Lambda Function multiple times, say 10 times, 50 times, 100 times or more. These executions will generate logs in **Amazon CloudWatch**, that you will be using in further steps.
+In the first step, you just need to invoke your Lambda Function multiple times, say 10 times, 50 times, 100 times or more. These executions will generate logs in **Amazon CloudWatch**, which will be used in further steps.
 
 To invoke your Lambda Function multiple times, you can use any approach from the following:
 * Use some Load Testing tools such as JMeter, k6, NBomber, etc.
@@ -29,7 +29,7 @@ To invoke your Lambda Function multiple times, you can use any approach from the
 * Invoke Lambda Function using code
 * Invoke Lambda Function manually from the console
 
-or any other way which you are comfortable with.
+or any other way that you are comfortable with.
 
 ## Step 2: Query Logs using Amazon CloudWatch Logs Insights
 >  **Amazon CloudWatch Logs Insights** allows you to search and analyze your log data stored in Amazon CloudWatch Logs. You can perform queries to efficiently and effectively analyze log data for specific use cases.
@@ -59,11 +59,11 @@ Follow the below easy steps to run a query in **Amazon CloudWatch Logs Insights*
 
 Here is a screenshot with the above query:
 
-![image](/img/blogs/determine-the-right-memory-for-your-lambda-using-aws-cloudwatch-logs-insights/1.png)
+![Choosing the perfect memory for your AWS Lambda functions](/img/blogs/determine-the-right-memory-for-your-lambda-using-aws-cloudwatch-logs-insights/1.png)
 
 ## Step 3: Observing Results
 
-After running the above query in **Amazon CloudWatch Logs Insights**, you will get the result below. This result will provide you numbers for the below parameters:
+After running the above query in **Amazon CloudWatch Logs Insights**, you will get the result below. This result will provide you with numbers for the below parameters:
 *   avgMemoryUsedMB	
 *   maxMemoryUsedMB	
 *   overProvisionedMB	
@@ -72,10 +72,10 @@ After running the above query in **Amazon CloudWatch Logs Insights**, you will g
 
 With the help of the above parameters, you can easily decide how much memory would be required for your Lambda Function to run efficiently. To be on the safe side, you should always provision some extra memory. 
 
-![image](/img/blogs/determine-the-right-memory-for-your-lambda-using-aws-cloudwatch-logs-insights/2.png)
+![Choosing the perfect memory for your AWS Lambda functions](/img/blogs/determine-the-right-memory-for-your-lambda-using-aws-cloudwatch-logs-insights/2.png)
 
 ## Conclusion
-In this post, you learned how can you determine the right memory size for your Lambda Function using Amazon CloudWatch Logs Insights. Please let me know your thoughts and feedback in the comment section below.
+In this post, you learned how can you determine the right memory for your Lambda function using Amazon CloudWatch Logs Insights. Please let me know your thoughts and feedback in the comment section below.
 
 Thank You ❤️
 
