@@ -1,5 +1,5 @@
 Title: Running .NET 8 Lambda Functions on AWS using Custom Runtime & Lambda Internals for .NET Developers
-Published: 21/11/2023
+Published: 25/11/2023
 Author: Ankush Jain
 IsActive: true
 ImageFolder: running-net-8-lambda-functions-on-aws-using-custom-runtime
