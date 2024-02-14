@@ -3,54 +3,38 @@
     var selectedTags = OutputPages.Get("tags.html").GetChildren().Where(item => tagsToDisplay.Contains(item.GetTitle()));
 }
 <footer class="bg-white mt-4">
-    @* <div class="container-fluid">
-    <div class="d-flex justify-content-between pt-4 px-4">
-    <ul class="list-unstyled d-flex">
-    <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24">
-    <use xlink:href="#twitter"></use>
-    </svg></a></li>
-    <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24">
-    <use xlink:href="#instagram"></use>
-    </svg></a></li>
-    <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24">
-    <use xlink:href="#facebook"></use>
-    </svg></a></li>
-    </ul>
-    </div>
-    </div>
-    <hr/> *@
-    <div class="container-fluid">
+    <div class="container mx-auto">
         <footer class="py-5 px-4">
-            <div class="row d-flex justify-content-center">
-                <div class="col-md-2 mb-3">
-                    <h5>Quick Links</h5>
-                    <ul class="nav flex-column">
-                        <li class="nav-item mb-2"><a href="/" class="nav-link p-0 text-muted">Home</a></li>
-                        <li class="nav-item mb-2"><a href="/blogs" class="nav-link p-0 text-muted">Blogs</a></li>
-                        <li class="nav-item mb-2"><a href="/private-policy" class="nav-link p-0 text-muted">Private Policy</a></li>
-                        <li class="nav-item mb-2"><a href="/about" class="nav-link p-0 text-muted">About</a></li>
-                        <li class="nav-item mb-2"><a href="/contact" class="nav-link p-0 text-muted">Contact</a></li>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 justify-items-center">
+                <div class="mb-3">
+                    <h5 class="text-xl font-bold mb-2">Quick Links</h5>
+                    <ul class="flex flex-col">
+                        <li class="mb-2"><a href="/" class="text-gray-600 hover:text-gray-800">Home</a></li>
+                        <li class="mb-2"><a href="/blogs" class="text-gray-600 hover:text-gray-800">Blogs</a></li>
+                        <li class="mb-2"><a href="/private-policy" class="text-gray-600 hover:text-gray-800">Private Policy</a></li>
+                        <li class="mb-2"><a href="/about" class="text-gray-600 hover:text-gray-800">About</a></li>
+                        <li class="mb-2"><a href="/contact" class="text-gray-600 hover:text-gray-800">Contact</a></li>
                     </ul>
                 </div>
 
-                <div class="col-md-2 mb-3">
-                    <h5>Connect with us</h5>
-                    <ul class="nav flex-column">
-                        <li class="nav-item mb-2"><a href="https://stackoverflow.com/users/1273882/ankush-jain" class="nav-link p-0 text-muted"><span class="fa-brands fa-stack-overflow me-2"></span>Stack Overflow</a></li>
-                        <li class="nav-item mb-2"><a href="https://github.com/ankushjain358" class="nav-link p-0 text-muted"><span class="fa-brands fa-github me-2"></span>GitHub</a></li>
-                        <li class="nav-item mb-2"><a href="https://www.linkedin.com/in/ankush-jain-developer/" class="nav-link p-0 text-muted"><span class="fa-brands fa-linkedin me-2"></span>LinkedIn</a></li>
-                        <li class="nav-item mb-2"><a href="https://www.facebook.com/CoderJonycom-134557060482505" class="nav-link p-0 text-muted"><span class="fa-brands fa-facebook me-2"></span>Facebook</a></li>
-                        <li class="nav-item mb-2"><a href="https://www.instagram.com/ankushjain358/" class="nav-link p-0 text-muted"><span class="fa-brands fa-instagram me-2"></span>Instagram</a></li>
+                <div class="mb-3">
+                    <h5 class="text-xl font-bold mb-2">Connect with us</h5>
+                    <ul class="flex flex-col">
+                        <li class="mb-2"><a href="https://stackoverflow.com/users/1273882/ankush-jain" class="text-gray-600 hover:text-gray-800"><span class="fa-brands fa-stack-overflow me-2"></span>Stack Overflow</a></li>
+                        <li class="mb-2"><a href="https://github.com/ankushjain358" class="text-gray-600 hover:text-gray-800"><span class="fa-brands fa-github me-2"></span>GitHub</a></li>
+                        <li class="mb-2"><a href="https://www.linkedin.com/in/ankush-jain-developer/" class="text-gray-600 hover:text-gray-800"><span class="fa-brands fa-linkedin me-2"></span>LinkedIn</a></li>
+                        <li class="mb-2"><a href="https://www.facebook.com/CoderJonycom-134557060482505" class="text-gray-600 hover:text-gray-800"><span class="fa-brands fa-facebook me-2"></span>Facebook</a></li>
+                        <li class="mb-2"><a href="https://www.instagram.com/ankushjain358/" class="text-gray-600 hover:text-gray-800"><span class="fa-brands fa-instagram me-2"></span>Instagram</a></li>
                     </ul>
                 </div>
 
-                <div class="col-md-2 mb-3">
-                    <h5>Categories</h5>
-                    <ul class="nav flex-column">
+                <div class="mb-3">
+                    <h5 class="text-xl font-bold mb-2">Categories</h5>
+                    <ul class="flex flex-col">
                         @foreach (var item in selectedTags)
                         {
-                            <li class="nav-item mb-2">
-                                <a class="nav-link p-0 text-muted" href="@item.GetLink()">@item.GetTitle()</a>
+                            <li class="mb-2">
+                                <a class="text-gray-600 hover:text-gray-800" href="@item.GetLink()">@item.GetTitle()</a>
                             </li>
                         }
                     </ul>
@@ -58,22 +42,14 @@
             </div>
         </footer>
     </div>
-    <hr>
-    <div class="container-fluid">
-        <div class="d-flex justify-content-between flex-md-row flex-column py-2 px-4">
-            <p>© @DateTime.Now.Year CoderJony, All rights reserved.</p>
-            <div>
-                <ul class="nav flex-md-row flex-column">
-                    <li class="nav-item me-3 mb-2">
-                        <a href="/feed.rss" class="nav-link p-0 text-muted"><span class="fa-solid fa-rss me-2"></span>RSS Feed</a>
-                    </li>
-                    <li class="nav-item me-3 mb-2">
-                        <a href="/feed.atom" class="nav-link p-0 text-muted"><span class="fa-solid fa-atom me-2"></span>Atom Feed</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="https://github.com/ankushjain358/coderjony-statiq-blog" class="nav-link p-0 text-muted"><span class="fa-brands fa-github me-2"></span>This site on GitHub</a>
-                    </li>
-                </ul>
+    <hr class="my-4">
+    <div class="container mx-auto">
+        <div class="flex justify-between flex-col md:flex-row py-2 px-4">
+            <p class="text-gray-600">© @DateTime.Now.Year CoderJony, All rights reserved.</p>
+            <div class="flex flex-col md:flex-row">
+                <a href="/feed.rss" class="text-gray-600 hover:text-gray-800 me-3 mb-2"><span class="fa-solid fa-rss me-2"></span>RSS Feed</a>
+                <a href="/feed.atom" class="text-gray-600 hover:text-gray-800 me-3 mb-2"><span class="fa-solid fa-atom me-2"></span>Atom Feed</a>
+                <a href="https://github.com/ankushjain358/coderjony-statiq-blog" class="text-gray-600 hover:text-gray-800"><span class="fa-brands fa-github me-2"></span>This site on GitHub</a>
             </div>
         </div>
     </div>
