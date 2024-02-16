@@ -1,20 +1,29 @@
- @model IDocument
+@model IDocument
 
 @{
-    string imagePath = BlogMetadata.GetBlogImage(Model, BlogImageType.BigThumbnail);
-    string excerpt = Model.GetString(Keys.Excerpt);
+string imagePath = BlogMetadata.GetBlogImage(Model, BlogImageType.BigThumbnail);
+string excerpt = Model.GetString(Keys.Excerpt);
 }
 
-<div class="col">
-    <div class="card shadow-lg bg-body rounded" title="@Model.GetTitle()">
-        <a href="@Model.GetLink()"><img src="@imagePath" class="card-img-top" alt="@Model.GetTitle()"></a>
-        <div class="card-body">
-            <h4 class="card-title"><a href="@Model.GetLink()" class="text-decoration-none link-dark">@Model.GetTitle()</a></h4>
-            <p class="card-text">@Html.Raw(excerpt)</p>
-            <div class="d-flex justify-content-between align-items-center">
-                <a href="@Model.GetLink()" class="btn btn-success">Read More</a>
-                <small class="text-muted">By @Model.GetString(WebKeys.Author)</small>
-            </div>
+<div class="max-w-md mx-auto bg-white shadow-md overflow-hidden rounded-md">
+    <a href="@Model.GetLink()">
+        <img src="@imagePath" alt="@Model.GetTitle()" class="w-full h-48 object-cover object-center"> 
+    </a>
+    <div class="p-4">
+        <!-- Blog Title -->
+        <h3 class="text-2xl font-bold mb-2"><a href="@Model.GetLink()" class="text-black">@Model.GetTitle()</a></h3>
+
+        <!-- Blog Description -->
+        <p class="text-gray-700 mb-4">@Html.Raw(excerpt)</p>
+
+        <!-- Read More Button and Author -->
+        <div class="flex justify-between items-center mt-4">
+            <a href="@Model.GetLink()"
+                class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Read
+                More</a>
+            <p class="text-gray-500">By @Model.GetString(WebKeys.Author)</p>
         </div>
     </div>
 </div>
+
+

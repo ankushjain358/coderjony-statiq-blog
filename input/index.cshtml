@@ -7,74 +7,81 @@ Description: Welcome to CoderJony. You can find here a huge collection of techni
             .FilterSources(GlobalMetadata.GetBlogSources(Document))
             .OrderByDescending(item => item.GetDateTime(BlogMetadataKeys.Published))
             .Where(item => item.GetBool(BlogMetadataKeys.IsActive))
-            .Take(9)
+            .Take(12)
             .ToArray();
 }
-<div class="bg-light p-5 mb-4 row">
-    <div class="col-md-8">
+
+<div class="bg-gray-100 p-5 mb-4 my-10 grid grid-cols-1 md:grid-cols-2">
+    <div class="col-span-1 md:col-span-1">
         <h5>coderjony</h5>
-        <h1>Hey! I'm Ankush Jain</h1>
-        <p class="lead">
+        <h1 class="text-3xl font-bold">Hey! I'm Ankush Jain</h1>
+        <p class="text-xl mb-4">
             I'm a Full Stack Engineer with 10+ years of experience in Software Development. I love building web applications
-            and cloud solutions.</p>
-        <p class="lead">My technology stack mostly revolves around .NET, AWS, Azure & JavaScript.</p>
-        <p class="lead">I write articles about Web Development and Cloud Computing.</p>
-        <a class="btn btn-lg btn-success" href="https://www.linkedin.com/in/ankush-jain-developer/">Connect via LinkedIn
-            &raquo;</a>
+            and cloud solutions.
+        </p>
+        <p class="text-xl mb-4">My technology stack mostly revolves around .NET, AWS, Azure & JavaScript.</p>
+        <p class="text-xl mb-4">I write articles about Web Development and Cloud Computing.</p>
+        <a href="https://www.linkedin.com/in/ankush-jain-developer/"
+            class="block w-48 text-center text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Connect via LinkedIn &raquo;</a>
     </div>
-    <div class="col-md-4 pt-md-0 pt-3">
-        <div class="d-flex justify-content-between">
-            <a href="https://www.credly.com/badges/cd3e7d4c-281c-4920-95de-cb84ed983848" target="_blank" class="col-6 p-3"
-                title="AWS Certified Solutions Architect – Professional">
-                <img src="/img/aws-sap.png" class="img-thumbnail">
-            </a>
-            <a href="https://www.credly.com/badges/22a0978d-0849-4047-a7ca-fa2fc0df99c0" target="_blank" class="col-6 p-3"
-                title="AWS Certified Solutions Architect – Associate">
-                <img src="/img/aws-saa.png" class="img-thumbnail">
-            </a>
-        </div>
-        <div class="d-flex justify-content-center">
-            <a href="https://www.credly.com/badges/abfec068-b3f5-4b45-80c8-0e165b42e1b2" target="_blank" class="col-6 p-3"
-                title="Microsoft Certified: Azure Fundamentals">
-                <img src="/img/azure-fundamentals.png" class="img-thumbnail" />
-            </a>
-        </div>
+    <div class="col-span-1 md:col-span-1 md:pt-0 pt-3 flex flex-col md:flex-row items-center justify-between">
+        <a href="https://www.credly.com/badges/cd3e7d4c-281c-4920-95de-cb84ed983848" target="_blank"
+            class="md:w-1/2 p-3">
+            <img src="/img/aws-sap.png" class="w-auto h-auto rounded-md">
+        </a>
+        <a href="https://www.credly.com/badges/22a0978d-0849-4047-a7ca-fa2fc0df99c0" target="_blank"
+            class="md:w-1/2 p-3">
+            <img src="/img/aws-saa.png" class="w-auto h-auto rounded-md">
+        </a>
+           <a href="https://www.credly.com/badges/64366b6e-cefa-4042-8b9e-f3ba85cf40f6" target="_blank"
+            class="md:w-1/2 p-3">
+            <img src="/img/aws-dev.png" class="w-auto h-auto rounded-md" />
+        </a>
+         <a href="https://www.credly.com/badges/abfec068-b3f5-4b45-80c8-0e165b42e1b2" target="_blank"
+            class="md:w-1/2 p-3">
+            <img src="/img/azure-fundamentals.png" class="w-auto h-auto rounded-md" />
+        </a>
     </div>
 </div>
 
-<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 mb-4 ">
+
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
     @foreach (var post in posts)
     {
         @Html.Partial("/_partials/_post.cshtml", post)   
     }
 </div>
 
-<div class="row d-flex justify-content-center ">
-    <div class="col-md-3 mb-5 d-grid gap-2">
-        <a class="btn btn-primary btn-lg " href="blogs">See more</a>
+<div class="grid justify-center mb-5 mt-6">
+    <div class="col-span-1 md:col-span-1 gap-2">
+        <a href="blogs" class="block w-48 text-center text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">See more</a>
     </div>
 </div>
 
-<div class="bg-white p-5 row">
-    <div class="col-md-12">
-        <h1>Built with <a class="text-decoration-none link-success" href="https://www.statiq.dev/"
-                target="_blank">Statiq.dev</a></h1>
-        <p class="lead">
-            This website is built with <a class="text-decoration-none link-success"
-                href="https://www.statiq.dev/" target="_blank">Statiq.dev</a>. Statiq is a powerful
-            static-site
-            generator framework written completely in .NET Core. This framework allows you build stunning static
+<div class="bg-white p-5 grid grid-cols-1">
+    <div class="col-span-1">
+        <h1 class="text-3xl font-bold">Built with <a href="https://www.statiq.dev/"
+                class="text-green-500 underline" target="_blank">Statiq.dev</a></h1>
+        <p class="text-xl mb-4">
+            This website is built with <a href="https://www.statiq.dev/" class="text-green-500 underline"
+                target="_blank">Statiq.dev</a>. Statiq is a powerful static-site
+            generator framework written completely in .NET Core. This framework allows you to build stunning static
             websites using your knowledge of .NET.
         </p>
-        <p class="lead">I have made this website's source code public. It can be accessed from <a
-                href="https://github.com/ankushjain358/coderjony-statiq-blog" class="text-decoration-none link-success">GitHub repository.</a></p>
-        <p class="lead">
-           Few websites build with Statiq:
-        <ul class="lead">
-            <li><a href="https://dotnetfoundation.org/" class="text-decoration-none link-success" target="_blank">.NET Foundation</a></li>
-            <li><a href="https://www.techwatching.dev/" class="text-decoration-none link-success" target="_blank">Techatching.dev</a></li>
-            <li><a href="https://www.tryingtocode.co.uk/" class="text-decoration-none link-success" target="_blank">TryingToCode</a></li>
-            <li><a href="https://www.developmomentum.com/" class="text-decoration-none link-success" target="_blank">Develop Momentum</a></li>
+        <p class="text-xl mb-4">I have made this website's source code public. It can be accessed from <a
+                href="https://github.com/ankushjain358/coderjony-statiq-blog"
+                class="text-green-500 underline">GitHub repository.</a></p>
+        <p class="text-xl">
+            Few websites build with Statiq:
+        <ul class="text-xl">
+            <li><a href="https://dotnetfoundation.org/" class="text-green-500 underline"
+                    target="_blank">.NET Foundation</a></li>
+            <li><a href="https://www.techwatching.dev/" class="text-green-500 underline"
+                    target="_blank">Techatching.dev</a></li>
+            <li><a href="https://www.tryingtocode.co.uk/" class="text-green-500 underline"
+                    target="_blank">TryingToCode</a></li>
+            <li><a href="https://www.developmomentum.com/" class="text-green-500 underline"
+                    target="_blank">Develop Momentum</a></li>
         </ul>
         </p>
     </div>
