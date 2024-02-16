@@ -11,10 +11,10 @@ Description: Welcome to CoderJony. You can find here a huge collection of techni
             .ToArray();
 }
 
-<div class="bg-gray-100 p-5 mb-4 my-10 grid grid-cols-1 md:grid-cols-2">
+<div class="bg-white px-5 py-10 y-5 mb-4 mb-10 grid grid-cols-1 md:grid-cols-2">
     <div class="col-span-1 md:col-span-1">
-        <h5>coderjony</h5>
-        <h1 class="text-3xl font-bold">Hey! I'm Ankush Jain</h1>
+        <h5 class="mb-3">coderjony</h5>
+        <h1 class="text-3xl font-bold mb-5">Hey! I'm Ankush Jain</h1>
         <p class="text-xl mb-4">
             I'm a Full Stack Engineer with 10+ years of experience in Software Development. I love building web applications
             and cloud solutions.
@@ -45,7 +45,7 @@ Description: Welcome to CoderJony. You can find here a huge collection of techni
 </div>
 
 
-<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4">
     @foreach (var post in posts)
     {
         @Html.Partial("/_partials/_post.cshtml", post)   

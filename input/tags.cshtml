@@ -17,49 +17,45 @@ Title: Tags
 
 @if (Document.ContainsKey(Keys.GroupKey))
 {
-    <div class="row d-flex justify-content-center">
-        <div class="col-md-8 text-center pb-5">
-                @foreach (IDocument tag in OutputPages.Get("tags.html").GetChildren().OrderByDescending(x =>
-               x.GetChildren().Count()))
+    <div class="flex justify-center">
+        <div class="md:w-8/12 text-center pb-5">
+            @foreach (IDocument tag in OutputPages.Get("tags.html").GetChildren().OrderByDescending(x => x.GetChildren().Count()))
+            {
+                if (!string.IsNullOrEmpty(tag.GetTitle()))
                 {
-                    if(!string.IsNullOrEmpty(tag.GetTitle()))
-                    {
-                        string badgeStyle = Document.GetString(Keys.GroupKey).Equals(tag.GetTitle(),
-                        StringComparison.OrdinalIgnoreCase) ? "btn-warning" : "btn-success";
-                        string postCount = tag.GetChildren().Count().ToString();
-                        
-                        <a href="@Context.GetLink(tag)" class="btn @badgeStyle mb-2"> @tag.GetTitle() (@postCount)</a>
-                    }
+                    string badgeStyle = Document.GetString(Keys.GroupKey).Equals(tag.GetTitle(), StringComparison.OrdinalIgnoreCase) ? "bg-green-500" : "";
+                    string postCount = tag.GetChildren().Count().ToString();
+
+                    <a href="@Context.GetLink(tag)" class="inline-block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 @badgeStyle"> @tag.GetTitle() (@postCount)</a>
                 }
+            }
         </div>
     </div>
 
-    <div class="row">
-        <div class="col-md-12">
-            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 mb-4">
-                    @foreach (IDocument document in Document.GetChildren())
-                    {
-                        @Html.Partial("/_partials/_post.cshtml", document)
-                    }
+    <div class="flex flex-wrap justify-center">
+        <div class="md:w-12/12">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 mb-4">
+                @foreach (IDocument document in Document.GetChildren())
+                {
+                    @Html.Partial("/_partials/_post.cshtml", document)
+                }
             </div>
-
         </div>
     </div>
 }
 else
 {
-        <div class="row d-flex justify-content-center">
-            <div class="col-md-8 text-center pb-4">
-                @foreach (IDocument tag in Document.GetChildren().OrderByDescending(x => x.GetChildren().Count()))
-                {
-                    string postCount = tag.GetChildren().Count().ToString();
-                    <a role="button" href="@Context.GetLink(tag)" class="btn btn-success mb-2"> @tag.GetTitle()
-                        (@postCount)</a>
-                }
-            </div>
+    <div class="flex justify-center">
+        <div class="md:w-8/12 text-center pb-4">
+            @foreach (IDocument tag in Document.GetChildren().OrderByDescending(x => x.GetChildren().Count()))
+            {
+                string postCount = tag.GetChildren().Count().ToString();
+                <a role="button" href="@Context.GetLink(tag)" class="inline-block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2"> @tag.GetTitle() (@postCount)</a>
+            }
         </div>
-   
+    </div>
 }
+
 
 @* Reference for tags
 https://github.com/statiqdev/CleanBlog/blob/b4238cb28197e66647e796760934e5b6728e382b/input/tags.cshtml *@
